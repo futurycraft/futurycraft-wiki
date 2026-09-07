@@ -29,7 +29,7 @@ export const skyblockHighlights = [
   { icon: "⛏️", title: "Minions", desc: "Automáticos de mineração, plantas, mobs e mais.", href: "/wiki/skyblock/minions" },
   { icon: "💰", title: "Economia", desc: "Venda itens, faça quests e participe da economia.", href: "/wiki/skyblock/economia" },
   { icon: "🎯", title: "Missões", desc: "Complete com /c, /d e /q e ganhe recompensas.", href: "/wiki/skyblock/missoes" },
-  { icon: "✨", title: "Encantamentos", desc: "250+ encantamentos personalizados para dominar.", href: "/wiki/skyblock/encantamentos" },
+  { icon: "✨", title: "Encantamentos", desc: "284 encantamentos personalizados para dominar.", href: "/wiki/skyblock/encantamentos" },
   { icon: "🧙", title: "Textura", desc: "Ative a textura oficial com /textura.", href: "/wiki/skyblock/textura-do-servidor" },
   { icon: "🎫", title: "Vote", desc: "Vote e ganhe recompensas todos os dias.", href: "/wiki/skyblock/votar" },
 ];

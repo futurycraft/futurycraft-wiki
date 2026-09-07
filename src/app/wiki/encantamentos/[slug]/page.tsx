@@ -3,31 +3,22 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import { getEnchantByPath, getAllEnchants } from "@/lib/enchants";
-import { encantCategories } from "@/data/encantamentos";
 import { DocLayout } from "@/components/doc-layout";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { ArrowLeftIcon } from "@/components/icons";
-import { CopyButton } from "@/components/copy-button";
 import { JsonLd, articleJsonLd, breadcrumbJsonLd } from "@/components/json-ld";
 
 const rarityColor: Record<string, string> = {
   Simples: "text-slate-300 border-slate-500/40",
-  Elite: "text-emerald-400 border-emerald-500/40",
-  "Lendário": "text-amber-400 border-amber-500/40",
-  Supremo: "text-fuchsia-400 border-fuchsia-500/40",
   Único: "text-purple-400 border-purple-500/40",
-  Fabuloso: "text-rose-400 border-rose-500/40",
+  Elite: "text-emerald-400 border-emerald-500/40",
+  Supremo: "text-fuchsia-400 border-fuchsia-500/40",
+  Lendário: "text-amber-400 border-amber-500/40",
   Heróico: "text-orange-400 border-orange-500/40",
-  Alma: "text-cyan-400 border-cyan-500/40",
-  Maestria: "text-yellow-400 border-yellow-500/40",
 };
 
 interface PageProps {
   params: Promise<{ slug: string }>;
-}
-
-function familyMeta(slug: string) {
-  return encantCategories.find((c) => c.slug === slug);
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -40,7 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     alternates: { canonical: `${siteConfig.wikiUrl}/encantamentos/${e.path}` },
     openGraph: {
       type: "article",
-      title: `${e.nome} — Encantamento ${e.familia}`,
+      title: `${e.nome} — Encantamento ${e.raridade}`,
       description: e.descricao,
       url: `${siteConfig.wikiUrl}/encantamentos/${e.path}`,
     },
@@ -66,7 +57,6 @@ export default async function EnchantPage({ params }: PageProps) {
   })();
 
   const color = rarityColor[e.raridade] ?? "text-text-muted border-border-bright";
-  const fam = familyMeta(e.familiaSlug);
 
   return (
     <DocLayout>
@@ -78,7 +68,7 @@ export default async function EnchantPage({ params }: PageProps) {
               description: e.descricao,
               url: `${siteConfig.url}/wiki/encantamentos/${e.path}`,
               datePublished: "2026-01-01",
-              section: `Encantamentos ${e.familia}`,
+              section: `Encantamentos ${e.raridade}`,
             }),
             breadcrumbJsonLd([
               { name: "Wiki", href: "/wiki" },
@@ -106,9 +96,6 @@ export default async function EnchantPage({ params }: PageProps) {
           <div className="flex flex-wrap items-center gap-2">
             <span className={`rounded-full border px-2.5 py-1 text-xs font-semibold ${color}`}>
               {e.raridade}
-            </span>
-            <span className="rounded-full border border-border bg-bg-card px-2.5 py-1 text-xs text-text-muted">
-              {e.familia}
             </span>
             {e.aplicaSe && (
               <span className="rounded-full border border-border bg-bg-card px-2.5 py-1 text-xs font-medium uppercase tracking-wide text-accent-dim">
@@ -142,17 +129,6 @@ export default async function EnchantPage({ params }: PageProps) {
             <dd className="mt-1.5 text-sm font-medium text-text">{e.grupo}</dd>
           </div>
         </dl>
-
-        {fam && (
-          <div className="mt-6 flex items-start gap-3 rounded-xl border border-accent/30 bg-accent-glow p-4">
-            <div className="min-w-0">
-              <p className="text-sm text-text">
-                <span className="font-semibold text-accent">{fam.nome}:</span> {fam.descricao}
-              </p>
-              <CopyButton text={e.nome} label={`Copiar ${e.nome}`} />
-            </div>
-          </div>
-        )}
 
         <section className="mt-10 border-t border-border pt-6" aria-label="Recomendados">
           <h2 className="mb-4 text-lg font-semibold text-text">Você também pode gostar</h2>

@@ -24,7 +24,6 @@ const typeStyles: Record<string, string> = {
   encantamento: "border-purple-500/40 bg-purple-500/10 text-purple-400",
   rank: "border-amber-500/40 bg-amber-500/10 text-amber-400",
   categoria: "border-emerald-500/40 bg-emerald-500/10 text-emerald-400",
-  familia: "border-fuchsia-500/40 bg-fuchsia-500/10 text-fuchsia-400",
   pagina: "border-slate-500/40 bg-slate-500/10 text-slate-400",
 };
 

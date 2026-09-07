@@ -3,7 +3,6 @@ import { comandos } from "@/data/comandos";
 import { getAllEnchants } from "@/lib/enchants";
 import { vips } from "@/data/ranks";
 import { categories } from "@/data/categories";
-import { enchantFamilies } from "@/lib/enchants";
 import { siteConfig } from "@/config/site";
 
 export const dynamic = "force-static";
@@ -47,12 +46,12 @@ function buildIndex(): SearchEntry[] {
 
   for (const e of getAllEnchants()) {
     entries.push({
-      id: `encantamento:${e.familiaSlug}:${e.slug}`,
+      id: `encantamento:${e.path}`,
       type: "Encantamento",
       typeSlug: "encantamento",
       title: `✨ ${e.nome}`,
-      subtitle: `${e.familia} • ${e.raridade}`,
-      text: `${e.nome} ${e.descricao} ${e.aplicaSe} ${e.raridade} ${e.familia} ${e.grupo}`,
+      subtitle: e.raridade,
+      text: `${e.nome} ${e.descricao} ${e.aplicaSe} ${e.raridade} ${e.grupo}`,
       href: `/wiki/encantamentos/${e.path}`,
     });
   }
@@ -78,18 +77,6 @@ function buildIndex(): SearchEntry[] {
       subtitle: "Categoria",
       text: `${c.title} ${c.description}`,
       href: c.href,
-    });
-  }
-
-  for (const f of enchantFamilies) {
-    entries.push({
-      id: `familia:${f.familiaSlug}`,
-      type: "Família",
-      typeSlug: "familia",
-      title: `🔮 ${f.familia}`,
-      subtitle: "Encantamentos",
-      text: `${f.familia} encantamentos`,
-      href: `/wiki/encantamentos?categoria=${f.familiaSlug}`,
     });
   }
 

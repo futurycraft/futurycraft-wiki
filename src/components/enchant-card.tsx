@@ -40,9 +40,6 @@ export function EnchantCard({ e }: { e: CatalogEnchant }) {
             Nível máx. {e.nivelMaximo}
           </span>
         )}
-        <span className="rounded-full border border-border bg-bg-raised px-2 py-0.5">
-          {e.familia}
-        </span>
       </div>
     </Link>
   );
