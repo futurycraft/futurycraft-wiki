@@ -52,6 +52,10 @@ export function Header() {
     };
   }, [openMenu]);
 
+  function activeClass(href: string) {
+    return pathname === href || (href !== "/wiki" && pathname.startsWith(href)) ? "active" : "";
+  }
+
   return (
     <>
       <header className="sticky top-0 z-40 border-b border-border bg-bg/80 backdrop-blur-md">
@@ -146,23 +150,47 @@ export function Header() {
                   {section.label}
                 </div>
                 <ul className="space-y-0.5">
-                  {section.items.map((item) => {
-                    const active =
-                      pathname === item.href ||
-                      (item.href !== "/wiki" && pathname.startsWith(item.href));
-                    return (
-                      <li key={item.href}>
-                        <Link
-                          href={item.href}
-                          onClick={() => setOpenMenu(false)}
-                          className={`sidebar-link ${active ? "active" : ""}`}
-                          aria-current={active ? "page" : undefined}
-                        >
-                          {item.title}
-                        </Link>
-                      </li>
-                    );
-                  })}
+                  {section.items.map((item) => (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        onClick={() => setOpenMenu(false)}
+                        className={`sidebar-link ${activeClass(item.href)} ${item.children?.some((c) => pathname.startsWith(c.href)) ? "active" : ""}`}
+                        aria-current={activeClass(item.href) === "active" ? "page" : undefined}
+                      >
+                        <span>{item.title}</span>
+                        {item.emBreve && (
+                          <span className="ml-auto shrink-0 rounded-full border border-border bg-bg-raised px-1.5 py-0.5 text-[0.5625rem] font-medium text-text-muted">
+                            em breve
+                          </span>
+                        )}
+                      </Link>
+                      {item.children && item.children.length > 0 && (
+                        <ul className="mt-0.5 space-y-0.5 border-l border-border pl-3 ml-2">
+                          {item.children.map((child) => {
+                            const childActive = pathname === child.href || pathname.startsWith(child.href);
+                            return (
+                              <li key={child.href}>
+                                <Link
+                                  href={child.href}
+                                  onClick={() => setOpenMenu(false)}
+                                  className={`sidebar-link !text-[0.8125rem] ${childActive ? "active" : ""} ${childActive ? "" : "opacity-80"}`}
+                                  aria-current={childActive ? "page" : undefined}
+                                >
+                                  <span>{child.title}</span>
+                                  {child.emBreve && (
+                                    <span className="ml-auto shrink-0 rounded-full border border-border bg-bg-raised px-1.5 py-0.5 text-[0.5625rem] font-medium text-text-muted">
+                                      em breve
+                                    </span>
+                                  )}
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
                 </ul>
               </div>
             ))}

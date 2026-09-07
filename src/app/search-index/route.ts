@@ -1,10 +1,9 @@
 import { getArticles } from "@/lib/content";
 import { comandos } from "@/data/comandos";
-import { encantamentosPadrao } from "@/data/enchants/padrao";
-import { encantamentosCosmicos } from "@/data/enchants/cosmicos";
-import { encantamentosVanilla } from "@/data/enchants/vanilla";
+import { getAllEnchants } from "@/lib/enchants";
 import { vips } from "@/data/ranks";
 import { categories } from "@/data/categories";
+import { enchantFamilies } from "@/lib/enchants";
 import { siteConfig } from "@/config/site";
 
 export const dynamic = "force-static";
@@ -12,6 +11,7 @@ export const dynamic = "force-static";
 export interface SearchEntry {
   id: string;
   type: string;
+  typeSlug: string;
   title: string;
   subtitle: string;
   text: string;
@@ -25,6 +25,7 @@ function buildIndex(): SearchEntry[] {
     entries.push({
       id: `article:${a.path}`,
       type: a.meta.category,
+      typeSlug: "artigo",
       title: a.meta.icon ? `${a.meta.icon} ${a.meta.title}` : a.meta.title,
       subtitle: a.meta.category,
       text: `${a.meta.title} ${a.meta.description} ${a.contentText}`,
@@ -36,26 +37,23 @@ function buildIndex(): SearchEntry[] {
     entries.push({
       id: `comando:${c.comando}`,
       type: "Comando",
+      typeSlug: "comando",
       title: c.comando,
       subtitle: c.categoria,
-      text: `${c.comando} ${c.descricao} ${c.uso ?? ""} ${c.categoria}`,
+      text: `${c.comando} ${c.descricao} ${c.uso ?? ""} ${c.categoria} ${c.permissao}`,
       href: `/wiki/comandos?comando=${encodeURIComponent(c.comando)}`,
     });
   }
 
-  const enchants = [
-    ...encantamentosPadrao.map((e) => ({ ...e, grupoExtra: "Padrão" })),
-    ...encantamentosCosmicos.map((e) => ({ ...e, grupoExtra: "Cósmico" })),
-    ...encantamentosVanilla.map((e) => ({ ...e, grupoExtra: "Vanilla" })),
-  ];
-  for (const e of enchants) {
+  for (const e of getAllEnchants()) {
     entries.push({
-      id: `encantamento:${e.grupoExtra}:${e.slug}`,
+      id: `encantamento:${e.familiaSlug}:${e.slug}`,
       type: "Encantamento",
+      typeSlug: "encantamento",
       title: `✨ ${e.nome}`,
-      subtitle: `${e.grupoExtra} • ${e.raridade}`,
-      text: `${e.nome} ${e.descricao} ${e.aplicaSe} ${e.raridade} ${e.grupoExtra}`,
-      href: `/wiki/encantamentos?nome=${encodeURIComponent(e.nome.toLowerCase())}`,
+      subtitle: `${e.familia} • ${e.raridade}`,
+      text: `${e.nome} ${e.descricao} ${e.aplicaSe} ${e.raridade} ${e.familia} ${e.grupo}`,
+      href: `/wiki/encantamentos/${e.path}`,
     });
   }
 
@@ -63,6 +61,7 @@ function buildIndex(): SearchEntry[] {
     entries.push({
       id: `vip:${v.slug}`,
       type: "Rank",
+      typeSlug: "rank",
       title: `🏆 ${v.nome}`,
       subtitle: "VIP",
       text: `${v.nome} ${v.kits} ${v.comandos.join(" ")} ${v.extras.join(" ")}`,
@@ -74,6 +73,7 @@ function buildIndex(): SearchEntry[] {
     entries.push({
       id: `categoria:${c.slug}`,
       type: "Categoria",
+      typeSlug: "categoria",
       title: `${c.icon} ${c.title}`,
       subtitle: "Categoria",
       text: `${c.title} ${c.description}`,
@@ -81,9 +81,22 @@ function buildIndex(): SearchEntry[] {
     });
   }
 
+  for (const f of enchantFamilies) {
+    entries.push({
+      id: `familia:${f.familiaSlug}`,
+      type: "Família",
+      typeSlug: "familia",
+      title: `🔮 ${f.familia}`,
+      subtitle: "Encantamentos",
+      text: `${f.familia} encantamentos`,
+      href: `/wiki/encantamentos?categoria=${f.familiaSlug}`,
+    });
+  }
+
   entries.push({
     id: "home",
     type: "Página",
+    typeSlug: "pagina",
     title: "🏠 Início",
     subtitle: "Wiki",
     text: `${siteConfig.name} ${siteConfig.description}`,

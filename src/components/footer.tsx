@@ -9,6 +9,8 @@ const footerColumns = [
       { title: "Começando", href: "/wiki/comecando" },
       { title: "SkyBlock", href: "/wiki/skyblock" },
       { title: "RankUP", href: "/wiki/rankup" },
+      { title: "Sistemas", href: "/wiki/sistemas/economia" },
+      { title: "Guias", href: "/wiki/guias/para-iniciantes" },
       { title: "Comandos", href: "/wiki/comandos" },
       { title: "Encantamentos", href: "/wiki/encantamentos" },
       { title: "Ranks", href: "/wiki/ranks" },

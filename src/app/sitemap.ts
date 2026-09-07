@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getArticles } from "@/lib/content";
+import { getAllEnchants } from "@/lib/enchants";
 import { siteConfig } from "@/config/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -20,5 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...articles];
+  const encantamentos = getAllEnchants().map((e) => ({
+    url: `${wikiUrl}/encantamentos/${e.path}`,
+    lastModified: new Date("2026-01-01"),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticPages, ...articles, ...encantamentos];
 }

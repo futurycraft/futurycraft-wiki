@@ -27,4 +27,6 @@ O número de minions ativos depende do seu VIP:
 
 Coloque seus minions dentro da área da sua ilha e configure a tarefa no próprio minion pelo painel dele.
 
+> Os limites variam conforme o seu [VIP](/wiki/ranks). Confira também o guia de [Ilhas](/wiki/skyblock/ilhas) para gerenciar sua equipe e área.
+
 > **Em breve:** mais detalhes sobre tipos, upgrades e configurações de minions serão adicionados aqui.

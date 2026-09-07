@@ -12,7 +12,7 @@ Bem-vindo ao FuturyCraft! Este guia vai te acompanhar desde o primeiro acesso at
 
 ## 1 — Entre no servidor
 
-Conecte-se usando os dados da [Introdução](/wiki/comecando/introducao):
+Conecte-se usando os dados da [Introdução](/wiki/comecando):
 
 **Java:** `futurycraft.com.br`
 

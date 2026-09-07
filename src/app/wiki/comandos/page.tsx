@@ -1,65 +1,37 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Suspense } from "react";
 import { siteConfig } from "@/config/site";
 import { DocLayout } from "@/components/doc-layout";
 import { Breadcrumb } from "@/components/breadcrumb";
-import { CommandCard } from "@/components/command-card";
+import { CommandsBrowser } from "@/components/commands-browser";
 import { CommandScroller } from "@/components/command-scroller";
-import { comandos, comandoCategorias, type ComandoCategoria } from "@/data/comandos";
+import { JsonLd, breadcrumbJsonLd } from "@/components/json-ld";
 
 export const metadata: Metadata = {
   title: "Comandos",
   description:
-    "Lista completa de comandos disponíveis para jogadores no FuturyCraft.",
+    "Lista completa de comandos disponíveis para jogadores no FuturyCraft, com busca instantânea e filtros por categoria.",
   alternates: { canonical: `${siteConfig.wikiUrl}/comandos` },
 };
 
-export default async function ComandosPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ cat?: string }>;
-}) {
-  const { cat } = await searchParams;
-  const categoria: ComandoCategoria = (cat as ComandoCategoria) ?? "Todos";
-  const filtered =
-    categoria === "Todos"
-      ? comandos
-      : comandos.filter((c) => c.categoria === categoria);
-
+export default function ComandosPage() {
   return (
     <DocLayout>
       <div className="animate-fade-in">
-        <CommandScroller />
+        <JsonLd data={breadcrumbJsonLd([{ name: "Wiki", href: "/wiki" }, { name: "Comandos" }])} />
+        <Suspense>
+          <CommandScroller />
+        </Suspense>
         <Breadcrumb items={[{ label: "Wiki", href: "/wiki" }, { label: "Comandos" }]} />
         <header className="mt-4">
           <h1 className="text-3xl font-bold tracking-tight text-text sm:text-4xl">Comandos</h1>
           <p className="mt-2 max-w-2xl text-text-muted">
-            Todos os comandos do servidor. Escolha uma categoria para filtrar.
+            Pesquise qualquer comando do servidor por nome, descrição ou categoria.
           </p>
         </header>
-
-        <nav className="mt-6 flex flex-wrap gap-2" aria-label="Filtrar comandos">
-          {comandoCategorias.map((c) => (
-            <Link
-              key={c}
-              href={c === "Todos" ? "/wiki/comandos" : `/wiki/comandos?cat=${encodeURIComponent(c)}`}
-              aria-current={categoria === c ? "page" : undefined}
-              className={`rounded-full border px-4 py-2 text-sm transition-colors ${
-                categoria === c
-                  ? "border-accent bg-accent-glow text-accent"
-                  : "border-border bg-bg-card text-text-muted hover:border-border-bright hover:text-text"
-              }`}
-            >
-              {c}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="mt-6 grid gap-4 lg:grid-cols-2">
-          {filtered.map((c) => (
-            <CommandCard key={c.comando} id={`cmd-${c.comando}`} comando={c} />
-          ))}
-        </div>
+        <Suspense>
+          <CommandsBrowser />
+        </Suspense>
       </div>
     </DocLayout>
   );

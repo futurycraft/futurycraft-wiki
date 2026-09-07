@@ -18,6 +18,27 @@ function normalize(s: string): string {
     .replace(/[\u0300-\u036f]/g, "");
 }
 
+const typeStyles: Record<string, string> = {
+  artigo: "border-blue-500/40 bg-blue-500/10 text-blue-400",
+  comando: "border-cyan-500/40 bg-cyan-500/10 text-cyan-400",
+  encantamento: "border-purple-500/40 bg-purple-500/10 text-purple-400",
+  rank: "border-amber-500/40 bg-amber-500/10 text-amber-400",
+  categoria: "border-emerald-500/40 bg-emerald-500/10 text-emerald-400",
+  familia: "border-fuchsia-500/40 bg-fuchsia-500/10 text-fuchsia-400",
+  pagina: "border-slate-500/40 bg-slate-500/10 text-slate-400",
+};
+
+function TypeBadge({ type, typeSlug }: { type: string; typeSlug: string }) {
+  const style = typeStyles[typeSlug] ?? typeStyles.pagina;
+  return (
+    <span
+      className={`inline-flex shrink-0 items-center rounded-full border px-1.5 py-0.5 text-[0.625rem] font-semibold uppercase tracking-wide ${style}`}
+    >
+      {type}
+    </span>
+  );
+}
+
 function highlight(text: string, query: string): ReactNode {
   if (!query) return text;
   const q = normalize(query).trim();
@@ -163,7 +184,12 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
                   i === active ? "bg-accent-glow" : "hover:bg-bg-hover"
                 }`}
               >
-                <span className="text-sm font-semibold text-text">{highlight(r.title, query)}</span>
+                <span className="flex items-center gap-2">
+                  <TypeBadge type={r.type} typeSlug={r.typeSlug} />
+                  <span className="min-w-0 truncate text-sm font-semibold text-text">
+                    {highlight(r.title, query)}
+                  </span>
+                </span>
                 <span className="text-xs text-text-muted">{r.subtitle}</span>
               </Link>
             ))

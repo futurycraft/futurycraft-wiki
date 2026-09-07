@@ -1,6 +1,8 @@
 export interface NavItem {
   title: string;
   href: string;
+  emBreve?: boolean;
+  children?: NavItem[];
 }
 
 export interface NavSection {
@@ -16,8 +18,40 @@ export const navSections: NavSection[] = [
   {
     label: "Servidores",
     items: [
-      { title: "SkyBlock", href: "/wiki/skyblock" },
-      { title: "RankUP", href: "/wiki/rankup" },
+      {
+        title: "SkyBlock",
+        href: "/wiki/skyblock",
+        children: [
+          { title: "Como Começar", href: "/wiki/skyblock/como-comecar" },
+          { title: "Ilhas", href: "/wiki/skyblock/ilhas" },
+          { title: "Minions", href: "/wiki/skyblock/minions" },
+          { title: "Progressão", href: "/wiki/skyblock/progressao" },
+          { title: "Missões", href: "/wiki/skyblock/missoes" },
+          { title: "Economia", href: "/wiki/skyblock/economia" },
+          { title: "Encantamentos", href: "/wiki/skyblock/encantamentos" },
+          { title: "Loteria", href: "/wiki/skyblock/loteria" },
+          { title: "Eventos", href: "/wiki/skyblock/eventos" },
+          { title: "Comandos", href: "/wiki/skyblock/comandos" },
+          { title: "Crafting", href: "/wiki/skyblock/crafting" },
+          { title: "Vote", href: "/wiki/skyblock/votar" },
+          { title: "Benefícios VIP", href: "/wiki/skyblock/beneficios-vip" },
+          { title: "Textura", href: "/wiki/skyblock/textura-do-servidor" },
+        ],
+      },
+      {
+        title: "RankUP",
+        href: "/wiki/rankup",
+        children: [
+          { title: "Como Começar", href: "/wiki/rankup/como-comecar" },
+          { title: "Ranks", href: "/wiki/rankup/ranks", emBreve: true },
+          { title: "Progressão", href: "/wiki/rankup/progressao" },
+          { title: "Economia", href: "/wiki/rankup/economia" },
+          { title: "Prestígio", href: "/wiki/rankup/prestigio" },
+          { title: "Sistemas", href: "/wiki/rankup/sistemas" },
+          { title: "Comandos", href: "/wiki/rankup/comandos" },
+          { title: "Guias", href: "/wiki/rankup/guias" },
+        ],
+      },
     ],
   },
   {
@@ -28,7 +62,7 @@ export const navSections: NavSection[] = [
       { title: "Loja", href: "/wiki/sistemas/loja" },
       { title: "Ranks", href: "/wiki/sistemas/ranks" },
       { title: "Encantamentos", href: "/wiki/sistemas/encantamentos" },
-      { title: "Crates", href: "/wiki/sistemas/crates" },
+      { title: "Crates", href: "/wiki/sistemas/crates", emBreve: true },
       { title: "Eventos", href: "/wiki/sistemas/eventos" },
       { title: "Missões", href: "/wiki/sistemas/missoes" },
       { title: "Recompensas", href: "/wiki/sistemas/recompensas" },
@@ -50,7 +84,7 @@ export const navSections: NavSection[] = [
       { title: "Comandos", href: "/wiki/comandos" },
       { title: "Encantamentos", href: "/wiki/encantamentos" },
       { title: "Ranks", href: "/wiki/ranks" },
-      { title: "Itens", href: "/wiki/referencia/itens" },
+      { title: "Itens", href: "/wiki/referencia/itens", emBreve: true },
       { title: "Termos", href: "/wiki/referencia/termos" },
     ],
   },

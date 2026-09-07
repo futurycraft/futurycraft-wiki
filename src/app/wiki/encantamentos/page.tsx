@@ -3,6 +3,7 @@ import { siteConfig } from "@/config/site";
 import { DocLayout } from "@/components/doc-layout";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { EnchantsCatalog } from "@/components/enchants-catalog";
+import { JsonLd, breadcrumbJsonLd } from "@/components/json-ld";
 
 export const metadata = {
   title: "Encantamentos",
@@ -17,6 +18,7 @@ export default function EncantamentosPage() {
   return (
     <DocLayout>
       <div className="animate-fade-in">
+        <JsonLd data={breadcrumbJsonLd([{ name: "Wiki", href: "/wiki" }, { name: "Encantamentos" }])} />
         <Breadcrumb
           items={[{ label: "Wiki", href: "/wiki" }, { label: "Encantamentos" }]}
         />

@@ -1,9 +1,11 @@
+import Link from "next/link";
 import type { Article } from "@/lib/content";
 import { Breadcrumb } from "./breadcrumb";
 import { Callout } from "./callout";
 import { RelatedArticles } from "./related-articles";
 import { CodeCopy } from "./code-copy";
 import { navSections } from "@/lib/nav";
+import { ArrowLeftIcon, ArrowRightIcon } from "./icons";
 
 function crumbLabel(path: string): string {
   const href = `/wiki/${path}`;
@@ -17,12 +19,22 @@ function crumbLabel(path: string): string {
     .join(" ");
 }
 
+interface ArticleNav {
+  title: string;
+  icon: string;
+  href: string;
+}
+
 export function ArticleLayout({
   article,
   related,
+  prev,
+  next,
 }: {
   article: Article;
   related: { title: string; icon: string; description: string; href: string }[];
+  prev?: ArticleNav;
+  next?: ArticleNav;
 }) {
   const crumbs = article.path.split("/");
   return (
@@ -70,6 +82,38 @@ export function ArticleLayout({
         className="prose mt-6"
         dangerouslySetInnerHTML={{ __html: article.contentHtml }}
       />
+      {(prev || next) && (
+        <nav className="mt-10 grid gap-3 border-t border-border pt-6 sm:grid-cols-2" aria-label="Navegação entre artigos">
+          {prev ? (
+            <Link
+              href={prev.href}
+              className="group flex flex-col gap-1 rounded-xl border border-border bg-bg-card p-4 transition-colors hover:border-accent/40 hover:bg-bg-hover"
+            >
+              <span className="flex items-center gap-1.5 text-[0.6875rem] text-text-muted">
+                <ArrowLeftIcon className="h-3.5 w-3.5" /> Anterior
+              </span>
+              <span className="flex items-center gap-1.5 text-sm font-semibold text-text group-hover:text-accent">
+                <span aria-hidden="true">{prev.icon}</span> {prev.title}
+              </span>
+            </Link>
+          ) : (
+            <span />
+          )}
+          {next && (
+            <Link
+              href={next.href}
+              className="group flex flex-col gap-1 rounded-xl border border-border bg-bg-card p-4 text-right transition-colors hover:border-accent/40 hover:bg-bg-hover"
+            >
+              <span className="flex justify-end items-center gap-1.5 text-[0.6875rem] text-text-muted">
+                Próximo <ArrowRightIcon className="h-3.5 w-3.5" />
+              </span>
+              <span className="flex items-center justify-end gap-1.5 text-sm font-semibold text-text group-hover:text-accent">
+                {next.title} <span aria-hidden="true">{next.icon}</span>
+              </span>
+            </Link>
+          )}
+        </nav>
+      )}
       <RelatedArticles articles={related} />
     </article>
   );

@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { siteConfig } from "@/config/site";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { JsonLd, websiteJsonLd } from "@/components/json-ld";
 import "./globals.css";
 
 const inter = Inter({
@@ -49,6 +50,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={inter.variable}>
       <body className="min-h-screen bg-bg text-text antialiased">
+        <JsonLd data={websiteJsonLd()} />
         <Header />
         <main className="flex min-h-[calc(100vh-4rem)] flex-col">
           <div className="flex-1">{children}</div>

@@ -6,9 +6,23 @@ import { ArticleLayout } from "@/components/article-layout";
 import { ArticleToc } from "@/components/article-toc";
 import { WikiCard } from "@/components/wiki-card";
 import { DocLayout } from "@/components/doc-layout";
+import { JsonLd, articleJsonLd, breadcrumbJsonLd } from "@/components/json-ld";
+import { navSections } from "@/lib/nav";
 
 interface PageProps {
   params: Promise<{ slug: string[] }>;
+}
+
+function crumbLabel(path: string): string {
+  const href = `/wiki/${path}`;
+  for (const section of navSections) {
+    const found = section.items.find((item) => item.href === href);
+    if (found) return found.title;
+  }
+  return path
+    .split("/")
+    .map((seg) => seg.charAt(0).toUpperCase() + seg.slice(1))
+    .join(" ");
 }
 
 function toTitle(s: string): string {
@@ -62,11 +76,39 @@ export default async function WikiSlugPage({ params }: PageProps) {
         description: a.meta.description,
         href: `/wiki/${a.path}`,
       }));
+
+    const index = groupArticles.findIndex((a) => a.path === article.path);
+    const prev = index > 0 ? groupArticles[index - 1] : undefined;
+    const next = index >= 0 && index < groupArticles.length - 1 ? groupArticles[index + 1] : undefined;
+
+    const crumbs = ["Wiki", ...article.path.split("/")];
+    const bcItems = crumbs.map((c, i) => ({
+      name: i === 0 ? c : crumbLabel(c),
+      href: i === 0 ? "/wiki" : `/wiki/${crumbs.slice(1, i + 1).join("/")}`,
+    }));
+
     return (
       <DocLayout>
+        <JsonLd
+          data={[
+            articleJsonLd({
+              title: article.meta.title,
+              description: article.meta.description,
+              url: `${siteConfig.url}/wiki/${article.path}`,
+              datePublished: article.meta.updatedAt,
+              section: article.meta.category,
+            }),
+            breadcrumbJsonLd(bcItems),
+          ]}
+        />
         <div className="flex gap-10">
           <div className="min-w-0 flex-1">
-            <ArticleLayout article={article} related={related} />
+            <ArticleLayout
+              article={article}
+              related={related}
+              prev={prev ? { title: prev.meta.title, icon: prev.meta.icon, href: `/wiki/${prev.path}` } : undefined}
+              next={next ? { title: next.meta.title, icon: next.meta.icon, href: `/wiki/${next.path}` } : undefined}
+            />
           </div>
           <ArticleToc toc={article.toc} />
         </div>
@@ -77,6 +119,12 @@ export default async function WikiSlugPage({ params }: PageProps) {
   if (groupArticles.length > 0) {
     return (
       <DocLayout>
+        <JsonLd
+          data={breadcrumbJsonLd([
+            { name: "Wiki", href: "/wiki" },
+            { name: groupArticles[0].meta.category },
+          ])}
+        />
         <div className="animate-fade-in">
           <header className="mb-8">
             <p className="text-sm text-text-muted">{toTitle(group)}</p>

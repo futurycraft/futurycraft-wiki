@@ -4,40 +4,55 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { EnchantCard } from "./enchant-card";
-import {
-  encantCategories,
-  encantGrupos,
-  type Encantamento,
-} from "@/data/encantamentos";
-import { encantamentosPadrao } from "@/data/enchants/padrao";
-import { encantamentosCosmicos } from "@/data/enchants/cosmicos";
-import { encantamentosVanilla } from "@/data/enchants/vanilla";
+import { encantCategories, encantGrupos, type EncantGrupo } from "@/data/encantamentos";
+import { getEnchantsByFamily } from "@/lib/enchants";
 
 type Source = "padrao" | "cosmicos" | "vanilla";
+type SortOrder = "relevancia" | "nome-asc" | "nome-desc" | "nivel-desc";
 
-const sources: Record<Source, Encantamento[]> = {
-  padrao: encantamentosPadrao,
-  cosmicos: encantamentosCosmicos,
-  vanilla: encantamentosVanilla,
-};
+function strCompare(a: string, b: string) {
+  return a.localeCompare(b, "pt-BR", { sensitivity: "base" });
+}
 
 export function EnchantsCatalog() {
   const searchParams = useSearchParams();
   const initialCat = (searchParams.get("categoria") as Source) ?? "padrao";
   const initialNome = searchParams.get("nome") ?? "";
   const [source, setSource] = useState<Source>(initialCat);
-  const [grupo, setGrupo] = useState<string>("Todos");
+  const [grupo, setGrupo] = useState<EncantGrupo>("Todos");
   const [query, setQuery] = useState(initialNome);
+  const [sort, setSort] = useState<SortOrder>("relevancia");
 
-  const items = sources[source];
+  const items = getEnchantsByFamily(source);
+
   const filtered = useMemo(() => {
     const q = query.toLowerCase().trim();
-    return items.filter((e) => {
+    const list = items.filter((e) => {
       if (grupo !== "Todos" && e.grupo !== grupo) return false;
-      if (q && !`${e.nome} ${e.descricao} ${e.aplicaSe}`.toLowerCase().includes(q)) return false;
+      if (
+        q &&
+        !`${e.nome} ${e.descricao} ${e.aplicaSe} ${e.raridade} ${e.familia}`
+          .toLowerCase()
+          .includes(q)
+      )
+        return false;
       return true;
     });
-  }, [items, grupo, query]);
+    switch (sort) {
+      case "nome-asc":
+        return [...list].sort((a, b) => strCompare(a.nome, b.nome));
+      case "nome-desc":
+        return [...list].sort((a, b) => strCompare(b.nome, a.nome));
+      case "nivel-desc":
+        return [...list].sort((a, b) => b.nivelMaximo - a.nivelMaximo);
+      case "relevancia":
+      default:
+        if (!q) {
+          return [...list].sort((a, b) => strCompare(a.nome, b.nome));
+        }
+        return list;
+    }
+  }, [items, grupo, query, sort]);
 
   return (
     <div>
@@ -62,7 +77,7 @@ export function EnchantsCatalog() {
       <div
         className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4"
         role="group"
-        aria-label="Filtrar por grupo de encantamento"
+        aria-label="Filtrar por grupo de raridade"
       >
         {encantGrupos.map((g) => (
           <button
@@ -77,15 +92,13 @@ export function EnchantsCatalog() {
           >
             {g}
             <span className="ml-1 text-xs opacity-70">
-              {g === "Todos"
-                ? items.length
-                : items.filter((e) => e.grupo === g).length}
+              {g === "Todos" ? items.length : items.filter((e) => e.grupo === g).length}
             </span>
           </button>
         ))}
       </div>
 
-      <div className="mt-5">
+      <div className="mt-5 flex flex-col gap-3 sm:flex-row">
         <label htmlFor="encant-search" className="sr-only">
           Pesquisar encantamento
         </label>
@@ -94,20 +107,45 @@ export function EnchantsCatalog() {
           type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Pesquisar encantamento…"
+          placeholder="Pesquisar por nome, efeito, item ou raridade…"
           className="w-full rounded-xl border border-border bg-bg-card px-4 py-3 text-sm text-text placeholder:text-text-muted focus:border-accent focus:outline-none"
         />
+        <label htmlFor="encant-sort" className="sr-only">
+          Ordenar encantamentos
+        </label>
+        <select
+          id="encant-sort"
+          value={sort}
+          onChange={(e) => setSort(e.target.value as SortOrder)}
+          className="rounded-xl border border-border bg-bg-card px-4 py-3 text-sm text-text focus:border-accent focus:outline-none"
+        >
+          <option value="relevancia">Relevância</option>
+          <option value="nome-asc">Nome (A–Z)</option>
+          <option value="nome-desc">Nome (Z–A)</option>
+          <option value="nivel-desc">Nível máximo</option>
+        </select>
       </div>
 
-      <p className="mt-4 text-sm text-text-muted">
+      <p className="mt-4 text-sm text-text-muted" aria-live="polite">
         {filtered.length} encantamento{filtered.length === 1 ? "" : "s"}
+        {query && (
+          <>
+            {" "}para &quot;{query}&quot;
+          </>
+        )}
       </p>
 
-      <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3" id="encantamentos-list">
-        {filtered.map((e) => (
-          <EnchantCard key={e.slug} e={e} />
-        ))}
-      </div>
+      {filtered.length === 0 ? (
+        <div className="mt-4 rounded-xl border border-dashed border-border bg-bg-card p-10 text-center text-sm text-text-muted">
+          Nenhum encantamento encontrado. Ajuste os filtros para ver mais resultados.
+        </div>
+      ) : (
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3" id="encantamentos-list">
+          {filtered.map((e) => (
+            <EnchantCard key={`${e.familiaSlug}:${e.slug}`} e={e} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

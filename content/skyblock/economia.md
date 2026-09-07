@@ -21,6 +21,8 @@ Para visualizar as missões disponíveis **DENTRO DA SUA ILHA**, utilize um dos 
 - `/d` — menu de todas as missões do servidor
 - `/q` — missões secundárias disponíveis para sua ilha
 
+Veja também as páginas de [Missões](/wiki/skyblock/missoes) e de [Sistemas de Economia](/wiki/sistemas/economia).
+
 ## Money
 
 - `/money` — ver o seu money

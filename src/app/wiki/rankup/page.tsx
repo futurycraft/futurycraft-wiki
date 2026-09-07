@@ -2,35 +2,44 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { getArticlesByGroup } from "@/lib/content";
+import { comandos } from "@/data/comandos";
 import { DocLayout } from "@/components/doc-layout";
 import { WikiCard } from "@/components/wiki-card";
 import { Breadcrumb } from "@/components/breadcrumb";
-import { ArrowRightIcon } from "@/components/icons";
+import { JsonLd, breadcrumbJsonLd } from "@/components/json-ld";
+import { ArrowRightIcon, SparkIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "RankUP",
   description:
-    "Subir de rank, prestígio, sistemas e comandos do modo RankUP do FuturyCraft.",
+    "Central do modo RankUP do FuturyCraft: como começar, ranks, progressão, economia, prestígio, sistemas e comandos.",
   alternates: { canonical: `${siteConfig.wikiUrl}/rankup` },
 };
 
 const highlights = [
+  { icon: "🚀", title: "Como Começar", desc: "Os primeiros passos no modo RankUP.", href: "/wiki/rankup/como-comecar" },
   { icon: "⚔️", title: "Ranks", desc: "A linha de ranks e requisitos de progressão.", href: "/wiki/rankup/ranks" },
   { icon: "📈", title: "Progressão", desc: "Como evoluir no RankUP passo a passo.", href: "/wiki/rankup/progressao" },
   { icon: "💰", title: "Economia", desc: "Dinheiro, farm e investimentos no RankUP.", href: "/wiki/rankup/economia" },
   { icon: "✨", title: "Prestígio", desc: "Como o prestígio impacta sua jornada.", href: "/wiki/rankup/prestigio" },
   { icon: "🧰", title: "Sistemas", desc: "Sistemas exclusivos do modo RankUP.", href: "/wiki/rankup/sistemas" },
   { icon: "📖", title: "Comandos", desc: "Todos os comandos do RankUP.", href: "/wiki/rankup/comandos" },
+  { icon: "📚", title: "Guias", desc: "Guias práticos para evoluir no modo.", href: "/wiki/rankup/guias" },
 ];
 
 export default function RankupPage() {
   const guides = getArticlesByGroup("rankup").filter((a) => a.slug !== "home");
+  const cmdList = comandos
+    .filter((c) => c.categoria === "Mina" || c.categoria === "RankUP")
+    .slice(0, 8);
+
   return (
     <DocLayout>
       <div className="animate-fade-in">
+        <JsonLd data={breadcrumbJsonLd([{ name: "Wiki", href: "/wiki" }, { name: "RankUP" }])} />
         <Breadcrumb items={[{ label: "Wiki", href: "/wiki" }, { label: "RankUP" }]} />
 
-        <div className="mt-6 overflow-hidden rounded-2xl border border-border bg-bg-card p-6 card-glow sm:p-8">
+        <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-bg-card p-6 card-glow sm:p-8">
           <div className="flex flex-wrap items-center gap-2">
             <span className="rounded-full border border-accent/30 bg-accent-glow px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent">
               Modo de jogo
@@ -58,11 +67,22 @@ export default function RankupPage() {
               Versão: <span className="text-text">{siteConfig.version}</span>
             </span>
           </div>
+          <div className="mt-5">
+            <Link
+              href="/wiki/rankup/como-comecar"
+              className="inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-bg transition-colors hover:bg-accent-dim"
+            >
+              Começar no RankUP <ArrowRightIcon className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
 
         <section className="mt-10">
-          <h2 className="mb-4 text-lg font-semibold text-text">Principais sistemas</h2>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold text-text">
+            <SparkIcon className="h-4 w-4 text-accent" />
+            Principais sistemas
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {highlights.map((h) => (
               <WikiCard key={h.title} icon={h.icon} title={h.title} description={h.desc} href={h.href} />
             ))}
@@ -70,8 +90,8 @@ export default function RankupPage() {
         </section>
 
         <section className="mt-10">
-          <h2 className="mb-4 text-lg font-semibold text-text">Guias do RankUP</h2>
-          <div className="grid gap-3 sm:grid-cols-2">
+          <h2 className="mb-4 text-lg font-semibold text-text">Documentação do RankUP</h2>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {guides.map((g) => (
               <Link
                 key={g.path}
@@ -88,6 +108,53 @@ export default function RankupPage() {
                 </span>
               </Link>
             ))}
+          </div>
+        </section>
+
+        <section className="mt-10">
+          <h2 className="mb-4 text-lg font-semibold text-text">Comandos essenciais</h2>
+          <div className="flex flex-wrap gap-2">
+            {cmdList.map((c) => (
+              <Link
+                key={c.comando}
+                href={`/wiki/comandos?comando=${encodeURIComponent(c.comando)}`}
+                className="rounded-full border border-border bg-bg-card px-4 py-2 font-mono text-xs text-text-muted transition-colors hover:border-accent/50 hover:text-accent"
+              >
+                {c.comando}
+              </Link>
+            ))}
+            <Link
+              href="/wiki/comandos?cat=Mina"
+              className="rounded-full border border-dashed border-border bg-transparent px-4 py-2 text-xs text-text-muted transition-colors hover:border-accent/50 hover:text-accent"
+            >
+              Ver todos →
+            </Link>
+          </div>
+        </section>
+
+        <section className="mt-10">
+          <h2 className="mb-4 text-lg font-semibold text-text">Guia relacionado</h2>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <Link
+              href="/wiki/guias/progressao"
+              className="group flex items-start gap-3 rounded-xl border border-border bg-bg-card p-4 transition-colors hover:border-accent/40 hover:bg-bg-hover"
+            >
+              <span className="text-xl" aria-hidden="true">📈</span>
+              <span className="flex flex-col gap-0.5">
+                <span className="text-sm font-semibold text-text group-hover:text-accent">Guia de Progressão</span>
+                <span className="text-xs text-text-muted">Dicas gerais para evoluir em qualquer modo do servidor.</span>
+              </span>
+            </Link>
+            <Link
+              href="/wiki/sistemas/economia"
+              className="group flex items-start gap-3 rounded-xl border border-border bg-bg-card p-4 transition-colors hover:border-accent/40 hover:bg-bg-hover"
+            >
+              <span className="text-xl" aria-hidden="true">💰</span>
+              <span className="flex flex-col gap-0.5">
+                <span className="text-sm font-semibold text-text group-hover:text-accent">Economia do servidor</span>
+                <span className="text-xs text-text-muted">Money, cash, loja e recompensas.</span>
+              </span>
+            </Link>
           </div>
         </section>
       </div>
