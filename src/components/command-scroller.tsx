@@ -10,7 +10,9 @@ export function CommandScroller() {
     if (!c) return;
     const el = document.getElementById(`cmd-${c}`);
     if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "center" });
+      const reduce =
+        window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
+      el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
       el.classList.add("ring-2", "ring-accent");
     }
   }, [sp]);

@@ -3,6 +3,19 @@ import { Breadcrumb } from "./breadcrumb";
 import { Callout } from "./callout";
 import { RelatedArticles } from "./related-articles";
 import { CodeCopy } from "./code-copy";
+import { navSections } from "@/lib/nav";
+
+function crumbLabel(path: string): string {
+  const href = `/wiki/${path}`;
+  for (const section of navSections) {
+    const found = section.items.find((item) => item.href === href);
+    if (found) return found.title;
+  }
+  return path
+    .split("/")
+    .map((seg) => seg.charAt(0).toUpperCase() + seg.slice(1))
+    .join(" ");
+}
 
 export function ArticleLayout({
   article,
@@ -17,7 +30,7 @@ export function ArticleLayout({
       <CodeCopy />
       <Breadcrumb
         items={[{ label: "Wiki", href: "/wiki" }, ...crumbs.map((c, i) => ({
-          label: c === "home" ? article.meta.category : c.replace(/-/g, " "),
+          label: c === "home" ? article.meta.category : crumbLabel(c),
           href: `/wiki/${crumbs.slice(0, i + 1).join("/")}`,
         }))]}
       />

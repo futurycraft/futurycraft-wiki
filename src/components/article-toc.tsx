@@ -33,15 +33,15 @@ export function ArticleToc({ toc }: ArticleTocProps) {
         <div className="mb-2 px-3 text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-text-muted">
           Neste artigo
         </div>
-        <ul className="space-y-0.5 border-l border-border">
+        <ul className="space-y-0.5">
           {toc.map((item) => (
             <li key={item.id}>
               <a
                 href={`#${item.id}`}
-                className={`block border-l-2 py-1 text-[0.8125rem] transition-colors ${
+                className={`-ml-0.5 block border-l-2 py-1 text-[0.8125rem] transition-colors ${
                   activeId === item.id
                     ? "border-accent text-accent"
-                    : "border-transparent text-text-muted hover:text-text"
+                    : "border-transparent text-text-muted hover:border-border-bright hover:text-text"
                 }`}
                 style={{ paddingLeft: `${0.75 + (item.level - 2) * 0.75}rem` }}
               >

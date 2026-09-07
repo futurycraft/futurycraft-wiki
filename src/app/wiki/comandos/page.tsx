@@ -43,7 +43,8 @@ export default async function ComandosPage({
             <Link
               key={c}
               href={c === "Todos" ? "/wiki/comandos" : `/wiki/comandos?cat=${encodeURIComponent(c)}`}
-              className={`rounded-full border px-3.5 py-1.5 text-sm transition-colors ${
+              aria-current={categoria === c ? "page" : undefined}
+              className={`rounded-full border px-4 py-2 text-sm transition-colors ${
                 categoria === c
                   ? "border-accent bg-accent-glow text-accent"
                   : "border-border bg-bg-card text-text-muted hover:border-border-bright hover:text-text"

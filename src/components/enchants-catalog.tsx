@@ -41,15 +41,14 @@ export function EnchantsCatalog() {
 
   return (
     <div>
-      <div className="mt-6 flex flex-wrap gap-2" role="tablist" aria-label="Família de encantamentos">
+      <div className="mt-6 flex flex-wrap gap-2" aria-label="Família de encantamentos">
         {encantCategories.map((cat) => (
           <Link
             key={cat.slug}
             href={`/wiki/encantamentos?categoria=${cat.slug}`}
-            role="tab"
-            aria-selected={source === cat.slug}
+            aria-current={source === cat.slug ? "page" : undefined}
             onClick={() => setSource(cat.slug as Source)}
-            className={`rounded-full border px-3.5 py-1.5 text-sm transition-colors ${
+            className={`rounded-full border px-4 py-2 text-sm transition-colors ${
               source === cat.slug
                 ? "border-accent bg-accent-glow text-accent"
                 : "border-border bg-bg-card text-text-muted hover:border-border-bright hover:text-text"
@@ -60,12 +59,17 @@ export function EnchantsCatalog() {
         ))}
       </div>
 
-      <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div
+        className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4"
+        role="group"
+        aria-label="Filtrar por grupo de encantamento"
+      >
         {encantGrupos.map((g) => (
           <button
             key={g}
             onClick={() => setGrupo(g)}
-            className={`rounded-lg border px-3 py-2 text-left text-sm transition-colors ${
+            aria-pressed={grupo === g}
+            className={`rounded-lg border px-3 py-2.5 text-left text-sm transition-colors ${
               grupo === g
                 ? "border-accent bg-accent-glow text-accent"
                 : "border-border bg-bg-card text-text-muted hover:border-border-bright hover:text-text"
@@ -82,13 +86,16 @@ export function EnchantsCatalog() {
       </div>
 
       <div className="mt-5">
+        <label htmlFor="encant-search" className="sr-only">
+          Pesquisar encantamento
+        </label>
         <input
+          id="encant-search"
           type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Pesquisar encantamento…"
-          aria-label="Pesquisar encantamento"
-          className="w-full rounded-xl border border-border bg-bg-card px-4 py-2.5 text-sm text-text placeholder:text-text-muted focus:border-accent focus:outline-none"
+          className="w-full rounded-xl border border-border bg-bg-card px-4 py-3 text-sm text-text placeholder:text-text-muted focus:border-accent focus:outline-none"
         />
       </div>
 

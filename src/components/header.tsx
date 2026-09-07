@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Logo } from "./logo";
 import { SearchModal } from "./search-modal";
 import { DiscordIcon, MenuIcon, SearchIcon } from "./icons";
+import { navSections } from "@/lib/nav";
 
 const links = [
   { label: "Wiki", href: "/wiki" },
@@ -34,6 +35,15 @@ export function Header() {
   useEffect(() => {
     setOpenMenu(false);
   }, [pathname]);
+
+  useEffect(() => {
+    if (!openMenu) return;
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") setOpenMenu(false);
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [openMenu]);
 
   useEffect(() => {
     document.body.style.overflow = openMenu ? "hidden" : "";
@@ -113,21 +123,49 @@ export function Header() {
             <div className="mb-2 flex items-center justify-between">
               <Logo />
             </div>
-            {links.map((l) => {
-              const active = pathname === l.href || (l.href !== "/wiki" && pathname.startsWith(l.href));
-              return (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setOpenMenu(false)}
-                  className={`rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
-                    active ? "bg-accent-glow text-accent" : "text-text-dim hover:bg-bg-hover hover:text-text"
-                  }`}
-                >
-                  {l.label}
-                </Link>
-              );
-            })}
+            <div className="mb-3 flex flex-wrap gap-1.5 border-b border-border pb-3">
+              {links.map((l) => {
+                const active = pathname === l.href || (l.href !== "/wiki" && pathname.startsWith(l.href));
+                return (
+                  <Link
+                    key={l.href}
+                    href={l.href}
+                    onClick={() => setOpenMenu(false)}
+                    className={`rounded-lg px-2.5 py-1.5 text-xs font-medium transition-colors ${
+                      active ? "bg-accent-glow text-accent" : "text-text-muted hover:bg-bg-hover hover:text-text"
+                    }`}
+                  >
+                    {l.label}
+                  </Link>
+                );
+              })}
+            </div>
+            {navSections.map((section) => (
+              <div key={section.label} className="mb-4">
+                <div className="mb-1 px-3 text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-text-muted">
+                  {section.label}
+                </div>
+                <ul className="space-y-0.5">
+                  {section.items.map((item) => {
+                    const active =
+                      pathname === item.href ||
+                      (item.href !== "/wiki" && pathname.startsWith(item.href));
+                    return (
+                      <li key={item.href}>
+                        <Link
+                          href={item.href}
+                          onClick={() => setOpenMenu(false)}
+                          className={`sidebar-link ${active ? "active" : ""}`}
+                          aria-current={active ? "page" : undefined}
+                        >
+                          {item.title}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            ))}
             <div className="mt-2 flex items-center gap-2 border-t border-border pt-3">
               <a
                 href="https://discord.futurycraft.com.br/"

@@ -21,7 +21,7 @@ export function CommandBlock({ command, description, usage, example }: CommandBl
       {usage && (
         <div className="px-4 pb-3">
           <span className="text-xs font-semibold uppercase tracking-wide text-text-muted">Uso</span>
-          <code className="mt-1 block w-fit rounded-lg border border-border bg-bg-raised px-3 py-1.5 font-mono text-xs text-text">
+          <code className="mt-1 block w-fit max-w-full overflow-x-auto rounded-lg border border-border bg-bg-raised px-3 py-1.5 font-mono text-xs text-text">
             {usage}
           </code>
         </div>
@@ -29,7 +29,7 @@ export function CommandBlock({ command, description, usage, example }: CommandBl
       {example && (
         <div className="px-4 pb-3">
           <span className="text-xs font-semibold uppercase tracking-wide text-text-muted">Exemplo</span>
-          <code className="mt-1 block w-fit rounded-lg border border-border bg-bg-raised px-3 py-1.5 font-mono text-xs text-text">
+          <code className="mt-1 block w-fit max-w-full overflow-x-auto rounded-lg border border-border bg-bg-raised px-3 py-1.5 font-mono text-xs text-text">
             {example}
           </code>
         </div>
