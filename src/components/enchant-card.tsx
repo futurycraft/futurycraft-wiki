@@ -17,7 +17,7 @@ export function EnchantCard({ e }: { e: CatalogEnchant }) {
   const color = rarityColor[e.raridade] ?? "text-text-muted border-border-bright";
   return (
     <Link
-      href={`/wiki/encantamentos/${e.path}`}
+      href={`/encantamentos/${e.path}`}
       className="flex h-full flex-col gap-1 rounded-xl border border-border bg-bg-card p-4 transition-colors hover:border-accent/40 hover:bg-bg-hover"
     >
       <div className="flex items-start justify-between gap-2">

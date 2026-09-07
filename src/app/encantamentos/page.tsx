@@ -10,7 +10,7 @@ export const metadata = {
   description:
     "Catálogo completo dos 284 encantamentos personalizados do FuturyCraft, com filtro por raridade.",
   alternates: {
-    canonical: `${siteConfig.url}/wiki/encantamentos`,
+    canonical: `${siteConfig.url}/encantamentos`,
   },
 };
 
@@ -18,9 +18,9 @@ export default function EncantamentosPage() {
   return (
     <DocLayout>
       <div className="animate-fade-in">
-        <JsonLd data={breadcrumbJsonLd([{ name: "Wiki", href: "/wiki" }, { name: "Encantamentos" }])} />
+        <JsonLd data={breadcrumbJsonLd([{ name: "Wiki", href: "/" }, { name: "Encantamentos" }])} />
         <Breadcrumb
-          items={[{ label: "Wiki", href: "/wiki" }, { label: "Encantamentos" }]}
+          items={[{ label: "Wiki", href: "/" }, { label: "Encantamentos" }]}
         />
         <header className="mt-4">
           <h1 className="text-3xl font-bold tracking-tight text-text sm:text-4xl">

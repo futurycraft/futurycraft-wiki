@@ -12,7 +12,7 @@ O RankUP é um modo focado em **evolução**: você sobe de rank gastando money,
 
 ## 1 — Entre no servidor
 
-Conecte-se e selecione o modo RankUP. Veja [Como Entrar](/wiki/comecando/entrar) para detalhes de Java e Bedrock.
+Conecte-se e selecione o modo RankUP. Veja [Como Entrar](/comecando/entrar) para detalhes de Java e Bedrock.
 
 ## 2 — Conheça as minas
 
@@ -30,18 +30,18 @@ Use os comandos abaixo para acessar as minas:
 /minavip
 ```
 
-> O `/minavip` está disponível **somente para VIPs**. Veja os [benefícios dos VIPs](/wiki/ranks).
+> O `/minavip` está disponível **somente para VIPs**. Veja os [benefícios dos VIPs](/ranks).
 
 ## 3 — Evolua por ranks
 
-Sua progressão é baseada em ranks adquiridos com money. Confira a página de [Ranks](/wiki/rankup/ranks) para ver requisitos e benefícios.
+Sua progressão é baseada em ranks adquiridos com money. Confira a página de [Ranks](/rankup/ranks) para ver requisitos e benefícios.
 
 ## 4 — Acompanhe sua economia
 
-Use `/money` e `/cash` para acompanhar seus recursos. Saiba mais na página de [Economia](/wiki/rankup/economia).
+Use `/money` e `/cash` para acompanhar seus recursos. Saiba mais na página de [Economia](/rankup/economia).
 
 ## 5 — Continue evoluindo
 
-Após alcançar o topo, o [Prestígio](/wiki/rankup/prestigio) permite reiniciar sua progressão para ganhar bônus permanentes.
+Após alcançar o topo, o [Prestígio](/rankup/prestigio) permite reiniciar sua progressão para ganhar bônus permanentes.
 
-> Consulte também os [Comandos do RankUP](/wiki/rankup/comandos) e a página de [Sistemas](/wiki/rankup/sistemas).
+> Consulte também os [Comandos do RankUP](/rankup/comandos) e a página de [Sistemas](/rankup/sistemas).

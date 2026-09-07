@@ -12,10 +12,10 @@ Bem-vindo à seção de **Guias de Crafting**! Aqui você encontrará todas as r
 
 ## Categorias de Receitas
 
-- [Vegetais](/wiki/skyblock/crafting/vegetais)
-- [Comidas](/wiki/skyblock/crafting/comidas)
-- [Sementes](/wiki/skyblock/crafting/sementes)
-- [Itens Principais](/wiki/skyblock/crafting/itens-principais)
+- [Vegetais](/skyblock/crafting/vegetais)
+- [Comidas](/skyblock/crafting/comidas)
+- [Sementes](/skyblock/crafting/sementes)
+- [Itens Principais](/skyblock/crafting/itens-principais)
 
 ## Receitas Conhecidas
 

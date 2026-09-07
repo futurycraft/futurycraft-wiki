@@ -31,6 +31,6 @@ Use o comando `/dragao` para participar.
 
 Fique de olho no chat do servidor — os anúncios de eventos aparecem com antecedência. Ao ver o anúncio, siga as instruções no chat e use o comando indicado para entrar no evento.
 
-> Consulte também [Sistemas de Eventos](/wiki/sistemas/eventos) e as [Recompensas](/wiki/sistemas/recompensas) disponíveis.
+> Consulte também [Sistemas de Eventos](/sistemas/eventos) e as [Recompensas](/sistemas/recompensas) disponíveis.
 
 > **Em breve:** mais detalhes sobre outros eventos e recompensas serão adicionados aqui.

@@ -24,12 +24,12 @@ export const season: SeasonConfig = {
 };
 
 export const skyblockHighlights = [
-  { icon: "🌋", title: "Ilha inicial", desc: "Comece com uma ilha básica e expanda aos poucos.", href: "/wiki/skyblock/como-comecar" },
-  { icon: "🏝️", title: "Tipos de ilha", desc: "Ilha padrão, dupla ou em L — escolha a sua.", href: "/wiki/skyblock/ilhas" },
-  { icon: "⛏️", title: "Minions", desc: "Automáticos de mineração, plantas, mobs e mais.", href: "/wiki/skyblock/minions" },
-  { icon: "💰", title: "Economia", desc: "Venda itens, faça quests e participe da economia.", href: "/wiki/skyblock/economia" },
-  { icon: "🎯", title: "Missões", desc: "Complete com /c, /d e /q e ganhe recompensas.", href: "/wiki/skyblock/missoes" },
-  { icon: "✨", title: "Encantamentos", desc: "284 encantamentos personalizados para dominar.", href: "/wiki/skyblock/encantamentos" },
-  { icon: "🧙", title: "Textura", desc: "Ative a textura oficial com /textura.", href: "/wiki/skyblock/textura-do-servidor" },
-  { icon: "🎫", title: "Vote", desc: "Vote e ganhe recompensas todos os dias.", href: "/wiki/skyblock/votar" },
+  { icon: "🌋", title: "Ilha inicial", desc: "Comece com uma ilha básica e expanda aos poucos.", href: "/skyblock/como-comecar" },
+  { icon: "🏝️", title: "Tipos de ilha", desc: "Ilha padrão, dupla ou em L — escolha a sua.", href: "/skyblock/ilhas" },
+  { icon: "⛏️", title: "Minions", desc: "Automáticos de mineração, plantas, mobs e mais.", href: "/skyblock/minions" },
+  { icon: "💰", title: "Economia", desc: "Venda itens, faça quests e participe da economia.", href: "/skyblock/economia" },
+  { icon: "🎯", title: "Missões", desc: "Complete com /c, /d e /q e ganhe recompensas.", href: "/skyblock/missoes" },
+  { icon: "✨", title: "Encantamentos", desc: "284 encantamentos personalizados para dominar.", href: "/skyblock/encantamentos" },
+  { icon: "🧙", title: "Textura", desc: "Ative a textura oficial com /textura.", href: "/skyblock/textura-do-servidor" },
+  { icon: "🎫", title: "Vote", desc: "Vote e ganhe recompensas todos os dias.", href: "/skyblock/votar" },
 ];

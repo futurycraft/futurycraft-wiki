@@ -16,7 +16,7 @@ Acquira benefícios em: [https://futurycraft.com.br/itens](https://futurycraft.c
 
 ## O que comprar
 
-- **VIPs** — veja os benefícios de cada VIP na página de [Ranks](/wiki/ranks)
+- **VIPs** — veja os benefícios de cada VIP na página de [Ranks](/ranks)
 - **Kits** — pacotes de itens e recursos
 - **Cash** — moeda premium
 - **Outros benefícios** — cosmeticos e vantagens

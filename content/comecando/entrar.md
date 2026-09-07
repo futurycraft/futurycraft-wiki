@@ -8,7 +8,7 @@ featured: true
 updatedAt: 2026-01-01
 ---
 
-Você vai conectar pelo IP Java `futurycraft.com.br` ou pelos dados da [Bedrock Edition](/wiki/comecando/bedrock).
+Você vai conectar pelo IP Java `futurycraft.com.br` ou pelos dados da [Bedrock Edition](/comecando/bedrock).
 
 ## Passo a Passo
 

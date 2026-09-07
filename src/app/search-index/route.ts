@@ -28,7 +28,7 @@ function buildIndex(): SearchEntry[] {
       title: a.meta.icon ? `${a.meta.icon} ${a.meta.title}` : a.meta.title,
       subtitle: a.meta.category,
       text: `${a.meta.title} ${a.meta.description} ${a.contentText}`,
-      href: `/wiki/${a.path}`,
+      href: `/${a.path}`,
     });
   }
 
@@ -40,7 +40,7 @@ function buildIndex(): SearchEntry[] {
       title: c.comando,
       subtitle: c.categoria,
       text: `${c.comando} ${c.descricao} ${c.uso ?? ""} ${c.categoria} ${c.permissao}`,
-      href: `/wiki/comandos?comando=${encodeURIComponent(c.comando)}`,
+      href: `/comandos?comando=${encodeURIComponent(c.comando)}`,
     });
   }
 
@@ -52,7 +52,7 @@ function buildIndex(): SearchEntry[] {
       title: `✨ ${e.nome}`,
       subtitle: e.raridade,
       text: `${e.nome} ${e.descricao} ${e.aplicaSe} ${e.raridade} ${e.grupo}`,
-      href: `/wiki/encantamentos/${e.path}`,
+      href: `/encantamentos/${e.path}`,
     });
   }
 
@@ -64,7 +64,7 @@ function buildIndex(): SearchEntry[] {
       title: `🏆 ${v.nome}`,
       subtitle: "VIP",
       text: `${v.nome} ${v.kits} ${v.comandos.join(" ")} ${v.extras.join(" ")}`,
-      href: `/wiki/ranks#${v.slug}`,
+      href: `/ranks#${v.slug}`,
     });
   }
 
@@ -87,7 +87,7 @@ function buildIndex(): SearchEntry[] {
     title: "🏠 Início",
     subtitle: "Wiki",
     text: `${siteConfig.name} ${siteConfig.description}`,
-    href: "/wiki",
+    href: "/",
   });
 
   return entries;

@@ -20,12 +20,12 @@ O SkyBlock possui um sistema de **encantamentos personalizados** com 284 encanta
 
 Confira todos os encantamentos no catálogo completo:
 
-- [Simples (22)](/wiki/encantamentos?grupo=Simples)
-- [Único (26)](/wiki/encantamentos?grupo=Único)
-- [Elite (54)](/wiki/encantamentos?grupo=Elite)
-- [Supremo (75)](/wiki/encantamentos?grupo=Supremo)
-- [Lendário (55)](/wiki/encantamentos?grupo=Lendário)
-- [Heróico (52)](/wiki/encantamentos?grupo=Heróico)
+- [Simples (22)](/encantamentos?grupo=Simples)
+- [Único (26)](/encantamentos?grupo=Único)
+- [Elite (54)](/encantamentos?grupo=Elite)
+- [Supremo (75)](/encantamentos?grupo=Supremo)
+- [Lendário (55)](/encantamentos?grupo=Lendário)
+- [Heróico (52)](/encantamentos?grupo=Heróico)
 
 Cada encantamento possui:
 

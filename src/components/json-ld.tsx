@@ -17,11 +17,11 @@ export function websiteJsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Wiki FuturyCraft",
-    url: "https://futurycraft.com.br/wiki",
+    url: "https://wiki.futurycraft.com.br",
     inLanguage: "pt-BR",
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://futurycraft.com.br/wiki?q={search_term_string}",
+      target: "https://wiki.futurycraft.com.br?q={search_term_string}",
       "query-input": "required name=search_term_string",
     },
   };
@@ -35,7 +35,7 @@ export function breadcrumbJsonLd(items: Crumb[]) {
       "@type": "ListItem",
       position: i + 1,
       name: item.name,
-      ...(item.href ? { item: `https://futurycraft.com.br${item.href}` } : {}),
+      ...(item.href ? { item: `https://wiki.futurycraft.com.br${item.href}` } : {}),
     })),
   };
 }

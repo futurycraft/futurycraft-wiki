@@ -18,9 +18,9 @@ export const metadata: Metadata = {
 };
 
 const popular = [
-  { icon: "🎫", title: "Vote no servidor", desc: "Vote e ganhe recompensas diárias.", href: "/wiki/skyblock/votar" },
-  { icon: "🎰", title: "Loteria", desc: "Participe dos sorteios e concorra a prêmios.", href: "/wiki/skyblock/loteria" },
-  { icon: "⚗️", title: "Alquimista", desc: "Combine e melhore encantamentos.", href: "/wiki/comandos?comando=/alquimista" },
+  { icon: "🎫", title: "Vote no servidor", desc: "Vote e ganhe recompensas diárias.", href: "/skyblock/votar" },
+  { icon: "🎰", title: "Loteria", desc: "Participe dos sorteios e concorra a prêmios.", href: "/skyblock/loteria" },
+  { icon: "⚗️", title: "Alquimista", desc: "Combine e melhore encantamentos.", href: "/comandos?comando=/alquimista" },
 ];
 
 export default function SkyblockPage() {
@@ -32,8 +32,8 @@ export default function SkyblockPage() {
   return (
     <DocLayout>
       <div className="animate-fade-in">
-        <JsonLd data={breadcrumbJsonLd([{ name: "Wiki", href: "/wiki" }, { name: "SkyBlock" }])} />
-        <Breadcrumb items={[{ label: "Wiki", href: "/wiki" }, { label: "SkyBlock" }]} />
+        <JsonLd data={breadcrumbJsonLd([{ name: "Wiki", href: "/" }, { name: "SkyBlock" }])} />
+        <Breadcrumb items={[{ label: "Wiki", href: "/" }, { label: "SkyBlock" }]} />
         <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-bg-card p-6 card-glow sm:p-8">
           <div className="flex flex-wrap items-center gap-2">
             <span className="rounded-full border border-accent/30 bg-accent-glow px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent">
@@ -67,7 +67,7 @@ export default function SkyblockPage() {
           </div>
           <div className="mt-5">
             <Link
-              href="/wiki/skyblock/como-comecar"
+              href="/skyblock/como-comecar"
               className="inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-bg transition-colors hover:bg-accent-dim"
             >
               Começar no SkyBlock <ArrowRightIcon className="h-4 w-4" />
@@ -82,7 +82,7 @@ export default function SkyblockPage() {
           </h2>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             <Link
-              href="/wiki/skyblock/como-comecar"
+              href="/skyblock/como-comecar"
               className="group rounded-xl border border-border bg-bg-card p-4 transition-colors hover:border-accent/40"
             >
               <span className="text-xl" aria-hidden="true">🌱</span>
@@ -90,7 +90,7 @@ export default function SkyblockPage() {
               <span className="mt-0.5 block text-xs text-text-muted">Crie sua ilha e dê os primeiros passos.</span>
             </Link>
             <Link
-              href="/wiki/skyblock/progressao"
+              href="/skyblock/progressao"
               className="group rounded-xl border border-border bg-bg-card p-4 transition-colors hover:border-accent/40"
             >
               <span className="text-xl" aria-hidden="true">📈</span>
@@ -98,7 +98,7 @@ export default function SkyblockPage() {
               <span className="mt-0.5 block text-xs text-text-muted">Evolua sua ilha e seus recursos.</span>
             </Link>
             <Link
-              href="/wiki/skyblock/comandos"
+              href="/skyblock/comandos"
               className="group rounded-xl border border-border bg-bg-card p-4 transition-colors hover:border-accent/40"
             >
               <span className="text-xl" aria-hidden="true">⌨️</span>
@@ -134,7 +134,7 @@ export default function SkyblockPage() {
               .map((g) => (
                 <Link
                   key={g.path}
-                  href={`/wiki/${g.path}`}
+                  href={`/${g.path}`}
                   className="group flex items-start gap-3 rounded-xl border border-border bg-bg-card p-4 transition-colors hover:border-accent/40 hover:bg-bg-hover"
                 >
                   <span className="text-xl" aria-hidden="true">{g.meta.icon}</span>
@@ -149,7 +149,7 @@ export default function SkyblockPage() {
               ))}
           </div>
           <Link
-            href="/wiki/skyblock/crafting"
+            href="/skyblock/crafting"
             className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:text-accent-dim"
           >
             Guias de crafting <ChevronRightIcon className="h-4 w-4" />
@@ -162,14 +162,14 @@ export default function SkyblockPage() {
             {cmdList.map((c) => (
               <Link
                 key={c.comando}
-                href={`/wiki/comandos?comando=${encodeURIComponent(c.comando)}`}
+                href={`/comandos?comando=${encodeURIComponent(c.comando)}`}
                 className="rounded-full border border-border bg-bg-card px-4 py-2 font-mono text-xs text-text-muted transition-colors hover:border-accent/50 hover:text-accent"
               >
                 {c.comando}
               </Link>
             ))}
             <Link
-              href="/wiki/comandos?cat=SkyBlock"
+              href="/comandos?cat=SkyBlock"
               className="rounded-full border border-dashed border-border bg-transparent px-4 py-2 text-xs text-text-muted transition-colors hover:border-accent/50 hover:text-accent"
             >
               Ver todos →

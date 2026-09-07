@@ -18,11 +18,11 @@ export default function ComandosPage() {
   return (
     <DocLayout>
       <div className="animate-fade-in">
-        <JsonLd data={breadcrumbJsonLd([{ name: "Wiki", href: "/wiki" }, { name: "Comandos" }])} />
+        <JsonLd data={breadcrumbJsonLd([{ name: "Wiki", href: "/" }, { name: "Comandos" }])} />
         <Suspense>
           <CommandScroller />
         </Suspense>
-        <Breadcrumb items={[{ label: "Wiki", href: "/wiki" }, { label: "Comandos" }]} />
+        <Breadcrumb items={[{ label: "Wiki", href: "/" }, { label: "Comandos" }]} />
         <header className="mt-4">
           <h1 className="text-3xl font-bold tracking-tight text-text sm:text-4xl">Comandos</h1>
           <p className="mt-2 max-w-2xl text-text-muted">

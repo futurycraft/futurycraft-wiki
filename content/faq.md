@@ -46,12 +46,12 @@ Abra um ticket no [Discord](https://discord.futurycraft.com.br/).
 
 ## Como voto no servidor?
 
-Vote 1 vez a cada 24 horas nos sites listados na página [Vote no Servidor](/wiki/skyblock/votar).
+Vote 1 vez a cada 24 horas nos sites listados na página [Vote no Servidor](/skyblock/votar).
 
 ## Quero entrar para a staff
 
-Veja os requisitos e a explicação completa na página [Entrar para a Equipe](/wiki/informacoes/equipe).
+Veja os requisitos e a explicação completa na página [Entrar para a Equipe](/informacoes/equipe).
 
 ## Sou criador de conteúdo
 
-Veja o [Programa de Criadores](/wiki/informacoes/criadores) para saber como participar.
+Veja o [Programa de Criadores](/informacoes/criadores) para saber como participar.

@@ -10,7 +10,7 @@ updatedAt: 2026-01-01
 
 Sua ilha é o centro da sua experiência no SkyBlock. Aprenda a gerenciar cada parte dela.
 
-> Ainda não tem uma ilha? Veja [Como Começar](/wiki/skyblock/como-comecar). Prefere a lista completa? Consulte os [Comandos](/wiki/comandos).
+> Ainda não tem uma ilha? Veja [Como Começar](/skyblock/como-comecar). Prefere a lista completa? Consulte os [Comandos](/comandos).
 
 ## Nível da Ilha
 

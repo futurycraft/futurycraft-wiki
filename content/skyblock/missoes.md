@@ -37,4 +37,4 @@ Exemplos de desafios encontrados:
 
 Complete os desafios para ganhar recompensas que aceleram sua evolução: itens, dinheiro e recursos exclusivos.
 
-> Veja também as [Missões do servidor](/wiki/sistemas/missoes) e o sistema de [Recompensas](/wiki/sistemas/recompensas).
+> Veja também as [Missões do servidor](/sistemas/missoes) e o sistema de [Recompensas](/sistemas/recompensas).

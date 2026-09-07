@@ -3,8 +3,8 @@ export const siteConfig = {
   title: "Wiki FuturyCraft",
   description:
     "Central de conhecimento do servidor FuturyCraft. Tudo sobre SkyBlock, RankUP, economia, encantamentos, ranks, eventos, regras e comandos.",
-  url: "https://futurycraft.com.br",
-  wikiUrl: "https://futurycraft.com.br/wiki",
+  url: "https://wiki.futurycraft.com.br",
+  wikiUrl: "https://wiki.futurycraft.com.br",
   ipJava: "futurycraft.com.br",
   ipBedrock: "bedrock.futurycraft.com.br",
   bedrockPort: "25654",

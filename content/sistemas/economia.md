@@ -36,4 +36,4 @@ Use `/banco` para acessar seu painel bancário, guardando dinheiro com seguranç
 - `/flyshop` — loja de voar
 - `/voteshop` — loja de votação
 
-Saiba mais sobre cada loja na página de [Loja](/wiki/sistemas/loja).
+Saiba mais sobre cada loja na página de [Loja](/sistemas/loja).

@@ -20,7 +20,7 @@ O **money** é a moeda principal do servidor. O **cash** é a moeda premium.
 
 - Venda recursos das suas farms e minas
 - Complete missões com `/d` e `/q`
-- Participe de eventos (como a **[Loteria](/wiki/skyblock/loteria)**)
+- Participe de eventos (como a **[Loteria](/skyblock/loteria)**)
 - Vote no servidor e use `/voteshop`
 - Colete recompensas e kits de VIP
 

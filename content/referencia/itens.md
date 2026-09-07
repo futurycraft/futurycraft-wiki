@@ -13,7 +13,7 @@ Os itens personalizados do SkyBlock são exibidos corretamente apenas com a **te
 ## Como ver os itens
 
 - Ative a textura com `/textura`
-- Use as receitas da página de [Guias de Crafting](/wiki/skyblock/crafting) para criar itens exclusivos
+- Use as receitas da página de [Guias de Crafting](/skyblock/crafting) para criar itens exclusivos
 
 ## Categorias de Itens
 

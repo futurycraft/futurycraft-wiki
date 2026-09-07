@@ -14,7 +14,7 @@ interface PageProps {
 }
 
 function crumbLabel(path: string): string {
-  const href = `/wiki/${path}`;
+  const href = `/${path}`;
   for (const section of navSections) {
     const found = section.items.find((item) => item.href === href);
     if (found) return found.title;
@@ -74,7 +74,7 @@ export default async function WikiSlugPage({ params }: PageProps) {
         title: a.meta.title,
         icon: a.meta.icon,
         description: a.meta.description,
-        href: `/wiki/${a.path}`,
+        href: `/${a.path}`,
       }));
 
     const index = groupArticles.findIndex((a) => a.path === article.path);
@@ -84,7 +84,7 @@ export default async function WikiSlugPage({ params }: PageProps) {
     const crumbs = ["Wiki", ...article.path.split("/")];
     const bcItems = crumbs.map((c, i) => ({
       name: i === 0 ? c : crumbLabel(c),
-      href: i === 0 ? "/wiki" : `/wiki/${crumbs.slice(1, i + 1).join("/")}`,
+      href: i === 0 ? "/" : `/${crumbs.slice(1, i + 1).join("/")}`,
     }));
 
     return (
@@ -94,7 +94,7 @@ export default async function WikiSlugPage({ params }: PageProps) {
             articleJsonLd({
               title: article.meta.title,
               description: article.meta.description,
-              url: `${siteConfig.url}/wiki/${article.path}`,
+              url: `${siteConfig.url}/${article.path}`,
               datePublished: article.meta.updatedAt,
               section: article.meta.category,
             }),
@@ -106,8 +106,8 @@ export default async function WikiSlugPage({ params }: PageProps) {
             <ArticleLayout
               article={article}
               related={related}
-              prev={prev ? { title: prev.meta.title, icon: prev.meta.icon, href: `/wiki/${prev.path}` } : undefined}
-              next={next ? { title: next.meta.title, icon: next.meta.icon, href: `/wiki/${next.path}` } : undefined}
+              prev={prev ? { title: prev.meta.title, icon: prev.meta.icon, href: `/${prev.path}` } : undefined}
+              next={next ? { title: next.meta.title, icon: next.meta.icon, href: `/${next.path}` } : undefined}
             />
           </div>
           <ArticleToc toc={article.toc} />
@@ -121,7 +121,7 @@ export default async function WikiSlugPage({ params }: PageProps) {
       <DocLayout>
         <JsonLd
           data={breadcrumbJsonLd([
-            { name: "Wiki", href: "/wiki" },
+            { name: "Wiki", href: "/" },
             { name: groupArticles[0].meta.category },
           ])}
         />
@@ -139,7 +139,7 @@ export default async function WikiSlugPage({ params }: PageProps) {
                 icon={a.meta.icon}
                 title={a.meta.title}
                 description={a.meta.description}
-                href={`/wiki/${a.path}`}
+                href={`/${a.path}`}
               />
             ))}
           </div>

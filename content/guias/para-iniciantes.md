@@ -12,7 +12,7 @@ Bem-vindo ao FuturyCraft! Este guia vai te acompanhar desde o primeiro acesso at
 
 ## 1 — Entre no servidor
 
-Conecte-se usando os dados da [Introdução](/wiki/comecando):
+Conecte-se usando os dados da [Introdução](/comecando):
 
 **Java:** `futurycraft.com.br`
 
@@ -43,7 +43,7 @@ Use `/menu` para abrir o menu principal e conhecer todos os sistemas disponívei
 
 ## 6 — Missões e recompensas
 
-Complete missões (`/d`, `/q`), [vote no servidor](/wiki/skyblock/votar) e colete recompensas diárias para acelerar sua evolução.
+Complete missões (`/d`, `/q`), [vote no servidor](/skyblock/votar) e colete recompensas diárias para acelerar sua evolução.
 
 ## Dicas importantes
 

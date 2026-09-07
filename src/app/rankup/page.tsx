@@ -17,14 +17,14 @@ export const metadata: Metadata = {
 };
 
 const highlights = [
-  { icon: "🚀", title: "Como Começar", desc: "Os primeiros passos no modo RankUP.", href: "/wiki/rankup/como-comecar" },
-  { icon: "⚔️", title: "Ranks", desc: "A linha de ranks e requisitos de progressão.", href: "/wiki/rankup/ranks" },
-  { icon: "📈", title: "Progressão", desc: "Como evoluir no RankUP passo a passo.", href: "/wiki/rankup/progressao" },
-  { icon: "💰", title: "Economia", desc: "Dinheiro, farm e investimentos no RankUP.", href: "/wiki/rankup/economia" },
-  { icon: "✨", title: "Prestígio", desc: "Como o prestígio impacta sua jornada.", href: "/wiki/rankup/prestigio" },
-  { icon: "🧰", title: "Sistemas", desc: "Sistemas exclusivos do modo RankUP.", href: "/wiki/rankup/sistemas" },
-  { icon: "📖", title: "Comandos", desc: "Todos os comandos do RankUP.", href: "/wiki/rankup/comandos" },
-  { icon: "📚", title: "Guias", desc: "Guias práticos para evoluir no modo.", href: "/wiki/rankup/guias" },
+  { icon: "🚀", title: "Como Começar", desc: "Os primeiros passos no modo RankUP.", href: "/rankup/como-comecar" },
+  { icon: "⚔️", title: "Ranks", desc: "A linha de ranks e requisitos de progressão.", href: "/rankup/ranks" },
+  { icon: "📈", title: "Progressão", desc: "Como evoluir no RankUP passo a passo.", href: "/rankup/progressao" },
+  { icon: "💰", title: "Economia", desc: "Dinheiro, farm e investimentos no RankUP.", href: "/rankup/economia" },
+  { icon: "✨", title: "Prestígio", desc: "Como o prestígio impacta sua jornada.", href: "/rankup/prestigio" },
+  { icon: "🧰", title: "Sistemas", desc: "Sistemas exclusivos do modo RankUP.", href: "/rankup/sistemas" },
+  { icon: "📖", title: "Comandos", desc: "Todos os comandos do RankUP.", href: "/rankup/comandos" },
+  { icon: "📚", title: "Guias", desc: "Guias práticos para evoluir no modo.", href: "/rankup/guias" },
 ];
 
 export default function RankupPage() {
@@ -36,8 +36,8 @@ export default function RankupPage() {
   return (
     <DocLayout>
       <div className="animate-fade-in">
-        <JsonLd data={breadcrumbJsonLd([{ name: "Wiki", href: "/wiki" }, { name: "RankUP" }])} />
-        <Breadcrumb items={[{ label: "Wiki", href: "/wiki" }, { label: "RankUP" }]} />
+        <JsonLd data={breadcrumbJsonLd([{ name: "Wiki", href: "/" }, { name: "RankUP" }])} />
+        <Breadcrumb items={[{ label: "Wiki", href: "/" }, { label: "RankUP" }]} />
 
         <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-bg-card p-6 card-glow sm:p-8">
           <div className="flex flex-wrap items-center gap-2">
@@ -69,7 +69,7 @@ export default function RankupPage() {
           </div>
           <div className="mt-5">
             <Link
-              href="/wiki/rankup/como-comecar"
+              href="/rankup/como-comecar"
               className="inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-bg transition-colors hover:bg-accent-dim"
             >
               Começar no RankUP <ArrowRightIcon className="h-4 w-4" />
@@ -95,7 +95,7 @@ export default function RankupPage() {
             {guides.map((g) => (
               <Link
                 key={g.path}
-                href={`/wiki/${g.path}`}
+                href={`/${g.path}`}
                 className="group flex items-start gap-3 rounded-xl border border-border bg-bg-card p-4 transition-colors hover:border-accent/40 hover:bg-bg-hover"
               >
                 <span className="text-xl" aria-hidden="true">{g.meta.icon}</span>
@@ -117,14 +117,14 @@ export default function RankupPage() {
             {cmdList.map((c) => (
               <Link
                 key={c.comando}
-                href={`/wiki/comandos?comando=${encodeURIComponent(c.comando)}`}
+                href={`/comandos?comando=${encodeURIComponent(c.comando)}`}
                 className="rounded-full border border-border bg-bg-card px-4 py-2 font-mono text-xs text-text-muted transition-colors hover:border-accent/50 hover:text-accent"
               >
                 {c.comando}
               </Link>
             ))}
             <Link
-              href="/wiki/comandos?cat=Mina"
+              href="/comandos?cat=Mina"
               className="rounded-full border border-dashed border-border bg-transparent px-4 py-2 text-xs text-text-muted transition-colors hover:border-accent/50 hover:text-accent"
             >
               Ver todos →
@@ -136,7 +136,7 @@ export default function RankupPage() {
           <h2 className="mb-4 text-lg font-semibold text-text">Guia relacionado</h2>
           <div className="grid gap-3 sm:grid-cols-2">
             <Link
-              href="/wiki/guias/progressao"
+              href="/guias/progressao"
               className="group flex items-start gap-3 rounded-xl border border-border bg-bg-card p-4 transition-colors hover:border-accent/40 hover:bg-bg-hover"
             >
               <span className="text-xl" aria-hidden="true">📈</span>
@@ -146,7 +146,7 @@ export default function RankupPage() {
               </span>
             </Link>
             <Link
-              href="/wiki/sistemas/economia"
+              href="/sistemas/economia"
               className="group flex items-start gap-3 rounded-xl border border-border bg-bg-card p-4 transition-colors hover:border-accent/40 hover:bg-bg-hover"
             >
               <span className="text-xl" aria-hidden="true">💰</span>

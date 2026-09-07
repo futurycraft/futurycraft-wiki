@@ -9,11 +9,11 @@ import { DiscordIcon, MenuIcon, SearchIcon } from "./icons";
 import { navSections } from "@/lib/nav";
 
 const links = [
-  { label: "Wiki", href: "/wiki" },
-  { label: "SkyBlock", href: "/wiki/skyblock" },
-  { label: "RankUP", href: "/wiki/rankup" },
-  { label: "Comandos", href: "/wiki/comandos" },
-  { label: "Encantamentos", href: "/wiki/encantamentos" },
+  { label: "Wiki", href: "/" },
+  { label: "SkyBlock", href: "/skyblock" },
+  { label: "RankUP", href: "/rankup" },
+  { label: "Comandos", href: "/comandos" },
+  { label: "Encantamentos", href: "/encantamentos" },
 ];
 
 export function Header() {
@@ -53,7 +53,7 @@ export function Header() {
   }, [openMenu]);
 
   function activeClass(href: string) {
-    return pathname === href || (href !== "/wiki" && pathname.startsWith(href)) ? "active" : "";
+    return pathname === href || (href !== "/" && pathname.startsWith(href)) ? "active" : "";
   }
 
   return (
@@ -73,7 +73,7 @@ export function Header() {
 
           <nav className="ml-4 hidden items-center gap-1 lg:flex" aria-label="Navegação principal">
             {links.map((l) => {
-              const active = pathname === l.href || (l.href !== "/wiki" && pathname.startsWith(l.href));
+              const active = pathname === l.href || (l.href !== "/" && pathname.startsWith(l.href));
               return (
                 <Link
                   key={l.href}
@@ -129,7 +129,7 @@ export function Header() {
             </div>
             <div className="mb-3 flex flex-wrap gap-1.5 border-b border-border pb-3">
               {links.map((l) => {
-                const active = pathname === l.href || (l.href !== "/wiki" && pathname.startsWith(l.href));
+                const active = pathname === l.href || (l.href !== "/" && pathname.startsWith(l.href));
                 return (
                   <Link
                     key={l.href}

@@ -6,23 +6,23 @@ const footerColumns = [
   {
     title: "Wiki",
     links: [
-      { title: "Começando", href: "/wiki/comecando" },
-      { title: "SkyBlock", href: "/wiki/skyblock" },
-      { title: "RankUP", href: "/wiki/rankup" },
-      { title: "Sistemas", href: "/wiki/sistemas/economia" },
-      { title: "Guias", href: "/wiki/guias/para-iniciantes" },
-      { title: "Comandos", href: "/wiki/comandos" },
-      { title: "Encantamentos", href: "/wiki/encantamentos" },
-      { title: "Ranks", href: "/wiki/ranks" },
+      { title: "Começando", href: "/comecando" },
+      { title: "SkyBlock", href: "/skyblock" },
+      { title: "RankUP", href: "/rankup" },
+      { title: "Sistemas", href: "/sistemas/economia" },
+      { title: "Guias", href: "/guias/para-iniciantes" },
+      { title: "Comandos", href: "/comandos" },
+      { title: "Encantamentos", href: "/encantamentos" },
+      { title: "Ranks", href: "/ranks" },
     ],
   },
   {
     title: "Recursos",
     links: [
-      { title: "Regras", href: "/wiki/regras" },
-      { title: "FAQ", href: "/wiki/faq" },
-      { title: "Suporte", href: "/wiki/informacoes/suporte" },
-      { title: "Status", href: "/wiki/informacoes/status" },
+      { title: "Regras", href: "/regras" },
+      { title: "FAQ", href: "/faq" },
+      { title: "Suporte", href: "/informacoes/suporte" },
+      { title: "Status", href: "/informacoes/status" },
       { title: "Loja", href: siteConfig.loja },
       { title: "Site", href: siteConfig.site },
     ],
@@ -31,9 +31,9 @@ const footerColumns = [
     title: "Comunidade",
     links: [
       { title: "Discord", href: siteConfig.discord },
-      { title: "Equipe", href: "/wiki/informacoes/equipe" },
-      { title: "Criadores", href: "/wiki/informacoes/criadores" },
-      { title: "Vote no Servidor", href: "/wiki/skyblock/votar" },
+      { title: "Equipe", href: "/informacoes/equipe" },
+      { title: "Criadores", href: "/informacoes/criadores" },
+      { title: "Vote no Servidor", href: "/skyblock/votar" },
     ],
   },
 ];
@@ -44,7 +44,7 @@ export function Footer() {
       <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <Link href="/wiki" className="inline-flex items-center gap-2.5">
+            <Link href="/" className="inline-flex items-center gap-2.5">
               <Logo className="h-9 w-9" />
               <span className="flex flex-col">
                 <span className="text-base font-bold leading-tight text-text">

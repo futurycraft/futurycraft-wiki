@@ -49,9 +49,9 @@ export default async function EnchantPage({ params }: PageProps) {
 
   const suggestion = (() => {
     const docs = [
-      { title: "Catálogo de encantamentos", icon: "✨", description: "Pesquise todos os encantamentos do servidor com filtros.", href: "/wiki/encantamentos" },
-      { title: "Sistema de encantamentos", icon: "🔮", description: "Como funciona o sistema de encantamentos do FuturyCraft.", href: "/wiki/sistemas/encantamentos" },
-      { title: "Alquimista", icon: "⚗️", description: "Combine ou melhore seus encantamentos com /alquimista.", href: "/wiki/comandos?comando=/alquimista" },
+      { title: "Catálogo de encantamentos", icon: "✨", description: "Pesquise todos os encantamentos do servidor com filtros.", href: "/encantamentos" },
+      { title: "Sistema de encantamentos", icon: "🔮", description: "Como funciona o sistema de encantamentos do FuturyCraft.", href: "/sistemas/encantamentos" },
+      { title: "Alquimista", icon: "⚗️", description: "Combine ou melhore seus encantamentos com /alquimista.", href: "/comandos?comando=/alquimista" },
     ];
     return docs;
   })();
@@ -66,27 +66,27 @@ export default async function EnchantPage({ params }: PageProps) {
             articleJsonLd({
               title: e.nome,
               description: e.descricao,
-              url: `${siteConfig.url}/wiki/encantamentos/${e.path}`,
+              url: `${siteConfig.url}/encantamentos/${e.path}`,
               datePublished: "2026-01-01",
               section: `Encantamentos ${e.raridade}`,
             }),
             breadcrumbJsonLd([
-              { name: "Wiki", href: "/wiki" },
-              { name: "Encantamentos", href: "/wiki/encantamentos" },
+              { name: "Wiki", href: "/" },
+              { name: "Encantamentos", href: "/encantamentos" },
               { name: e.nome },
             ]),
           ]}
         />
         <Breadcrumb
           items={[
-            { label: "Wiki", href: "/wiki" },
-            { label: "Encantamentos", href: "/wiki/encantamentos" },
+            { label: "Wiki", href: "/" },
+            { label: "Encantamentos", href: "/encantamentos" },
             { label: e.nome },
           ]}
         />
 
         <Link
-          href="/wiki/encantamentos"
+          href="/encantamentos"
           className="mt-2 inline-flex items-center gap-1.5 text-sm text-text-muted transition-colors hover:text-accent"
         >
           <ArrowLeftIcon className="h-4 w-4" /> Voltar ao catálogo

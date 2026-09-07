@@ -18,7 +18,7 @@ updatedAt: 2026-01-01
 
 ## Preciso comprar Minecraft para jogar?
 
-Não! Aceitamos jogadores **piratas e originais**. Veja mais em [Java Edition](/wiki/comecando/java).
+Não! Aceitamos jogadores **piratas e originais**. Veja mais em [Java Edition](/comecando/java).
 
 ## Como faço minha conta?
 
@@ -42,4 +42,4 @@ Acesse: [https://discord.futurycraft.com.br/](https://discord.futurycraft.com.br
 
 ## Itens novos não aparecem no jogo
 
-Você precisa ativar a **textura oficial do servidor** com o comando `/textura`. Veja mais em [Textura do Servidor](/wiki/skyblock/textura-do-servidor).
+Você precisa ativar a **textura oficial do servidor** com o comando `/textura`. Veja mais em [Textura do Servidor](/skyblock/textura-do-servidor).

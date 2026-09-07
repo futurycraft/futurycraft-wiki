@@ -13,13 +13,13 @@ export default function NotFound() {
       </p>
       <div className="mt-6 flex gap-3">
         <Link
-          href="/wiki"
+          href="/"
           className="rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-bg transition-colors hover:bg-accent-dim"
         >
           Voltar ao início
         </Link>
         <Link
-          href="/wiki/comandos"
+          href="/comandos"
           className="rounded-xl border border-border bg-bg-card px-5 py-2.5 text-sm font-semibold text-text transition-colors hover:border-accent/50"
         >
           Ver comandos

@@ -8,7 +8,7 @@ featured: true
 updatedAt: 2026-01-01
 ---
 
-Lista completa de comandos do SkyBlock. Navegue pela página de [Comandos](/wiki/comandos) para pesquisar qualquer comando.
+Lista completa de comandos do SkyBlock. Navegue pela página de [Comandos](/comandos) para pesquisar qualquer comando.
 
 ## Principais Comandos
 

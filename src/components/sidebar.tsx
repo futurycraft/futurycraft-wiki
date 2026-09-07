@@ -7,7 +7,7 @@ import { navSections } from "@/lib/nav";
 function NavLink({ href, title, emBreve, children }: { href: string; title: string; emBreve?: boolean; children?: { title: string; href: string; emBreve?: boolean }[] }) {
   const pathname = usePathname();
   const active =
-    pathname === href || (href !== "/wiki" && pathname.startsWith(href));
+    pathname === href || (href !== "/" && pathname.startsWith(href));
 
   return (
     <li>

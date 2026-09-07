@@ -77,7 +77,7 @@ export default function RanksPage() {
   return (
     <DocLayout>
       <div className="animate-fade-in">
-        <Breadcrumb items={[{ label: "Wiki", href: "/wiki" }, { label: "Ranks" }]} />
+        <Breadcrumb items={[{ label: "Wiki", href: "/" }, { label: "Ranks" }]} />
         <header className="mt-4">
           <h1 className="text-3xl font-bold tracking-tight text-text sm:text-4xl">
             Ranks & VIPs
@@ -106,7 +106,7 @@ export default function RanksPage() {
 
         <p className="mt-8 text-sm text-text-muted">
           Tabela completa de ranks de progressão do RankUP disponível na página{" "}
-          <Link href="/wiki/sistemas/ranks" className="text-accent hover:underline">
+          <Link href="/sistemas/ranks" className="text-accent hover:underline">
             Sistemas de Ranks
           </Link>
           .

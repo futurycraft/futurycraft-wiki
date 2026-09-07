@@ -89,4 +89,4 @@ O sorteio ocorre sempre de acordo com o horário configurado no servidor. Fique 
 ✔️ Aguarde o sorteio\
 ✔️ Se ganhar, receba seu prêmio!
 
-> A Loteria faz parte da [Economia SkyBlock](/wiki/skyblock/economia). Curioso sobre outros sistemas? Veja a área de [Sistemas](/wiki/sistemas/economia).
+> A Loteria faz parte da [Economia SkyBlock](/skyblock/economia). Curioso sobre outros sistemas? Veja a área de [Sistemas](/sistemas/economia).

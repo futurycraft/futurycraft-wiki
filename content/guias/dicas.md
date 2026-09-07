@@ -21,6 +21,6 @@ updatedAt: 2026-01-01
 
 ## Fique atento
 
-- As regras podem ser atualizadas sem aviso prévio — consulte a página de [Regras](/wiki/regras)
+- As regras podem ser atualizadas sem aviso prévio — consulte a página de [Regras](/regras)
 - Jogue na versão recomendada **1.21.8** para total compatibilidade
 - Ajuda? Abra um ticket no [Discord](https://discord.futurycraft.com.br/)

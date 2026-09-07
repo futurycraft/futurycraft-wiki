@@ -8,7 +8,7 @@ import { navSections } from "@/lib/nav";
 import { ArrowLeftIcon, ArrowRightIcon } from "./icons";
 
 function crumbLabel(path: string): string {
-  const href = `/wiki/${path}`;
+  const href = `/${path}`;
   for (const section of navSections) {
     const found = section.items.find((item) => item.href === href);
     if (found) return found.title;
@@ -41,9 +41,9 @@ export function ArticleLayout({
     <article className="animate-fade-in">
       <CodeCopy />
       <Breadcrumb
-        items={[{ label: "Wiki", href: "/wiki" }, ...crumbs.map((c, i) => ({
+        items={[{ label: "Wiki", href: "/" }, ...crumbs.map((c, i) => ({
           label: c === "home" ? article.meta.category : crumbLabel(c),
-          href: `/wiki/${crumbs.slice(0, i + 1).join("/")}`,
+          href: `/${crumbs.slice(0, i + 1).join("/")}`,
         }))]}
       />
       <header className="mt-4">

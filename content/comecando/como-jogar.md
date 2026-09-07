@@ -8,7 +8,7 @@ featured: true
 updatedAt: 2026-01-01
 ---
 
-Para começar sua jornada no FuturyCraft, primeiro conecte-se ao servidor usando os IPs da [Introdução](/wiki/comecando).
+Para começar sua jornada no FuturyCraft, primeiro conecte-se ao servidor usando os IPs da [Introdução](/comecando).
 
 ## Primeiros Passos
 
