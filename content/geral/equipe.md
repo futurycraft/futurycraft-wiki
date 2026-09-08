@@ -1,88 +1,88 @@
 ---
 title: Entrar para a Equipe
-description: A equipe STAFF do FuturyCraft. Cargos, benefÃ­cios, requisitos e como se candidatar.
+description: A equipe STAFF do FuturyCraft. Cargos, benefícios, requisitos e como se candidatar.
 category: Geral
-icon: ðŸ›¡ï¸
+icon: 🛡️
 order: 7
 featured: true
 updatedAt: 2026-01-01
 ---
 
-Ative sua jornada como parte da equipe que mantÃ©m o FuturyCraft seguro, organizado e divertido!
+Ative sua jornada como parte da equipe que mantém o FuturyCraft seguro, organizado e divertido!
 
-A equipe STAFF Ã© formada pelos membros responsÃ¡veis pela moderaÃ§Ã£o, organizaÃ§Ã£o e bom funcionamento do servidor.
+A equipe STAFF é formada pelos membros responsáveis pela moderação, organização e bom funcionamento do servidor.
 
-Cada cargo possui uma funÃ§Ã£o especÃ­fica e, juntos, todos colaboram para manter o FuturyCraft um ambiente **seguro, organizado e divertido** para todos.
+Cada cargo possui uma função específica e, juntos, todos colaboram para manter o FuturyCraft um ambiente **seguro, organizado e divertido** para todos.
 
 ## Cargos da Equipe
 
-- **Builder** â€” responsÃ¡vel pela criaÃ§Ã£o de construÃ§Ãµes. NÃ£o possui funÃ§Ãµes de moderaÃ§Ã£o.
-- **EstagiÃ¡rio** â€” cargo inicial para novos membros da equipe.
-- **Ajudante** â€” atua no suporte aos jogadores e no auxÃ­lio Ã  moderaÃ§Ã£o.
-- **Moderador** â€” responsÃ¡vel pela aplicaÃ§Ã£o de puniÃ§Ãµes e manutenÃ§Ã£o da ordem.
-- **Administrador** â€” atua na gestÃ£o do servidor e da equipe.
-- **Gerente** â€” coordena setores e decisÃµes estratÃ©gicas.
-- **Dono** â€” responsÃ¡vel geral pelo servidor.
+- **Builder** — responsável pela criação de construções. Não possui funções de moderação.
+- **Estagiário** — cargo inicial para novos membros da equipe.
+- **Ajudante** — atua no suporte aos jogadores e no auxílio à moderação.
+- **Moderador** — responsável pela aplicação de punições e manutenção da ordem.
+- **Administrador** — atua na gestão do servidor e da equipe.
+- **Gerente** — coordena setores e decisões estratégicas.
+- **Dono** — responsável geral pelo servidor.
 
-> O cargo de **Builder** nÃ£o possui obrigaÃ§Ãµes de atendimento aos jogadores, porÃ©m manter educaÃ§Ã£o, respeito e seguir as regras Ã© fundamental para permanecer na funÃ§Ã£o.
+> O cargo de **Builder** não possui obrigações de atendimento aos jogadores, porém manter educação, respeito e seguir as regras é fundamental para permanecer na função.
 
-## BenefÃ­cios da STAFF
+## Benefícios da STAFF
 
-Na maioria dos casos, o trabalho realizado pela STAFF Ã© **voluntÃ¡rio**, nÃ£o havendo remuneraÃ§Ã£o financeira imediata. Como forma de incentivo e agradecimento, oferecemos **benefÃ­cios exclusivos**, divulgados **apenas apÃ³s a aprovaÃ§Ã£o na equipe**.
+Na maioria dos casos, o trabalho realizado pela STAFF é **voluntário**, não havendo remuneração financeira imediata. Como forma de incentivo e agradecimento, oferecemos **benefícios exclusivos**, divulgados **apenas após a aprovação na equipe**.
 
-**Exemplos de benefÃ­cios:**
+**Exemplos de benefícios:**
 
-- Em compras de **Unban**, **50% do valor** Ã© destinado ao staff responsÃ¡vel pela puniÃ§Ã£o.
-- Para **Builders**, os benefÃ­cios sÃ£o negociados diretamente com a diretoria, de acordo com a qualidade e quantidade das builds entregues.
-- A **remuneraÃ§Ã£o financeira** pode ser conquistada, dependendo do cargo, desempenho e dedicaÃ§Ã£o â€” geralmente disponÃ­vel para cargos mais altos da equipe.
+- Em compras de **Unban**, **50% do valor** é destinado ao staff responsável pela punição.
+- Para **Builders**, os benefícios são negociados diretamente com a diretoria, de acordo com a qualidade e quantidade das builds entregues.
+- A **remuneração financeira** pode ser conquistada, dependendo do cargo, desempenho e dedicação — geralmente disponível para cargos mais altos da equipe.
 
-## ConfianÃ§a
+## Confiança
 
-A **confianÃ§a** Ã© o pilar mais importante da nossa equipe. Seguir as regras, agir com responsabilidade e tratar bem os jogadores **dentro e fora do servidor** Ã© essencial e sempre levado em consideraÃ§Ã£o durante seleÃ§Ãµes e promoÃ§Ãµes.
+A **confiança** é o pilar mais importante da nossa equipe. Seguir as regras, agir com responsabilidade e tratar bem os jogadores **dentro e fora do servidor** é essencial e sempre levado em consideração durante seleções e promoções.
 
-## EvoluÃ§Ã£o de Cargo
+## Evolução de Cargo
 
-O formulÃ¡rio de inscriÃ§Ã£o permite o ingresso com os cargos iniciais de:
+O formulário de inscrição permite o ingresso com os cargos iniciais de:
 
-- **EstagiÃ¡rio**
+- **Estagiário**
 - **Builder**
 
-Ao entrar na equipe, o candidato ficarÃ¡ como **EstagiÃ¡rio** (exceto Builders) e passarÃ¡ por um **perÃ­odo de avaliaÃ§Ã£o de 30 dias**. ApÃ³s esse perÃ­odo, serÃ¡ feita uma anÃ¡lise de desempenho para decidir sobre a **efetivaÃ§Ã£o como Ajudante**.
+Ao entrar na equipe, o candidato ficará como **Estagiário** (exceto Builders) e passará por um **período de avaliação de 30 dias**. Após esse período, será feita uma análise de desempenho para decidir sobre a **efetivação como Ajudante**.
 
-Com dedicaÃ§Ã£o, compromisso e bom desempenho, Ã© possÃ­vel evoluir facilmente de cargo, seguindo nosso modelo de hierarquia. Valorizamos o esforÃ§o, o trabalho em equipe e, acima de tudo, a confianÃ§a.
+Com dedicação, compromisso e bom desempenho, é possível evoluir facilmente de cargo, seguindo nosso modelo de hierarquia. Valorizamos o esforço, o trabalho em equipe e, acima de tudo, a confiança.
 
-## ObrigaÃ§Ãµes
+## Obrigações
 
-Sabemos que o Minecraft Ã© um passatempo e que a vida real vem em primeiro lugar. Por isso:
+Sabemos que o Minecraft é um passatempo e que a vida real vem em primeiro lugar. Por isso:
 
-- NÃ£o exigimos horÃ¡rios fixos
-- NÃ£o hÃ¡ cobranÃ§as excessivas
+- Não exigimos horários fixos
+- Não há cobranças excessivas
 - Oferecemos total liberdade aos membros da STAFF
 
-Caso seja necessÃ¡rio se ausentar por um perÃ­odo, basta **avisar a equipe**.
+Caso seja necessário se ausentar por um período, basta **avisar a equipe**.
 
 ## Requisitos para se Candidatar
 
-- NÃ£o possuir histÃ³rico de puniÃ§Ãµes no servidor nos Ãºltimos **2 meses**
-- Jogar no servidor hÃ¡ no mÃ­nimo **10 dias**
-- Demonstrar domÃ­nio da **norma culta**
+- Não possuir histórico de punições no servidor nos últimos **2 meses**
+- Jogar no servidor há no mínimo **10 dias**
+- Demonstrar domínio da **norma culta**
 - Ser ativo no servidor e nas redes oficiais (como **Discord**)
-- Ser responsÃ¡vel e maduro
+- Ser responsável e maduro
 - Ter respeito com todos os jogadores
 - Realizar atendimento via **Discord (Tickets)**
 - Demonstrar interesse em ajudar
-- Idade mÃ­nima: **14 anos**
-- Conhecimento das regras, comandos e puniÃ§Ãµes do servidor
+- Idade mínima: **14 anos**
+- Conhecimento das regras, comandos e punições do servidor
 
 ## Prazo de Resposta
 
-NÃ£o possuÃ­mos um prazo fixo de resposta para as candidaturas. As inscriÃ§Ãµes sÃ£o analisadas periodicamente, de acordo com a necessidade de novos membros na equipe.
+Não possuímos um prazo fixo de resposta para as candidaturas. As inscrições são analisadas periodicamente, de acordo com a necessidade de novos membros na equipe.
 
-âš ï¸ **NÃ£o Ã© recomendado perguntar se foi aceito.**
+⚠️ **Não é recomendado perguntar se foi aceito.**
 
-Para verificar sua situaÃ§Ã£o:
+Para verificar sua situação:
 
-- Se o formulÃ¡rio indicar que vocÃª **jÃ¡ se inscreveu**, significa que sua candidatura ainda estÃ¡ em anÃ¡lise.
-- Se permitir **nova inscriÃ§Ã£o**, significa que nÃ£o foi aprovado desta vez â€” mas vocÃª pode se candidatar novamente futuramente.
+- Se o formulário indicar que você **já se inscreveu**, significa que sua candidatura ainda está em análise.
+- Se permitir **nova inscrição**, significa que não foi aprovado desta vez — mas você pode se candidatar novamente futuramente.
 
-**FuturyCraft** âœ¨ Compromisso, confianÃ§a e evoluÃ§Ã£o.
+**FuturyCraft** ✨ Compromisso, confiança e evolução.

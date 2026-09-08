@@ -1,35 +1,35 @@
 ---
 title: Programa de Criadores
-description: Programa de criadores de conteÃºdo do FuturyCraft. FormulÃ¡rios de YouTuber e Streamer.
+description: Programa de criadores de conteúdo do FuturyCraft. Formulários de YouTuber e Streamer.
 category: Geral
-icon: ðŸŽ¬
+icon: 🎬
 order: 8
 featured: false
 updatedAt: 2026-01-01
 ---
 
-O FuturyCraft valoriza criadores de conteÃºdo que ajudam a construir e fortalecer nossa comunidade.
+O FuturyCraft valoriza criadores de conteúdo que ajudam a construir e fortalecer nossa comunidade.
 
-## FormulÃ¡rio de YouTuber
+## Formulário de YouTuber
 
-**Para criadores que produzem vÃ­deos sobre o FuturyCraft.**
+**Para criadores que produzem vídeos sobre o FuturyCraft.**
 
 Ideal para quem grava:
 
-- SÃ©ries no servidor
+- Séries no servidor
 - Tutoriais
 - Eventos
-- ConteÃºdos recorrentes ou especiais
+- Conteúdos recorrentes ou especiais
 
-**CritÃ©rios de AvaliaÃ§Ã£o**
+**Critérios de Avaliação**
 
-- Qualidade do conteÃºdo produzido
-- FrequÃªncia de postagens
-- Engajamento do canal (likes, comentÃ¡rios e visualizaÃ§Ãµes)
+- Qualidade do conteúdo produzido
+- Frequência de postagens
+- Engajamento do canal (likes, comentários e visualizações)
 
-## FormulÃ¡rio de Streamer
+## Formulário de Streamer
 
-**Para criadores que realizam transmissÃµes ao vivo no FuturyCraft.**
+**Para criadores que realizam transmissões ao vivo no FuturyCraft.**
 
 Voltado para streamers que fazem lives em:
 
@@ -37,10 +37,10 @@ Voltado para streamers que fazem lives em:
 - YouTube
 - Kick ou plataformas similares
 
-**CritÃ©rios de AvaliaÃ§Ã£o**
+**Critérios de Avaliação**
 
-- Qualidade das transmissÃµes
-- FrequÃªncia das lives
+- Qualidade das transmissões
+- Frequência das lives
 - Engajamento do chat e da comunidade
 
-Criadores aprovados podem receber **benefÃ­cios exclusivos**, **reconhecimento oficial** e **apoio da equipe FuturyCraft**.
+Criadores aprovados podem receber **benefícios exclusivos**, **reconhecimento oficial** e **apoio da equipe FuturyCraft**.

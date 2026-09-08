@@ -2,17 +2,17 @@
 title: Minions
 description: Minions ativos no SkyBlock. Limites variam de acordo com o VIP do jogador.
 category: SkyBlock
-icon: âš™ï¸
+icon: ⚙️
 order: 15
 featured: false
 updatedAt: 2026-01-01
 ---
 
-Os **Minions** sÃ£o autÃ´matos que trabalham na sua ilha de forma autÃ´noma, coletando recursos para vocÃª.
+Os **Minions** são autômatos que trabalham na sua ilha de forma autônoma, coletando recursos para você.
 
 ## Limite de Minions por VIP
 
-O nÃºmero de minions ativos depende do seu VIP:
+O número de minions ativos depende do seu VIP:
 
 | VIP | Minions ativos |
 | --- | --- |
@@ -25,8 +25,8 @@ O nÃºmero de minions ativos depende do seu VIP:
 
 ## Como Usar
 
-Coloque seus minions dentro da Ã¡rea da sua ilha e configure a tarefa no prÃ³prio minion pelo painel dele.
+Coloque seus minions dentro da área da sua ilha e configure a tarefa no próprio minion pelo painel dele.
 
-> Os limites variam conforme o seu [VIP](/geral/vips). Confira tambÃ©m o guia de [Ilha](/skyblock/ilha) para gerenciar sua equipe e Ã¡rea.
+> Os limites variam conforme o seu [VIP](/geral/vips). Confira também o guia de [Ilha](/skyblock/ilha) para gerenciar sua equipe e área.
 
-> **Em breve:** mais detalhes sobre tipos, upgrades e configuraÃ§Ãµes de minions serÃ£o adicionados aqui.
+> **Em breve:** mais detalhes sobre tipos, upgrades e configurações de minions serão adicionados aqui.

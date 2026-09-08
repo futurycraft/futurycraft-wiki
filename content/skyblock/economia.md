@@ -2,55 +2,55 @@
 title: Economia
 description: Dinheiro (money) e cash no SkyBlock do FuturyCraft: como ver, transferir e consultar os tops.
 category: SkyBlock
-icon: ðŸ’°
+icon: 💰
 order: 3
 featured: true
 updatedAt: 2026-01-01
 ---
 
-AlÃ©m dos itens clÃ¡ssicos, vocÃª contarÃ¡ com novos recursos exclusivos do FuturyCraft. A economia do SkyBlock Ã© dividida em duas moedas principais: **Money** e **Cash**.
+Além dos itens clássicos, você contará com novos recursos exclusivos do FuturyCraft. A economia do SkyBlock é dividida em duas moedas principais: **Money** e **Cash**.
 
 ## Money
 
-O **Money** Ã© a moeda principal do servidor, usada para comprar itens, apostar na loteria e trocar com outros jogadores.
+O **Money** é a moeda principal do servidor, usada para comprar itens, apostar na loteria e trocar com outros jogadores.
 
-- `/money` â€” ver o seu money
-- `/money [jogador]` â€” ver o money de outro jogador
-- `/money pay [jogador] [valor]` â€” transferir money
-- `/money top` â€” ver o **TOP MONEY** do servidor
+- `/money` — ver o seu money
+- `/money [jogador]` — ver o money de outro jogador
+- `/money pay [jogador] [valor]` — transferir money
+- `/money top` — ver o **TOP MONEY** do servidor
 
 ## Cash
 
-O **Cash** Ã© a moeda premium, usada para adquirir itens exclusivos e vantagens no servidor.
+O **Cash** é a moeda premium, usada para adquirir itens exclusivos e vantagens no servidor.
 
-- `/cash` â€” ver o seu cash
-- `/cash [jogador]` â€” ver o cash de outro jogador
-- `/cash pay [jogador] [valor]` â€” transferir cash
-- `/cash top` â€” ver o **TOP CASH** do servidor
+- `/cash` — ver o seu cash
+- `/cash [jogador]` — ver o cash de outro jogador
+- `/cash pay [jogador] [valor]` — transferir cash
+- `/cash top` — ver o **TOP CASH** do servidor
 
 ## Banco
 
-Use `/banco` para acessar seu painel bancÃ¡rio e guardar dinheiro com seguranÃ§a â€” protegendo o saldo caso vocÃª caia no vazio.
+Use `/banco` para acessar seu painel bancário e guardar dinheiro com segurança — protegendo o saldo caso você caia no vazio.
 
 ## Lojas
 
-- `/shop` â€” loja principal do servidor
-- `/flyshop` â€” loja de voar
-- `/voteshop` â€” loja de votaÃ§Ã£o
+- `/shop` — loja principal do servidor
+- `/flyshop` — loja de voar
+- `/voteshop` — loja de votação
 
 ## Como Ganhar Cash
 
-O cash pode ser obtido atravÃ©s de **eventos, votaÃ§Ãµes, recompensas e compras na loja**.
+O cash pode ser obtido através de **eventos, votações, recompensas e compras na loja**.
 
 Veja:
-- [MissÃµes](/skyblock/missoes) â€” recompensas por desafios
-- [VotaÃ§Ã£o](/skyblock/votacao) â€” vote e ganhe itens
-- [Loteria](/skyblock/loteria) â€” aposte seu money para concorrer a prÃªmios
+- [Missões](/skyblock/missoes) — recompensas por desafios
+- [Votação](/skyblock/votacao) — vote e ganhe itens
+- [Loteria](/skyblock/loteria) — aposte seu money para concorrer a prêmios
 
-## Textura ObrigatÃ³ria
+## Textura Obrigatória
 
-Os itens novos deste SkyBlock sÃ³ aparecem corretamente com a textura oficial. Ative com `/textura`. Veja [Textura do Servidor](/skyblock/textura-do-servidor).
+Os itens novos deste SkyBlock só aparecem corretamente com a textura oficial. Ative com `/textura`. Veja [Textura do Servidor](/skyblock/textura-do-servidor).
 
-## VersÃ£o Recomendada
+## Versão Recomendada
 
-Jogue na versÃ£o **[1.21.8]** para garantir total compatibilidade.
+Jogue na versão **[1.21.8]** para garantir total compatibilidade.

@@ -1,38 +1,38 @@
 ---
-title: MissÃµes
-description: Sistema de missÃµes do SkyBlock: desafios, missÃµes do servidor e missÃµes secundÃ¡rias.
+title: Missões
+description: Sistema de missões do SkyBlock: desafios, missões do servidor e missões secundárias.
 category: SkyBlock
-icon: ðŸ“œ
+icon: 📜
 order: 5
 featured: true
 updatedAt: 2026-01-01
 ---
 
-O SkyBlock oferece **missÃµes** dentro da sua ilha que dÃ£o desafios variados e recompensas que ajudam no seu progresso.
+O SkyBlock oferece **missões** dentro da sua ilha que dão desafios variados e recompensas que ajudam no seu progresso.
 
-## Comandos de MissÃ£o
+## Comandos de Missão
 
 **Dentro da sua ilha:**
 
-- `/c` â€” painel de missÃµes
+- `/c` — painel de missões
 - `/island challenges`
 - `/ilha challenges`
 - `/is challenges`
 
 **Servidor todo:**
 
-- `/d` â€” menu de todas as missÃµes do servidor
-- `/q` â€” missÃµes secundÃ¡rias disponÃ­veis para sua ilha
+- `/d` — menu de todas as missões do servidor
+- `/q` — missões secundárias disponíveis para sua ilha
 
 ## Tipos de Desafios
 
 Exemplos de desafios encontrados:
 
-- Construir estruturas especÃ­ficas
-- Cultivar plantaÃ§Ãµes
+- Construir estruturas específicas
+- Cultivar plantações
 - Conseguir itens raros
-- Derrotar mobs especÃ­ficos
+- Derrotar mobs específicos
 
 ## Recompensas
 
-Complete os desafios para ganhar recompensas que aceleram sua evoluÃ§Ã£o: itens, dinheiro e recursos exclusivos.
+Complete os desafios para ganhar recompensas que aceleram sua evolução: itens, dinheiro e recursos exclusivos.

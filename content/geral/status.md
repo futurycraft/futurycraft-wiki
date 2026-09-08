@@ -1,21 +1,21 @@
 ---
 title: Status
-description: Dados de conexÃ£o e status do servidor FuturyCraft.
+description: Dados de conexão e status do servidor FuturyCraft.
 category: Geral
-icon: ðŸ“¡
+icon: 📡
 order: 9
 featured: false
 updatedAt: 2026-01-01
 ---
 
-## Dados de ConexÃ£o
+## Dados de Conexão
 
 | Plataforma | IP | Porta |
 | --- | --- | --- |
-| **Java** | `futurycraft.com.br` | â€” |
+| **Java** | `futurycraft.com.br` | — |
 | **Bedrock** | `bedrock.futurycraft.com.br` | `25654` |
 
-## VersÃ£o Recomendada
+## Versão Recomendada
 
 **1.21.8**
 
@@ -24,4 +24,4 @@ updatedAt: 2026-01-01
 - **Site:** [https://futurycraft.com.br](https://futurycraft.com.br)
 - **Discord:** [https://discord.futurycraft.com.br/](https://discord.futurycraft.com.br/)
 
-> **Em breve:** widget de status em tempo real do servidor serÃ¡ adicionado nesta pÃ¡gina. A estrutura estÃ¡ pronta para receber o monitoramento.
+> **Em breve:** widget de status em tempo real do servidor será adicionado nesta página. A estrutura está pronta para receber o monitoramento.

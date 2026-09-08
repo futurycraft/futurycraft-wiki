@@ -1,14 +1,14 @@
 ---
 title: Challenges
-description: Desafios e missÃµes dentro da sua ilha, com recompensas que aceleram sua evoluÃ§Ã£o.
+description: Desafios e missões dentro da sua ilha, com recompensas que aceleram sua evolução.
 category: SkyBlock
-icon: ðŸ†
+icon: 🏆
 order: 4.4
 featured: false
 updatedAt: 2026-01-01
 ---
 
-Os **challenges** (desafios) sÃ£o missÃµes disponÃ­veis dentro da sua ilha. CompletÃ¡-los dÃ¡ recompensas que ajudam no seu progresso no SkyBlock.
+Os **challenges** (desafios) são missões disponíveis dentro da sua ilha. Completá-los dá recompensas que ajudam no seu progresso no SkyBlock.
 
 ## Abrir o Painel de Challenges
 
@@ -23,20 +23,20 @@ Dentro da ilha, use um dos comandos:
 
 Os desafios pedem objetivos variados, como:
 
-- Construir estruturas especÃ­ficas
-- Cultivar plantaÃ§Ãµes
+- Construir estruturas específicas
+- Cultivar plantações
 - Conseguir itens raros
-- Derrotar mobs especÃ­ficos
+- Derrotar mobs específicos
 
 ## Recompensas
 
-Ao completar os desafios vocÃª ganha recompensas que aceleram sua evoluÃ§Ã£o: **itens**, **dinheiro** e **recursos exclusivos**.
+Ao completar os desafios você ganha recompensas que aceleram sua evolução: **itens**, **dinheiro** e **recursos exclusivos**.
 
-## MissÃµes do Servidor
+## Missões do Servidor
 
-AlÃ©m dos challenges da ilha, o servidor tambÃ©m tem missÃµes:
+Além dos challenges da ilha, o servidor também tem missões:
 
-- `/d` â€” menu de todas as missÃµes do servidor
-- `/q` â€” missÃµes secundÃ¡rias disponÃ­veis para sua ilha
+- `/d` — menu de todas as missões do servidor
+- `/q` — missões secundárias disponíveis para sua ilha
 
-> Veja tambÃ©m o guia completo de [MissÃµes](/skyblock/missoes).
+> Veja também o guia completo de [Missões](/skyblock/missoes).

@@ -1,25 +1,25 @@
 ---
 title: Itens
-description: ReferÃªncia de itens personalizados do SkyBlock do FuturyCraft.
+description: Referência de itens personalizados do SkyBlock do FuturyCraft.
 category: Geral
-icon: ðŸ§©
+icon: 🧩
 order: 10
 featured: false
 updatedAt: 2026-01-01
 ---
 
-Os itens personalizados do SkyBlock sÃ£o exibidos corretamente apenas com a **textura oficial** do servidor ativa.
+Os itens personalizados do SkyBlock são exibidos corretamente apenas com a **textura oficial** do servidor ativa.
 
 ## Como ver os itens
 
 - Ative a textura com `/textura`
-- Use as receitas da pÃ¡gina de [Guias de Crafting](/skyblock/crafting) para criar itens exclusivos
+- Use as receitas da página de [Guias de Crafting](/skyblock/crafting) para criar itens exclusivos
 
 ## Categorias de Itens
 
-- **Vegetais** â€” receitas de vegetais
-- **Comidas** â€” receitas de comidas personalizadas
-- **Sementes** â€” receitas de sementes
-- **Itens Principais** â€” receitas dos itens principais
+- **Vegetais** — receitas de vegetais
+- **Comidas** — receitas de comidas personalizadas
+- **Sementes** — receitas de sementes
+- **Itens Principais** — receitas dos itens principais
 
-> **Em breve:** catÃ¡logo completo de itens com receitas, usos e valores serÃ¡ adicionado aqui.
+> **Em breve:** catálogo completo de itens com receitas, usos e valores será adicionado aqui.
