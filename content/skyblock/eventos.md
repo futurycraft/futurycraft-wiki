@@ -1,9 +1,9 @@
 ---
 title: Eventos
-description: Horários dos eventos do SkyBlock, incluindo o evento do Dragão.
-category: Servidores
+description: Horários dos eventos do SkyBlock, incluindo o evento do Dragão e a Pinhata.
+category: SkyBlock
 icon: 🎉
-order: 9
+order: 17
 featured: true
 updatedAt: 2026-01-01
 ---
@@ -21,16 +21,13 @@ Os eventos principais acontecem nos horários abaixo:
 | 18:30 | 🐉 **DRAGÃO** |
 | 00:30 | 🐉 **DRAGÃO** |
 
-## Evento Dragão
-
-O evento do dragão é um dos mais aguardados. Fique atento ao chat do servidor, pois ele é anunciado antes de acontecer.
-
-Use o comando `/dragao` para participar.
-
 ## Como Participar
 
-Fique de olho no chat do servidor — os anúncios de eventos aparecem com antecedência. Ao ver o anúncio, siga as instruções no chat e use o comando indicado para entrar no evento.
+Fique atento aos anúncios no chat do servidor. Quando um evento for anunciado, siga as instruções e use o comando indicado.
 
-> Consulte também [Sistemas de Eventos](/sistemas/eventos) e as [Recompensas](/sistemas/recompensas) disponíveis.
+- `/dragao` — evento do dragão
+- `/pinhata` — evento de pinhata
 
-> **Em breve:** mais detalhes sobre outros eventos e recompensas serão adicionados aqui.
+> Consulte também as [Recompensas](/skyblock/recompensas) disponíveis.
+
+> **Em breve:** todos os eventos regulares com horários e recompensas serão documentados aqui.

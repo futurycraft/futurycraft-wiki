@@ -3,6 +3,7 @@ export interface NavItem {
   href: string;
   emBreve?: boolean;
   children?: NavItem[];
+  group?: string;
 }
 
 export interface NavSection {
@@ -13,7 +14,18 @@ export interface NavSection {
 export const navSections: NavSection[] = [
   {
     label: "Início",
-    items: [{ title: "Começando", href: "/comecando" }],
+    items: [
+      {
+        title: "Começando",
+        href: "/comecando",
+        children: [
+          { title: "Como Jogar", href: "/comecando/comojogar" },
+          { title: "Primeiro Acesso", href: "/comecando/primeiroacesso" },
+          { title: "Primeiros Passos", href: "/comecando/primeirospassos" },
+          { title: "FAQ", href: "/comecando/faq" },
+        ],
+      },
+    ],
   },
   {
     label: "Servidores",
@@ -22,89 +34,84 @@ export const navSections: NavSection[] = [
         title: "SkyBlock",
         href: "/skyblock",
         children: [
-          { title: "Como Começar", href: "/skyblock/como-comecar" },
-          { title: "Ilhas", href: "/skyblock/ilhas" },
-          { title: "Minions", href: "/skyblock/minions" },
-          { title: "Progressão", href: "/skyblock/progressao" },
-          { title: "Missões", href: "/skyblock/missoes" },
-          { title: "Economia", href: "/skyblock/economia" },
-          { title: "Encantamentos", href: "/skyblock/encantamentos" },
-          { title: "Loteria", href: "/skyblock/loteria" },
-          { title: "Eventos", href: "/skyblock/eventos" },
-          { title: "Comandos", href: "/skyblock/comandos" },
-          { title: "Crafting", href: "/skyblock/crafting" },
-          { title: "Vote", href: "/skyblock/votar" },
-          { title: "Benefícios VIP", href: "/skyblock/beneficios-vip" },
-          { title: "Textura", href: "/skyblock/textura-do-servidor" },
+          { title: "Como Jogar", href: "/skyblock/comojogar", group: "Começando" },
+          { title: "FAQ", href: "/skyblock/faq", group: "Começando" },
+          { title: "Textura do Servidor", href: "/skyblock/textura-do-servidor", group: "Começando" },
+          { title: "Ilha", href: "/skyblock/ilha", group: "Ilha" },
+          { title: "Progressão", href: "/skyblock/progressao", group: "Ilha" },
+          { title: "Minions", href: "/skyblock/minions", group: "Ilha" },
+          { title: "Spawners", href: "/skyblock/spawners", group: "Ilha" },
+          { title: "Economia", href: "/skyblock/economia", group: "Economia" },
+          { title: "Loteria", href: "/skyblock/loteria", group: "Economia" },
+          { title: "Crates", href: "/skyblock/crates", group: "Economia" },
+          { title: "Missões", href: "/skyblock/missoes", group: "Progressão" },
+          { title: "Jobs", href: "/skyblock/jobs", group: "Progressão" },
+          { title: "mcMMO", href: "/skyblock/mcmmo", group: "Progressão" },
+          { title: "Battle Pass", href: "/skyblock/battlepass", group: "Progressão" },
+          { title: "Encantamentos", href: "/skyblock/encantamentos", group: "Sistemas" },
+          { title: "Pets", href: "/skyblock/pets", group: "Sistemas" },
+          { title: "Eventos", href: "/skyblock/eventos", group: "Sistemas" },
+          { title: "Airdrops", href: "/skyblock/airdrops", group: "Sistemas" },
+          { title: "Relíquias", href: "/skyblock/reliquias", group: "Sistemas" },
+          { title: "Torneios", href: "/skyblock/torneios", group: "Sistemas" },
+          { title: "Parkour", href: "/skyblock/parkour", group: "Sistemas" },
+          { title: "Crafting", href: "/skyblock/crafting", group: "Sistemas", children: [
+            { title: "Vegetais", href: "/skyblock/crafting/vegetais" },
+            { title: "Comidas", href: "/skyblock/crafting/comidas" },
+            { title: "Sementes", href: "/skyblock/crafting/sementes" },
+            { title: "Itens Principais", href: "/skyblock/crafting/itens-principais" },
+          ]},
+          { title: "Recompensas", href: "/skyblock/recompensas", group: "Recompensas" },
+          { title: "Votação", href: "/skyblock/votacao", group: "Recompensas" },
+          { title: "Vouchers", href: "/skyblock/vouchers", group: "Recompensas" },
+          { title: "Rankings", href: "/skyblock/rankings", group: "Recompensas" },
+          { title: "Comandos", href: "/skyblock/comandos", group: "Referência" },
         ],
       },
-      {
-        title: "RankUP",
-        href: "/rankup",
-        children: [
-          { title: "Como Começar", href: "/rankup/como-comecar" },
-          { title: "Ranks", href: "/rankup/ranks", emBreve: true },
-          { title: "Progressão", href: "/rankup/progressao" },
-          { title: "Economia", href: "/rankup/economia" },
-          { title: "Prestígio", href: "/rankup/prestigio" },
-          { title: "Sistemas", href: "/rankup/sistemas" },
-          { title: "Comandos", href: "/rankup/comandos" },
-          { title: "Guias", href: "/rankup/guias" },
-        ],
-      },
     ],
   },
   {
-    label: "Sistemas",
+    label: "Geral",
     items: [
-      { title: "Economia", href: "/sistemas/economia" },
-      { title: "Cash", href: "/sistemas/cash" },
-      { title: "Loja", href: "/sistemas/loja" },
-      { title: "Ranks", href: "/sistemas/ranks" },
-      { title: "Encantamentos", href: "/sistemas/encantamentos" },
-      { title: "Crates", href: "/sistemas/crates", emBreve: true },
-      { title: "Eventos", href: "/sistemas/eventos" },
-      { title: "Missões", href: "/sistemas/missoes" },
-      { title: "Recompensas", href: "/sistemas/recompensas" },
-    ],
-  },
-  {
-    label: "Guias",
-    items: [
-      { title: "Guias para iniciantes", href: "/guias/para-iniciantes" },
-      { title: "Progressão", href: "/guias/progressao" },
-      { title: "Farm", href: "/guias/farm" },
-      { title: "Economia", href: "/guias/economia" },
-      { title: "Dicas", href: "/guias/dicas" },
-    ],
-  },
-  {
-    label: "Referência",
-    items: [
-      { title: "Comandos", href: "/comandos" },
-      { title: "Encantamentos", href: "/encantamentos" },
-      { title: "Ranks", href: "/ranks" },
-      { title: "Itens", href: "/referencia/itens", emBreve: true },
-      { title: "Termos", href: "/referencia/termos" },
-    ],
-  },
-  {
-    label: "Informações",
-    items: [
-      { title: "Regras", href: "/regras" },
-      { title: "Suporte", href: "/informacoes/suporte" },
-      { title: "Status", href: "/informacoes/status" },
-      { title: "Equipe", href: "/informacoes/equipe" },
-      { title: "Criadores", href: "/informacoes/criadores" },
-      { title: "FAQ", href: "/faq" },
+      { title: "Comandos", href: "/geral/comandos" },
+      { title: "Regras", href: "/geral/regras" },
+      { title: "Suporte", href: "/geral/suporte" },
+      { title: "FAQ", href: "/geral/faq" },
+      { title: "Discord", href: "/geral/discord" },
+      { title: "Contato", href: "/geral/contato" },
+      { title: "Loja", href: "/geral/loja" },
+      { title: "VIPs", href: "/geral/vips" },
+      { title: "Equipe", href: "/geral/equipe" },
+      { title: "Criadores", href: "/geral/criadores" },
+      { title: "Status", href: "/geral/status" },
+      { title: "Itens", href: "/geral/itens" },
+      { title: "Termos", href: "/geral/termos" },
     ],
   },
 ];
 
+const labelMap: Record<string, string> = { "/comecando": "Começando", "/skyblock": "SkyBlock", "/geral": "Geral" };
+
+function collectLabels(items: NavItem[]): Record<string, string> {
+  const map: Record<string, string> = {};
+  for (const item of items) {
+    map[item.href] = item.title;
+    if (item.children) {
+      Object.assign(map, collectLabels(item.children));
+    }
+  }
+  return map;
+}
+
+export const navLabel: Record<string, string> = navSections.reduce(
+  (acc, section) => Object.assign(acc, labelMap, collectLabels(section.items)),
+  {} as Record<string, string>
+);
+
 export const shortcuts = [
   { title: "Começar a jogar", href: "/comecando" },
   { title: "SkyBlock", href: "/skyblock" },
-  { title: "RankUP", href: "/rankup" },
-  { title: "Comandos", href: "/comandos" },
-  { title: "Economia", href: "/sistemas/economia" },
+  { title: "Comandos do SkyBlock", href: "/skyblock/comandos" },
+  { title: "Comandos Gerais", href: "/geral/comandos" },
+  { title: "VIPs", href: "/geral/vips" },
 ];

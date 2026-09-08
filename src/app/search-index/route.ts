@@ -32,6 +32,11 @@ function buildIndex(): SearchEntry[] {
     });
   }
 
+  const commandPage = (categoria: string) =>
+    ["SkyBlock", "Ilha", "Encantamentos"].includes(categoria)
+      ? "/skyblock/comandos"
+      : "/geral/comandos";
+
   for (const c of comandos) {
     entries.push({
       id: `comando:${c.comando}`,
@@ -40,7 +45,7 @@ function buildIndex(): SearchEntry[] {
       title: c.comando,
       subtitle: c.categoria,
       text: `${c.comando} ${c.descricao} ${c.uso ?? ""} ${c.categoria} ${c.permissao}`,
-      href: `/comandos?comando=${encodeURIComponent(c.comando)}`,
+      href: `${commandPage(c.categoria)}?comando=${encodeURIComponent(c.comando)}`,
     });
   }
 
@@ -52,7 +57,7 @@ function buildIndex(): SearchEntry[] {
       title: `✨ ${e.nome}`,
       subtitle: e.raridade,
       text: `${e.nome} ${e.descricao} ${e.aplicaSe} ${e.raridade} ${e.grupo}`,
-      href: `/encantamentos/${e.path}`,
+      href: `/skyblock/encantamentos/${e.path}`,
     });
   }
 
@@ -64,7 +69,7 @@ function buildIndex(): SearchEntry[] {
       title: `🏆 ${v.nome}`,
       subtitle: "VIP",
       text: `${v.nome} ${v.kits} ${v.comandos.join(" ")} ${v.extras.join(" ")}`,
-      href: `/ranks#${v.slug}`,
+      href: `/geral/vips#${v.slug}`,
     });
   }
 

@@ -131,7 +131,7 @@ export default function WikiHomePage() {
               Discord
             </Link>
             <Link
-              href="/informacoes/suporte"
+              href="/geral/suporte"
               className="inline-flex items-center gap-2 rounded-xl border border-border bg-bg-raised px-5 py-3 text-sm font-semibold text-text transition-colors hover:border-accent/50 hover:text-accent"
             >
               Suporte

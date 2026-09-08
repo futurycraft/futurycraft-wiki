@@ -7,11 +7,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const wikiUrl = siteConfig.wikiUrl;
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${wikiUrl}/`, lastModified: new Date(), changeFrequency: "daily", priority: 1 },
-    { url: `${wikiUrl}/comandos`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
-    { url: `${wikiUrl}/encantamentos`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
-    { url: `${wikiUrl}/ranks`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
-    { url: `${wikiUrl}/skyblock`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
-    { url: `${wikiUrl}/rankup`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+    { url: `${wikiUrl}/comecando`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+    { url: `${wikiUrl}/skyblock`, lastModified: new Date(), changeFrequency: "daily", priority: 0.9 },
+    { url: `${wikiUrl}/geral`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+    { url: `${wikiUrl}/skyblock/comandos`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${wikiUrl}/geral/comandos`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${wikiUrl}/skyblock/encantamentos`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+    { url: `${wikiUrl}/geral/vips`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
   ];
 
   const articles = getArticles().map((a) => ({
@@ -22,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const encantamentos = getAllEnchants().map((e) => ({
-    url: `${wikiUrl}/encantamentos/${e.path}`,
+    url: `${wikiUrl}/skyblock/encantamentos/${e.path}`,
     lastModified: new Date("2026-01-01"),
     changeFrequency: "monthly" as const,
     priority: 0.6,

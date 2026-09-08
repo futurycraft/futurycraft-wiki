@@ -7,22 +7,21 @@ const footerColumns = [
     title: "Wiki",
     links: [
       { title: "Começando", href: "/comecando" },
+      { title: "Como Jogar", href: "/skyblock/comojogar" },
       { title: "SkyBlock", href: "/skyblock" },
-      { title: "RankUP", href: "/rankup" },
-      { title: "Sistemas", href: "/sistemas/economia" },
-      { title: "Guias", href: "/guias/para-iniciantes" },
-      { title: "Comandos", href: "/comandos" },
-      { title: "Encantamentos", href: "/encantamentos" },
-      { title: "Ranks", href: "/ranks" },
+      { title: "Comandos do SkyBlock", href: "/skyblock/comandos" },
+      { title: "Encantamentos", href: "/skyblock/encantamentos" },
+      { title: "Comandos Gerais", href: "/geral/comandos" },
+      { title: "VIPs", href: "/geral/vips" },
     ],
   },
   {
     title: "Recursos",
     links: [
-      { title: "Regras", href: "/regras" },
-      { title: "FAQ", href: "/faq" },
-      { title: "Suporte", href: "/informacoes/suporte" },
-      { title: "Status", href: "/informacoes/status" },
+      { title: "Regras", href: "/geral/regras" },
+      { title: "FAQ", href: "/geral/faq" },
+      { title: "Suporte", href: "/geral/suporte" },
+      { title: "Status", href: "/geral/status" },
       { title: "Loja", href: siteConfig.loja },
       { title: "Site", href: siteConfig.site },
     ],
@@ -31,9 +30,9 @@ const footerColumns = [
     title: "Comunidade",
     links: [
       { title: "Discord", href: siteConfig.discord },
-      { title: "Equipe", href: "/informacoes/equipe" },
-      { title: "Criadores", href: "/informacoes/criadores" },
-      { title: "Vote no Servidor", href: "/skyblock/votar" },
+      { title: "Equipe", href: "/geral/equipe" },
+      { title: "Criadores", href: "/geral/criadores" },
+      { title: "Votação", href: "/skyblock/votacao" },
     ],
   },
 ];
@@ -55,7 +54,7 @@ export function Footer() {
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-text-muted">
               Central de conhecimento do servidor FuturyCraft. Tudo sobre
-              SkyBlock, RankUP, economia, encantamentos, ranks e eventos.
+              SkyBlock, economia, encantamentos, vips e eventos.
             </p>
             <div className="mt-4 flex flex-wrap items-center gap-2 text-xs">
               <span className="rounded-full border border-border bg-bg-card px-2.5 py-1 font-mono text-text-muted">

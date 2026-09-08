@@ -519,7 +519,7 @@ export const comandos: Comando[] = [
     comando: "/loteria",
     descricao: "Abre o menu da loteria e permite participar dos sorteios.",
     uso: "/loteria",
-    categoria: "Economia",
+    categoria: "SkyBlock",
     permissao: "Jogador",
   },
   // Encantamentos

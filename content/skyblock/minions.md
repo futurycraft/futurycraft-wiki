@@ -1,7 +1,7 @@
 ---
 title: Minions
 description: Minions ativos no SkyBlock. Limites variam de acordo com o VIP do jogador.
-category: Servidores
+category: SkyBlock
 icon: ⚙️
 order: 6
 featured: false
@@ -27,6 +27,6 @@ O número de minions ativos depende do seu VIP:
 
 Coloque seus minions dentro da área da sua ilha e configure a tarefa no próprio minion pelo painel dele.
 
-> Os limites variam conforme o seu [VIP](/ranks). Confira também o guia de [Ilhas](/skyblock/ilhas) para gerenciar sua equipe e área.
+> Os limites variam conforme o seu [VIP](/geral/vips). Confira também o guia de [Ilha](/skyblock/ilha) para gerenciar sua equipe e área.
 
 > **Em breve:** mais detalhes sobre tipos, upgrades e configurações de minions serão adicionados aqui.

@@ -19,7 +19,7 @@ export default function NotFound() {
           Voltar ao início
         </Link>
         <Link
-          href="/comandos"
+          href="/skyblock/comandos"
           className="rounded-xl border border-border bg-bg-card px-5 py-2.5 text-sm font-semibold text-text transition-colors hover:border-accent/50"
         >
           Ver comandos

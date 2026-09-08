@@ -1,7 +1,7 @@
 ---
 title: Textura do Servidor
 description: Como ativar a textura oficial do FuturyCraft no Java e no Bedrock, e como ver texturas de armaduras.
-category: Servidores
+category: SkyBlock
 icon: 🎨
 order: 11
 featured: true

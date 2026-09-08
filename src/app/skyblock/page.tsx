@@ -1,39 +1,112 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import { season, skyblockHighlights } from "@/data/season";
-import { getArticlesByGroup } from "@/lib/content";
-import { comandos } from "@/data/comandos";
+import { season } from "@/data/season";
 import { DocLayout } from "@/components/doc-layout";
-import { WikiCard } from "@/components/wiki-card";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { JsonLd, breadcrumbJsonLd } from "@/components/json-ld";
-import { ArrowRightIcon, ChevronRightIcon, ServerIcon, SparkIcon } from "@/components/icons";
+import { ArrowRightIcon, ChevronRightIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "SkyBlock",
   description:
-    "Central do modo SkyBlock do FuturyCraft: como começar, ilhas, minions, missões, economia, encantamentos, loteria, eventos e comandos.",
+    "Central do modo SkyBlock do FuturyCraft: comece, evolua sua ilha, cresça na economia e domine os sistemas.",
   alternates: { canonical: `${siteConfig.wikiUrl}/skyblock` },
 };
 
-const popular = [
-  { icon: "🎫", title: "Vote no servidor", desc: "Vote e ganhe recompensas diárias.", href: "/skyblock/votar" },
-  { icon: "🎰", title: "Loteria", desc: "Participe dos sorteios e concorra a prêmios.", href: "/skyblock/loteria" },
-  { icon: "⚗️", title: "Alquimista", desc: "Combine e melhore encantamentos.", href: "/comandos?comando=/alquimista" },
+const areas = [
+  {
+    id: "comecando",
+    title: "Começando",
+    icon: "🌱",
+    desc: "Crie sua ilha, ative a textura e tire suas dúvidas.",
+    pages: [
+      { title: "Como Jogar", icon: "🕹️", href: "/skyblock/comojogar", desc: "Crie sua ilha e dê os primeiros passos." },
+      { title: "FAQ", icon: "❓", href: "/skyblock/faq", desc: "Perguntas frequentes sobre o modo." },
+      { title: "Textura do Servidor", icon: "🎨", href: "/skyblock/textura-do-servidor", desc: "Ative a textura oficial com /textura." },
+    ],
+  },
+  {
+    id: "ilha",
+    title: "Ilha",
+    icon: "🏝️",
+    desc: "Gerencie sua ilha, evolua e automatize.",
+    pages: [
+      { title: "Ilha", icon: "🏝️", href: "/skyblock/ilha", desc: "Níveis, equipe, homes, biomas e mais." },
+      { title: "Progressão", icon: "📈", href: "/skyblock/progressao", desc: "Como evoluir sua ilha e suas farms." },
+      { title: "Minions", icon: "⚙️", href: "/skyblock/minions", desc: "Autômatos que trabalham para você." },
+      { title: "Spawners", icon: "🫧", href: "/skyblock/spawners", desc: "Drops constantes de mobs na ilha." },
+    ],
+  },
+  {
+    id: "economia",
+    title: "Economia",
+    icon: "💰",
+    desc: "Money, cash, loteria e crates.",
+    pages: [
+      { title: "Economia", icon: "💰", href: "/skyblock/economia", desc: "Money, cash, banco e lojas." },
+      { title: "Loteria", icon: "🎟️", href: "/skyblock/loteria", desc: "Aposte números e concorra a prêmios." },
+      { title: "Crates", icon: "📦", href: "/skyblock/crates", desc: "Caixas de recompensas." },
+    ],
+  },
+  {
+    id: "progressao",
+    title: "Progressão",
+    icon: "📜",
+    desc: "Missões, jobs, habilidades e temporadas.",
+    pages: [
+      { title: "Missões", icon: "📜", href: "/skyblock/missoes", desc: "Desafios da ilha e do servidor." },
+      { title: "Jobs", icon: "🛠️", href: "/skyblock/jobs", desc: "Profissões para ganhar recompensas." },
+      { title: "mcMMO", icon: "⛏️", href: "/skyblock/mcmmo", desc: "Habilidades e XP por ações." },
+      { title: "Battle Pass", icon: "🎖️", href: "/skyblock/battlepass", desc: "Missões e recompensas por temporada." },
+    ],
+  },
+  {
+    id: "sistemas",
+    title: "Sistemas",
+    icon: "✨",
+    desc: "Encantamentos, eventos, crafting e mais.",
+    pages: [
+      { title: "Encantamentos", icon: "✨", href: "/skyblock/encantamentos", desc: "284 encantamentos personalizados." },
+      { title: "Pets", icon: "🐾", href: "/skyblock/pets", desc: "Companheiros da sua ilha." },
+      { title: "Eventos", icon: "🎉", href: "/skyblock/eventos", desc: "Dragão, pinhata e mais." },
+      { title: "Airdrops", icon: "🪂", href: "/skyblock/airdrops", desc: "Recompensas que caem do céu." },
+      { title: "Relíquias", icon: "⚰️", href: "/skyblock/reliquias", desc: "Itens raros especiais." },
+      { title: "Torneios", icon: "🏆", href: "/skyblock/torneios", desc: "Competições com premiações." },
+      { title: "Parkour", icon: "🏃", href: "/skyblock/parkour", desc: "Pistas de habilidade." },
+      { title: "Crafting", icon: "🔨", href: "/skyblock/crafting", desc: "Receitas exclusivas do modo." },
+    ],
+  },
+  {
+    id: "recompensas",
+    title: "Recompensas",
+    icon: "🎁",
+    desc: "Ganhe votando e participando.",
+    pages: [
+      { title: "Recompensas", icon: "🎁", href: "/skyblock/recompensas", desc: "Votações, kits VIP e diárias." },
+      { title: "Votação", icon: "🗳️", href: "/skyblock/votacao", desc: "Vote a cada 24h e ganhe recompensas." },
+      { title: "Vouchers", icon: "🎫", href: "/skyblock/vouchers", desc: "Vales de recompensas." },
+      { title: "Rankings", icon: "📊", href: "/skyblock/rankings", desc: "Tops de ilha, money e cash." },
+    ],
+  },
+  {
+    id: "referencia",
+    title: "Referência",
+    icon: "⌨️",
+    desc: "Todos os comandos do modo.",
+    pages: [
+      { title: "Comandos", icon: "⌨️", href: "/skyblock/comandos", desc: "Comandos da ilha, missões e sistemas." },
+    ],
+  },
 ];
 
 export default function SkyblockPage() {
-  const group = getArticlesByGroup("skyblock");
-  const cmdList = comandos
-    .filter((c) => c.categoria === "Ilha" || c.categoria === "SkyBlock")
-    .slice(0, 10);
-
   return (
     <DocLayout>
       <div className="animate-fade-in">
         <JsonLd data={breadcrumbJsonLd([{ name: "Wiki", href: "/" }, { name: "SkyBlock" }])} />
         <Breadcrumb items={[{ label: "Wiki", href: "/" }, { label: "SkyBlock" }]} />
+
         <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-bg-card p-6 card-glow sm:p-8">
           <div className="flex flex-wrap items-center gap-2">
             <span className="rounded-full border border-accent/30 bg-accent-glow px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent">
@@ -65,126 +138,62 @@ export default function SkyblockPage() {
               Versão: <span className="text-text">{season.versao}</span>
             </span>
           </div>
-          <div className="mt-5">
+          <div className="mt-5 flex flex-wrap gap-3">
             <Link
-              href="/skyblock/como-comecar"
+              href="/skyblock/comojogar"
               className="inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-bg transition-colors hover:bg-accent-dim"
             >
               Começar no SkyBlock <ArrowRightIcon className="h-4 w-4" />
             </Link>
+            <Link
+              href="/skyblock/comandos"
+              className="inline-flex items-center gap-2 rounded-xl border border-border bg-bg-raised px-5 py-2.5 text-sm font-semibold text-text transition-colors hover:border-accent/50"
+            >
+              Comandos
+            </Link>
           </div>
         </div>
 
-        <section className="mt-10">
-          <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold text-text">
-            <SparkIcon className="h-4 w-4 text-accent" />
-            Comece por aqui
-          </h2>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            <Link
-              href="/skyblock/como-comecar"
-              className="group rounded-xl border border-border bg-bg-card p-4 transition-colors hover:border-accent/40"
+        <section className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {areas.map((a) => (
+            <a
+              key={a.id}
+              href={`#${a.id}`}
+              className="group flex flex-col gap-2 rounded-2xl border border-border bg-bg-card p-5 transition-colors hover:border-accent/40 hover:bg-bg-hover"
             >
-              <span className="text-xl" aria-hidden="true">🌱</span>
-              <span className="mt-2 block text-sm font-semibold text-text group-hover:text-accent">Como Começar</span>
-              <span className="mt-0.5 block text-xs text-text-muted">Crie sua ilha e dê os primeiros passos.</span>
-            </Link>
-            <Link
-              href="/skyblock/progressao"
-              className="group rounded-xl border border-border bg-bg-card p-4 transition-colors hover:border-accent/40"
-            >
-              <span className="text-xl" aria-hidden="true">📈</span>
-              <span className="mt-2 block text-sm font-semibold text-text group-hover:text-accent">Progressão</span>
-              <span className="mt-0.5 block text-xs text-text-muted">Evolua sua ilha e seus recursos.</span>
-            </Link>
-            <Link
-              href="/skyblock/comandos"
-              className="group rounded-xl border border-border bg-bg-card p-4 transition-colors hover:border-accent/40"
-            >
-              <span className="text-xl" aria-hidden="true">⌨️</span>
-              <span className="mt-2 block text-sm font-semibold text-text group-hover:text-accent">Comandos</span>
-              <span className="mt-0.5 block text-xs text-text-muted">Todos os comandos do SkyBlock.</span>
-            </Link>
-          </div>
+              <span className="flex items-center justify-between">
+                <span className="text-2xl" aria-hidden="true">{a.icon}</span>
+                <ChevronRightIcon className="h-4 w-4 text-text-muted transition-transform group-hover:translate-x-0.5 group-hover:text-accent" />
+              </span>
+              <span className="text-base font-semibold text-text group-hover:text-accent">{a.title}</span>
+              <span className="text-sm text-text-muted">{a.desc}</span>
+            </a>
+          ))}
         </section>
 
-        <section className="mt-10">
-          <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold text-text">
-            <ServerIcon className="h-4 w-4 text-accent" />
-            Sistemas disponíveis
-          </h2>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {skyblockHighlights.map((h) => (
-              <WikiCard
-                key={h.title}
-                icon={h.icon}
-                title={h.title}
-                description={h.desc}
-                href={h.href}
-              />
-            ))}
-          </div>
-        </section>
-
-        <section className="mt-10">
-          <h2 className="mb-4 text-lg font-semibold text-text">Documentação do SkyBlock</h2>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {group
-              .filter((a) => a.slug !== "home" && a.slug !== "crafting")
-              .map((g) => (
+        {areas.map((a) => (
+          <section key={a.id} id={a.id} className="mt-12 scroll-mt-24">
+            <h2 className="mb-1 flex items-center gap-2 text-lg font-semibold text-text">
+              <span aria-hidden="true">{a.icon}</span> {a.title}
+            </h2>
+            <p className="mb-4 text-sm text-text-muted">{a.desc}</p>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {a.pages.map((p) => (
                 <Link
-                  key={g.path}
-                  href={`/${g.path}`}
+                  key={p.href}
+                  href={p.href}
                   className="group flex items-start gap-3 rounded-xl border border-border bg-bg-card p-4 transition-colors hover:border-accent/40 hover:bg-bg-hover"
                 >
-                  <span className="text-xl" aria-hidden="true">{g.meta.icon}</span>
+                  <span className="text-xl" aria-hidden="true">{p.icon}</span>
                   <span className="flex flex-col gap-0.5">
-                    <span className="flex items-center gap-1 text-sm font-semibold text-text group-hover:text-accent">
-                      {g.meta.title}
-                      <ArrowRightIcon className="h-3 w-3 opacity-60 transition-transform group-hover:translate-x-0.5" />
-                    </span>
-                    <span className="text-xs text-text-muted">{g.meta.description}</span>
+                    <span className="text-sm font-semibold text-text group-hover:text-accent">{p.title}</span>
+                    <span className="text-xs text-text-muted">{p.desc}</span>
                   </span>
                 </Link>
               ))}
-          </div>
-          <Link
-            href="/skyblock/crafting"
-            className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:text-accent-dim"
-          >
-            Guias de crafting <ChevronRightIcon className="h-4 w-4" />
-          </Link>
-        </section>
-
-        <section className="mt-10">
-          <h2 className="mb-4 text-lg font-semibold text-text">Comandos essenciais</h2>
-          <div className="flex flex-wrap gap-2">
-            {cmdList.map((c) => (
-              <Link
-                key={c.comando}
-                href={`/comandos?comando=${encodeURIComponent(c.comando)}`}
-                className="rounded-full border border-border bg-bg-card px-4 py-2 font-mono text-xs text-text-muted transition-colors hover:border-accent/50 hover:text-accent"
-              >
-                {c.comando}
-              </Link>
-            ))}
-            <Link
-              href="/comandos?cat=SkyBlock"
-              className="rounded-full border border-dashed border-border bg-transparent px-4 py-2 text-xs text-text-muted transition-colors hover:border-accent/50 hover:text-accent"
-            >
-              Ver todos →
-            </Link>
-          </div>
-        </section>
-
-        <section className="mt-10">
-          <h2 className="mb-4 text-lg font-semibold text-text">Conteúdos populares</h2>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {popular.map((p) => (
-              <WikiCard key={p.title} icon={p.icon} title={p.title} description={p.desc} href={p.href} />
-            ))}
-          </div>
-        </section>
+            </div>
+          </section>
+        ))}
       </div>
     </DocLayout>
   );

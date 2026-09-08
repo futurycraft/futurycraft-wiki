@@ -1,10 +1,10 @@
 ---
 title: Missões
 description: Sistema de missões do SkyBlock: desafios, missões do servidor e missões secundárias.
-category: Servidores
+category: SkyBlock
 icon: 📜
-order: 7
-featured: false
+order: 9
+featured: true
 updatedAt: 2026-01-01
 ---
 
@@ -37,4 +37,4 @@ Exemplos de desafios encontrados:
 
 Complete os desafios para ganhar recompensas que aceleram sua evolução: itens, dinheiro e recursos exclusivos.
 
-> Veja também as [Missões do servidor](/sistemas/missoes) e o sistema de [Recompensas](/sistemas/recompensas).
+> Veja também o sistema de [Recompensas](/skyblock/recompensas).

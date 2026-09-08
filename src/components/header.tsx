@@ -10,10 +10,9 @@ import { navSections } from "@/lib/nav";
 
 const links = [
   { label: "Wiki", href: "/" },
+  { label: "Começando", href: "/comecando" },
   { label: "SkyBlock", href: "/skyblock" },
-  { label: "RankUP", href: "/rankup" },
-  { label: "Comandos", href: "/comandos" },
-  { label: "Encantamentos", href: "/encantamentos" },
+  { label: "Geral", href: "/geral" },
 ];
 
 export function Header() {
@@ -166,25 +165,33 @@ export function Header() {
                         )}
                       </Link>
                       {item.children && item.children.length > 0 && (
-                        <ul className="mt-0.5 space-y-0.5 border-l border-border pl-3 ml-2">
-                          {item.children.map((child) => {
+                        <ul className="mt-0.5 space-y-0.5 border-l border-border pl-2 ml-2">
+                          {item.children.map((child, ci) => {
+                            const showHeader = child.group !== undefined && (ci === 0 || child.group !== item.children![ci - 1].group);
                             const childActive = pathname === child.href || pathname.startsWith(child.href);
                             return (
-                              <li key={child.href}>
-                                <Link
-                                  href={child.href}
-                                  onClick={() => setOpenMenu(false)}
-                                  className={`sidebar-link !text-[0.8125rem] ${childActive ? "active" : ""} ${childActive ? "" : "opacity-80"}`}
-                                  aria-current={childActive ? "page" : undefined}
-                                >
-                                  <span>{child.title}</span>
-                                  {child.emBreve && (
-                                    <span className="ml-auto shrink-0 rounded-full border border-border bg-bg-raised px-1.5 py-0.5 text-[0.5625rem] font-medium text-text-muted">
-                                      em breve
-                                    </span>
-                                  )}
-                                </Link>
-                              </li>
+                              <div key={child.href}>
+                                {showHeader && (
+                                  <div className="mb-1 ml-2 mt-2 text-[0.625rem] font-semibold uppercase tracking-[0.15em] text-text-muted/80 first:mt-0">
+                                    {child.group}
+                                  </div>
+                                )}
+                                <li>
+                                  <Link
+                                    href={child.href}
+                                    onClick={() => setOpenMenu(false)}
+                                    className={`sidebar-link !text-[0.8125rem] ${childActive ? "active" : ""} ${childActive ? "" : "opacity-80"}`}
+                                    aria-current={childActive ? "page" : undefined}
+                                  >
+                                    <span>{child.title}</span>
+                                    {child.emBreve && (
+                                      <span className="ml-auto shrink-0 rounded-full border border-border bg-bg-raised px-1.5 py-0.5 text-[0.5625rem] font-medium text-text-muted">
+                                        em breve
+                                      </span>
+                                    )}
+                                  </Link>
+                                </li>
+                              </div>
                             );
                           })}
                         </ul>

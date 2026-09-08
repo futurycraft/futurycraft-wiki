@@ -7,19 +7,14 @@ import { ArticleToc } from "@/components/article-toc";
 import { WikiCard } from "@/components/wiki-card";
 import { DocLayout } from "@/components/doc-layout";
 import { JsonLd, articleJsonLd, breadcrumbJsonLd } from "@/components/json-ld";
-import { navSections } from "@/lib/nav";
+import { navLabel } from "@/lib/nav";
 
 interface PageProps {
   params: Promise<{ slug: string[] }>;
 }
 
 function crumbLabel(path: string): string {
-  const href = `/${path}`;
-  for (const section of navSections) {
-    const found = section.items.find((item) => item.href === href);
-    if (found) return found.title;
-  }
-  return path
+  return navLabel[path] ?? path
     .split("/")
     .map((seg) => seg.charAt(0).toUpperCase() + seg.slice(1))
     .join(" ");
@@ -50,7 +45,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-const RESERVED_PATHS = new Set(["skyblock", "rankup"]);
+const RESERVED_PATHS = new Set(["comecando", "skyblock", "geral"]);
 
 export function generateStaticParams(): { slug: string[] }[] {
   return getArticles()

@@ -3,25 +3,35 @@
 import { useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { CommandCard } from "./command-card";
-import { comandos, comandoCategorias, type ComandoCategoria } from "@/data/comandos";
+import { comandos, type ComandoCategoria } from "@/data/comandos";
 
-export function CommandsBrowser() {
+export function CommandsBrowser({ categorias = [] }: { categorias?: ComandoCategoria[] }) {
   const searchParams = useSearchParams();
+  const allowed = useMemo(
+    () => (categorias.length > 0 ? categorias : (["Todos"] as ComandoCategoria[])),
+    [categorias]
+  );
+  const chips = useMemo(
+    () => ["Todos", ...allowed.filter((c) => c !== "Todos")] as ComandoCategoria[],
+    [allowed]
+  );
+
   const initialCat = (searchParams.get("cat") as ComandoCategoria) ?? "Todos";
   const [categoria, setCategoria] = useState<ComandoCategoria>(
-    comandoCategorias.includes(initialCat) ? initialCat : "Todos"
+    chips.includes(initialCat) ? initialCat : "Todos"
   );
   const [query, setQuery] = useState("");
 
   const filtered = useMemo(() => {
     const q = query.toLowerCase().trim();
     return comandos.filter((c) => {
+      if (!allowed.includes("Todos") && !allowed.includes(c.categoria as ComandoCategoria)) return false;
       if (categoria !== "Todos" && c.categoria !== categoria) return false;
       if (!q) return true;
       const haystack = `${c.comando} ${c.descricao} ${c.uso ?? ""} ${c.categoria} ${c.aliases?.join(" ") ?? ""}`.toLowerCase();
       return haystack.includes(q);
     });
-  }, [categoria, query]);
+  }, [categoria, query, allowed]);
 
   return (
     <div>
@@ -40,7 +50,7 @@ export function CommandsBrowser() {
       </div>
 
       <nav className="mt-5 flex flex-wrap gap-2" aria-label="Filtrar comandos por categoria">
-        {comandoCategorias.map((c) => (
+        {chips.map((c) => (
           <button
             key={c}
             type="button"
