@@ -53,7 +53,7 @@ export const sidebarNodes: SidebarNode[] = [
           { kind: "link", title: "Limits", href: "/skyblock/ilha/limits" },
           { kind: "link", title: "Settings", href: "/skyblock/ilha/settings" },
           { kind: "link", title: "Team", href: "/skyblock/ilha/team" },
-          { kind: "link", title: "Comandos", href: "/skyblock/comandos?cat=Ilha" },
+          { kind: "link", title: "Comandos", href: "/skyblock/comandos?cat=%F0%9F%8F%9D%EF%B8%8F%20Ilhas" },
         ],
       },
       {

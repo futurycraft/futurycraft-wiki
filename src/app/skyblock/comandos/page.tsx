@@ -39,7 +39,20 @@ export default function SkyBlockComandosPage() {
           </p>
         </header>
         <Suspense>
-          <CommandsBrowser categorias={["Geral", "SkyBlock", "Economia", "Ilha", "Teletransporte", "Mina", "Encantamentos"]} />
+          <CommandsBrowser
+            categorias={[
+              "🏝️ Ilhas",
+              "⛏️ Mineração",
+              "💰 Economia e Comércio",
+              "🎁 Kits, Ranks e VIPs",
+              "⚔️ Progressão e Habilidades",
+              "🐉 Dragão e Sistemas Especiais",
+              "💬 Comunicação e Social",
+              "🧭 Teleporte e Navegação",
+              "🛠️ Utilidades",
+              "📊 Rankings, Votação e Informações",
+            ]}
+          />
         </Suspense>
       </div>
     </DocLayout>

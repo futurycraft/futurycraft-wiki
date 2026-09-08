@@ -111,7 +111,7 @@ As seguintes rotas são **reservadas** por páginas estáticas e não podem ser 
 | `/skyblock/eventos` | Eventos — horários, Dragão e Pinhata | ✓ (parcial) |
 | `/skyblock/dragao` | Dragão | ⏳ em breve |
 | `/skyblock/shop` | Shop | ⏳ em breve |
-| `/skyblock/kits` | Kits | ⏳ em breve |
+| `/skyblock/kits` | Kits — Ranks, VIPs e Especiais | ✓ |
 | `/skyblock/mercado-galactico` | Mercado Galáctico | ⏳ em breve |
 
 #### Sistemas
