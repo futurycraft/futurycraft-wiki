@@ -65,7 +65,7 @@ const areas = [
     pages: [
       { title: "Missões", icon: "📜", href: "/skyblock/missoes", desc: "Desafios da ilha e do servidor." },
       { title: "Passe de Batalha", icon: "🎖️", href: "/skyblock/battlepass", desc: "Missões e recompensas por temporada." },
-      { title: "Crates", icon: "📦", href: "/skyblock/crates", desc: "Caixas de recompensas." },
+      { title: "MobTraps", icon: "👾", href: "/skyblock/mobtraps", desc: "Farm de mobs e lucro." },
       { title: "Eventos", icon: "🎉", href: "/skyblock/eventos", desc: "Dragão, pinhata e mais." },
       { title: "Airdrops", icon: "🪂", href: "/skyblock/airdrops", desc: "Recompensas que caem do céu." },
       { title: "Relíquias", icon: "⚰️", href: "/skyblock/reliquias", desc: "Itens raros especiais." },

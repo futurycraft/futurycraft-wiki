@@ -53,7 +53,6 @@ export const sidebarNodes: SidebarNode[] = [
           { kind: "link", title: "Limits", href: "/skyblock/ilha/limits" },
           { kind: "link", title: "Settings", href: "/skyblock/ilha/settings" },
           { kind: "link", title: "Team", href: "/skyblock/ilha/team" },
-          { kind: "link", title: "Comandos", href: "/skyblock/comandos?cat=%F0%9F%8F%9D%EF%B8%8F%20Ilhas" },
         ],
       },
       {
@@ -80,7 +79,7 @@ export const sidebarNodes: SidebarNode[] = [
           { kind: "link", title: "mcMMO", href: "/skyblock/mcmmo" },
           { kind: "link", title: "Minions", href: "/skyblock/minions" },
           { kind: "link", title: "Encantamentos", href: "/skyblock/encantamentos" },
-          { kind: "link", title: "Crates", href: "/skyblock/crates" },
+          { kind: "link", title: "MobTraps", href: "/skyblock/mobtraps" },
           { kind: "link", title: "Airdrops", href: "/skyblock/airdrops" },
           { kind: "link", title: "Relíquias", href: "/skyblock/reliquias" },
           { kind: "link", title: "Torneios", href: "/skyblock/torneios" },

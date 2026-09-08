@@ -43,7 +43,7 @@ export const navSections: NavSection[] = [
           { title: "Spawners", href: "/skyblock/spawners", group: "Ilha" },
           { title: "Economia", href: "/skyblock/economia", group: "Economia" },
           { title: "Loteria", href: "/skyblock/loteria", group: "Economia" },
-          { title: "Crates", href: "/skyblock/crates", group: "Economia" },
+          { title: "MobTraps", href: "/skyblock/mobtraps", group: "Economia" },
           { title: "Missões", href: "/skyblock/missoes", group: "Progressão" },
           { title: "Jobs", href: "/skyblock/jobs", group: "Progressão" },
           { title: "mcMMO", href: "/skyblock/mcmmo", group: "Progressão" },
