@@ -1,23 +1,23 @@
----
+﻿---
 title: Settings
-description: Configure sua ilha no SkyBlock pelo painel de configurações.
+description: Configure sua ilha no SkyBlock pelo painel de configuraÃ§Ãµes.
 category: SkyBlock
-icon: ⚙️
-order: 2.8
+icon: âš™ï¸
+order: 4.8
 featured: false
 updatedAt: 2026-01-01
 ---
 
-As **configurações** controlam o funcionamento da sua ilha no SkyBlock.
+As **configuraÃ§Ãµes** controlam o funcionamento da sua ilha no SkyBlock.
 
-## Abrir as Configurações
+## Abrir as ConfiguraÃ§Ãµes
 
-Abra o painel de configurações da sua ilha com:
+Abra o painel de configuraÃ§Ãµes da sua ilha com:
 
 ```
 /island settings
 ```
 
-As opções disponíveis aparecem no painel dentro do jogo.
+As opÃ§Ãµes disponÃ­veis aparecem no painel dentro do jogo.
 
-> Apenas o **dono** da ilha pode alterar as configurações.
+> Apenas o **dono** da ilha pode alterar as configuraÃ§Ãµes.

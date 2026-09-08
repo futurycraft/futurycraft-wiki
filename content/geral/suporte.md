@@ -1,14 +1,14 @@
----
+﻿---
 title: Suporte
 description: Como abrir um ticket no Discord para receber suporte do FuturyCraft.
 category: Geral
-icon: 🎫
-order: 4
+icon: ðŸŽ«
+order: 2
 featured: true
 updatedAt: 2026-01-01
 ---
 
-Precisa de ajuda? Nosso suporte é feito através dos **tickets no Discord**.
+Precisa de ajuda? Nosso suporte Ã© feito atravÃ©s dos **tickets no Discord**.
 
 ## Como abrir um ticket
 
@@ -17,7 +17,7 @@ Precisa de ajuda? Nosso suporte é feito através dos **tickets no Discord**.
 3. Abra um ticket descrevendo o seu problema
 4. Aguarde o atendimento de um membro da equipe
 
-## Links úteis
+## Links Ãºteis
 
 - **Site oficial:** [https://futurycraft.com.br](https://futurycraft.com.br)
 - **Loja:** [https://futurycraft.com.br/itens](https://futurycraft.com.br/itens)

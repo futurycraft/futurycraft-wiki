@@ -1,32 +1,32 @@
----
+﻿---
 title: Termos
-description: Glossário de termos e siglas usados no FuturyCraft e no Minecraft.
+description: GlossÃ¡rio de termos e siglas usados no FuturyCraft e no Minecraft.
 category: Geral
-icon: 📚
-order: 2
+icon: ðŸ“š
+order: 11
 featured: false
 updatedAt: 2026-01-01
 ---
 
 ## Termos do Servidor
 
-- **SkyBlock** — modo de jogo de ilha flutuante
-- **RankUP** — modo de jogo de progressão por ranks
-- **VIP** — linha de benefícios pagos do servidor (Ferro, Ouro, Diamante, Esmeralda, Supremo)
-- **Spawners** — blocos que geram mobs
-- **Minions** — autômatos que trabalham na sua ilha
-- **Mina VIP** — mina exclusiva para jogadores com VIP
-- **Cash** — moeda premium do servidor
-- **Money** — moeda principal do servidor
-- **Prestígio** — sistema de reinício de progressão com bônus permanentes
+- **SkyBlock** â€” modo de jogo de ilha flutuante
+- **RankUP** â€” modo de jogo de progressÃ£o por ranks
+- **VIP** â€” linha de benefÃ­cios pagos do servidor (Ferro, Ouro, Diamante, Esmeralda, Supremo)
+- **Spawners** â€” blocos que geram mobs
+- **Minions** â€” autÃ´matos que trabalham na sua ilha
+- **Mina VIP** â€” mina exclusiva para jogadores com VIP
+- **Cash** â€” moeda premium do servidor
+- **Money** â€” moeda principal do servidor
+- **PrestÃ­gio** â€” sistema de reinÃ­cio de progressÃ£o com bÃ´nus permanentes
 
 ## Termos do Minecraft
 
-- **Mob** — criatura do jogo (hostil ou passiva)
-- **XP / EXP** — experiência
-- **mcMMO** — plugin de habilidades com árvores de aptidão
-- **Freekill** — matar um jogador sem motivo
-- **Griefing** — destruir ou modificar construção de outro jogador sem permissão
-- **Rollback** — restauração de dados/itens para um estado anterior
+- **Mob** â€” criatura do jogo (hostil ou passiva)
+- **XP / EXP** â€” experiÃªncia
+- **mcMMO** â€” plugin de habilidades com Ã¡rvores de aptidÃ£o
+- **Freekill** â€” matar um jogador sem motivo
+- **Griefing** â€” destruir ou modificar construÃ§Ã£o de outro jogador sem permissÃ£o
+- **Rollback** â€” restauraÃ§Ã£o de dados/itens para um estado anterior
 
-> **Em breve:** este glossário será expandido com mais termos conforme necessário.
+> **Em breve:** este glossÃ¡rio serÃ¡ expandido com mais termos conforme necessÃ¡rio.

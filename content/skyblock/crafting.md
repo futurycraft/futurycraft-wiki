@@ -1,14 +1,14 @@
----
+﻿---
 title: Guias de Crafting
 description: Receitas personalizadas do SkyBlock: vegetais, comidas, sementes e itens principais.
 category: SkyBlock
-icon: 🔨
-order: 15
+icon: ðŸ”¨
+order: 25
 featured: false
 updatedAt: 2026-01-01
 ---
 
-Bem-vindo à seção de **Guias de Crafting**! Aqui você encontrará todas as receitas necessárias para criar itens exclusivos do nosso Skyblock.
+Bem-vindo Ã  seÃ§Ã£o de **Guias de Crafting**! Aqui vocÃª encontrarÃ¡ todas as receitas necessÃ¡rias para criar itens exclusivos do nosso Skyblock.
 
 ## Categorias de Receitas
 
@@ -19,19 +19,19 @@ Bem-vindo à seção de **Guias de Crafting**! Aqui você encontrará todas as r
 
 ## Receitas Conhecidas
 
-Algumas receitas já catalogadas da wiki:
+Algumas receitas jÃ¡ catalogadas da wiki:
 
-- **Farinha de Trigo** — feita a partir de trigo
-- **Queijo** — feito a partir do balde de leite
-- **Pizza** — receita especial
-- **Pote de Ketchup** — placa de plástico com tomate
-- **Pão Baguette** — massa de trigo assada
-- **Placa de plástico** com batata — item de comida
-- **Graveto com pepita de ferro** — item principal
-- **Papel com fatias de batata frita** — item de comida
+- **Farinha de Trigo** â€” feita a partir de trigo
+- **Queijo** â€” feito a partir do balde de leite
+- **Pizza** â€” receita especial
+- **Pote de Ketchup** â€” placa de plÃ¡stico com tomate
+- **PÃ£o Baguette** â€” massa de trigo assada
+- **Placa de plÃ¡stico** com batata â€” item de comida
+- **Graveto com pepita de ferro** â€” item principal
+- **Papel com fatias de batata frita** â€” item de comida
 
-## Próximos Passos
+## PrÃ³ximos Passos
 
-As imagens das receitas estão disponíveis nas páginas de cada categoria. Consulte cada uma para ver os formatos exatos das receitas.
+As imagens das receitas estÃ£o disponÃ­veis nas pÃ¡ginas de cada categoria. Consulte cada uma para ver os formatos exatos das receitas.
 
-> **Em breve:** todas as receitas com grids visuais serão adicionadas individualmente.
+> **Em breve:** todas as receitas com grids visuais serÃ£o adicionadas individualmente.

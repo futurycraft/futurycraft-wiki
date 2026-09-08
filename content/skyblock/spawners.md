@@ -1,24 +1,24 @@
----
+﻿---
 title: Spawners
 description: Spawners no SkyBlock do FuturyCraft: como obter, limites por VIP e upgrades.
 category: SkyBlock
-icon: 🫧
-order: 7
+icon: ðŸ«§
+order: 6
 featured: true
 updatedAt: 2026-01-01
 ---
 
-Os **spawners** garantem drops constantes de mobs e são essenciais para farms eficientes no SkyBlock.
+Os **spawners** garantem drops constantes de mobs e sÃ£o essenciais para farms eficientes no SkyBlock.
 
 ## Como Usar
 
-Spawners podem ser movidos e posicionados dentro da sua ilha para gerar mobs automaticamente. Com recursos, é possível aumentar o nível deles para melhorar os drops.
+Spawners podem ser movidos e posicionados dentro da sua ilha para gerar mobs automaticamente. Com recursos, Ã© possÃ­vel aumentar o nÃ­vel deles para melhorar os drops.
 
-> **Em breve:** detalhes completos de obtenção, upgrades e tabela de drops serão adicionados.
+> **Em breve:** detalhes completos de obtenÃ§Ã£o, upgrades e tabela de drops serÃ£o adicionados.
 
 ## Limites por VIP
 
-O número máximo de spawners com upgrade que você pode ter na ilha depende do seu VIP:
+O nÃºmero mÃ¡ximo de spawners com upgrade que vocÃª pode ter na ilha depende do seu VIP:
 
 | VIP | Spawners (com upgrade) |
 | --- | --- |

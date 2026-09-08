@@ -1,31 +1,31 @@
----
+﻿---
 title: Eventos
-description: Horários dos eventos do SkyBlock, incluindo o evento do Dragão e a Pinhata.
+description: HorÃ¡rios dos eventos do SkyBlock, incluindo o evento do DragÃ£o e a Pinhata.
 category: SkyBlock
-icon: 🎉
-order: 17
+icon: ðŸŽ‰
+order: 8
 featured: true
 updatedAt: 2026-01-01
 ---
 
 No FuturyCraft, eventos acontecem o dia inteiro, a cada poucos minutos, diretamente pelo chat do servidor!
 
-## Horários dos Eventos
+## HorÃ¡rios dos Eventos
 
-Os eventos principais acontecem nos horários abaixo:
+Os eventos principais acontecem nos horÃ¡rios abaixo:
 
-| Horário | Evento |
+| HorÃ¡rio | Evento |
 | --- | --- |
-| 07:00 | 🐉 **DRAGÃO** |
-| 12:00 | 🐉 **DRAGÃO** |
-| 18:30 | 🐉 **DRAGÃO** |
-| 00:30 | 🐉 **DRAGÃO** |
+| 07:00 | ðŸ‰ **DRAGÃƒO** |
+| 12:00 | ðŸ‰ **DRAGÃƒO** |
+| 18:30 | ðŸ‰ **DRAGÃƒO** |
+| 00:30 | ðŸ‰ **DRAGÃƒO** |
 
 ## Como Participar
 
-Fique atento aos anúncios no chat do servidor. Quando um evento for anunciado, siga as instruções e use o comando indicado.
+Fique atento aos anÃºncios no chat do servidor. Quando um evento for anunciado, siga as instruÃ§Ãµes e use o comando indicado.
 
-- `/dragao` — evento do dragão
-- `/pinhata` — evento de pinhata
+- `/dragao` â€” evento do dragÃ£o
+- `/pinhata` â€” evento de pinhata
 
-> **Em breve:** todos os eventos regulares com horários e recompensas serão documentados aqui.
+> **Em breve:** todos os eventos regulares com horÃ¡rios e recompensas serÃ£o documentados aqui.

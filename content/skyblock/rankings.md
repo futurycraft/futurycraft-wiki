@@ -1,18 +1,18 @@
----
+﻿---
 title: Rankings
-description: Rankings do SkyBlock: nível de ilha, money, cash e mais.
+description: Rankings do SkyBlock: nÃ­vel de ilha, money, cash e mais.
 category: SkyBlock
-icon: 📊
-order: 20
+icon: ðŸ“Š
+order: 21
 featured: true
 updatedAt: 2026-01-01
 ---
 
-Acompanhe os tops do servidor para saber quem está dominando o SkyBlock.
+Acompanhe os tops do servidor para saber quem estÃ¡ dominando o SkyBlock.
 
 ## Top de Ilha
 
-Consulte o ranking de ilhas (por **nível de ilha**) com:
+Consulte o ranking de ilhas (por **nÃ­vel de ilha**) com:
 
 ```
 /island top
@@ -20,7 +20,7 @@ Consulte o ranking de ilhas (por **nível de ilha**) com:
 
 ## Top Money e Cash
 
-- `/money top` — top money do servidor
-- `/cash top` — top cash do servidor
+- `/money top` â€” top money do servidor
+- `/cash top` â€” top cash do servidor
 
-> **Em breve:** ranking completo com todos os tops e estatísticas será adicionado aqui.
+> **Em breve:** ranking completo com todos os tops e estatÃ­sticas serÃ¡ adicionado aqui.

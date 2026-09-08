@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getArticlesByGroup, getArticleBySlug, getArticles } from "@/lib/content";
+import { getArticlesByFolder, getArticleBySlug, getArticles } from "@/lib/content";
 import { siteConfig } from "@/config/site";
 import { ArticleLayout } from "@/components/article-layout";
 import { ArticleToc } from "@/components/article-toc";
@@ -58,11 +58,13 @@ export default async function WikiSlugPage({ params }: PageProps) {
   const path = slug.join("/");
 
   const group = slug[0] ?? "";
-  const groupArticles = getArticlesByGroup(group);
+  const groupArticles = getArticlesByFolder(group);
   const article = getArticleBySlug(path);
 
   if (article) {
-    const related = groupArticles
+    const folder = path.includes("/") ? path.split("/").slice(0, -1).join("/") : path;
+    const sequence = getArticlesByFolder(folder);
+    const related = sequence
       .filter((a) => a.path !== article.path)
       .slice(0, 4)
       .map((a) => ({
@@ -72,9 +74,9 @@ export default async function WikiSlugPage({ params }: PageProps) {
         href: `/${a.path}`,
       }));
 
-    const index = groupArticles.findIndex((a) => a.path === article.path);
-    const prev = index > 0 ? groupArticles[index - 1] : undefined;
-    const next = index >= 0 && index < groupArticles.length - 1 ? groupArticles[index + 1] : undefined;
+    const index = sequence.findIndex((a) => a.path === article.path);
+    const prev = index > 0 ? sequence[index - 1] : undefined;
+    const next = index >= 0 && index < sequence.length - 1 ? sequence[index + 1] : undefined;
 
     const crumbs = ["Wiki", ...article.path.split("/")];
     const bcItems = crumbs.map((c, i) => ({

@@ -1,27 +1,27 @@
----
-title: Progressão
-description: Como evoluir no SkyBlock: ilha, farms, automação, encantamentos de farm e nível da ilha.
+﻿---
+title: ProgressÃ£o
+description: Como evoluir no SkyBlock: ilha, farms, automaÃ§Ã£o, encantamentos de farm e nÃ­vel da ilha.
 category: SkyBlock
-icon: 📈
-order: 8
+icon: ðŸ“ˆ
+order: 23
 featured: true
 updatedAt: 2026-01-01
 ---
 
-O Skyblock é baseado em **progressão gradual**. Você começa com quase nada e evolui aos poucos até itens avançados.
+O Skyblock Ã© baseado em **progressÃ£o gradual**. VocÃª comeÃ§a com quase nada e evolui aos poucos atÃ© itens avanÃ§ados.
 
 ## Como Evoluir
 
-- Complete **missões e desafios** para ganhar recompensas
-- Construa **fazendas de mobs** para drops de mobs e experiência
-- Invista em **automação com redstone** para coletar mais recursos
+- Complete **missÃµes e desafios** para ganhar recompensas
+- Construa **fazendas de mobs** para drops de mobs e experiÃªncia
+- Invista em **automaÃ§Ã£o com redstone** para coletar mais recursos
 - **Negocie e troque** com outros jogadores
 - Expanda sua **ilha** para construir mais estruturas
 - Evolua seu **VIP** para ter mais spawners, minions e comandos
 
-## Nível da Ilha
+## NÃ­vel da Ilha
 
-Sua ilha possui um nível baseado na construção e nos blocos colocados. Consulte:
+Sua ilha possui um nÃ­vel baseado na construÃ§Ã£o e nos blocos colocados. Consulte:
 
 ```
 /island level
@@ -31,27 +31,27 @@ E acompanhe o ranking com `/island top`.
 
 ## Farms
 
-As **farms** são essenciais para a evolução, garantindo drops de mobs, comida e recursos constantes.
+As **farms** sÃ£o essenciais para a evoluÃ§Ã£o, garantindo drops de mobs, comida e recursos constantes.
 
 ### Farms de Mobs
-Muito importantes para obter **drops de mobs** e **experiência**. Fazendas bem feitas fazem toda a diferença no progresso.
+Muito importantes para obter **drops de mobs** e **experiÃªncia**. Fazendas bem feitas fazem toda a diferenÃ§a no progresso.
 
-### Farms de Plantações
-Cultive plantações para gerar comida e recursos. Use o comando `/replantar` para replantar automaticamente suas plantações.
+### Farms de PlantaÃ§Ãµes
+Cultive plantaÃ§Ãµes para gerar comida e recursos. Use o comando `/replantar` para replantar automaticamente suas plantaÃ§Ãµes.
 
-### Automação
-Sistemas automáticos com **redstone** ajudam a economizar tempo e coletar recursos com mais eficiência.
+### AutomaÃ§Ã£o
+Sistemas automÃ¡ticos com **redstone** ajudam a economizar tempo e coletar recursos com mais eficiÃªncia.
 
 ### Encantamentos que Ajudam nas Farms
 
-Alguns encantamentos são muito úteis para farms:
+Alguns encantamentos sÃ£o muito Ãºteis para farms:
 
-- **Reabastecer** — restaura plantações ao quebrá-las (Enxadas)
-- **Plantador de Cenouras** — planta cenouras em área 3x3
-- **Telepatia** — coloca automaticamente blocos quebrados no inventário
+- **Reabastecer** â€” restaura plantaÃ§Ãµes ao quebrÃ¡-las (Enxadas)
+- **Plantador de Cenouras** â€” planta cenouras em Ã¡rea 3x3
+- **Telepatia** â€” coloca automaticamente blocos quebrados no inventÃ¡rio
 
 ## Dica Importante
 
-Cuidado com o vazio! Cair da ilha **não faz perder itens**, mas você perde **10% do money atual**.
+Cuidado com o vazio! Cair da ilha **nÃ£o faz perder itens**, mas vocÃª perde **10% do money atual**.
 
-> **Em breve:** designs de farms recomendados e configurações ideais para cada recurso, além de rotas de progressão eficientes.
+> **Em breve:** designs de farms recomendados e configuraÃ§Ãµes ideais para cada recurso, alÃ©m de rotas de progressÃ£o eficientes.

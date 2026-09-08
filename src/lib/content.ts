@@ -176,6 +176,21 @@ export function getArticlesByGroup(group: string): Article[] {
     .sort((a, b) => a.meta.order - b.meta.order);
 }
 
+export function getArticlesByFolder(folder: string): Article[] {
+  return collect()
+    .filter((a) => {
+      const parts = a.path.split("/");
+      const parent = parts.slice(0, -1).join("/");
+      return a.path === folder || parent === folder;
+    })
+    .sort((a, b) => {
+      const aRoot = a.path === folder ? 0 : 1;
+      const bRoot = b.path === folder ? 0 : 1;
+      if (aRoot !== bRoot) return aRoot - bRoot;
+      return a.meta.order - b.meta.order;
+    });
+}
+
 export function getFeaturedArticles(): Article[] {
   return collect()
     .filter((a) => a.meta.featured)

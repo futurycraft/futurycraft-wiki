@@ -1,14 +1,14 @@
----
+﻿---
 title: Ilha
-description: Crie e gerencie sua ilha no SkyBlock: criar ilha, nível, warps, biomas, challenges, limites, valor, configurações e time.
+description: Crie e gerencie sua ilha no SkyBlock: criar ilha, nÃ­vel, warps, biomas, challenges, limites, valor, configuraÃ§Ãµes e time.
 category: SkyBlock
-icon: 🏝️
-order: 2
+icon: ðŸï¸
+order: 4
 featured: true
 updatedAt: 2026-01-01
 ---
 
-Sua ilha é o centro da sua experiência no SkyBlock. Esta é a página principal da categoria **Ilha**: aprenda a criar a sua e escolha um sistema abaixo.
+Sua ilha Ã© o centro da sua experiÃªncia no SkyBlock. Esta Ã© a pÃ¡gina principal da categoria **Ilha**: aprenda a criar a sua e escolha um sistema abaixo.
 
 ## Criar Sua Ilha
 
@@ -26,16 +26,16 @@ Ou pelo comando alternativo:
 
 ## Tipos de Ilha
 
-Existem **3 tipos de ilha** que você pode criar:
+Existem **3 tipos de ilha** que vocÃª pode criar:
 
-### Ilha Padrão
-Uma ilha padrão para começar suas aventuras.
+### Ilha PadrÃ£o
+Uma ilha padrÃ£o para comeÃ§ar suas aventuras.
 
 ### Ilha Dupla
-Uma ilha com o **dobro de recursos** para você iniciar sua história aqui.
+Uma ilha com o **dobro de recursos** para vocÃª iniciar sua histÃ³ria aqui.
 
 ### Ilha em Forma de L
-Uma ilha clássica para os jogadores raiz de SkyBlock.
+Uma ilha clÃ¡ssica para os jogadores raiz de SkyBlock.
 
 ## Painel da Ilha
 
@@ -51,54 +51,54 @@ Ou o atalho:
 /is
 ```
 
-## Missões Dentro da Ilha
+## MissÃµes Dentro da Ilha
 
-Para visualizar as missões disponíveis **dentro da sua ilha**, utilize um dos seguintes comandos:
+Para visualizar as missÃµes disponÃ­veis **dentro da sua ilha**, utilize um dos seguintes comandos:
 
 - `/c`
 - `/island challenges`
 - `/ilha challenges`
 - `/is challenges`
 
-Além deles:
+AlÃ©m deles:
 
-- `/d` — menu de todas as missões do servidor
-- `/q` — missões secundárias disponíveis para sua ilha
+- `/d` â€” menu de todas as missÃµes do servidor
+- `/q` â€” missÃµes secundÃ¡rias disponÃ­veis para sua ilha
 
 > Prefere a lista completa? Consulte os [Comandos do SkyBlock](/skyblock/comandos).
 
 ## Sistemas da Ilha
 
-- [Nível](/skyblock/ilha/nivel) — consulte e acompanhe o nível da sua ilha
-- [Warps](/skyblock/ilha/warps) — visite as warps de outros jogadores
-- [Biomas](/skyblock/ilha/biomas) — altere o bioma da sua ilha
-- [Challenges](/skyblock/ilha/challenges) — missões dentro da sua ilha
-- [Gerador](/skyblock/ilha/gerador) — sistema de geração da ilha
-- [Limits](/skyblock/ilha/limits) — limites da sua ilha
-- [Value](/skyblock/ilha/value) — valor da ilha
-- [Settings](/skyblock/ilha/settings) — configurações da ilha
-- [Team](/skyblock/ilha/team) — gerencie a equipe da ilha
+- [NÃ­vel](/skyblock/ilha/nivel) â€” consulte e acompanhe o nÃ­vel da sua ilha
+- [Warps](/skyblock/ilha/warps) â€” visite as warps de outros jogadores
+- [Biomas](/skyblock/ilha/biomas) â€” altere o bioma da sua ilha
+- [Challenges](/skyblock/ilha/challenges) â€” missÃµes dentro da sua ilha
+- [Gerador](/skyblock/ilha/gerador) â€” sistema de geraÃ§Ã£o da ilha
+- [Limits](/skyblock/ilha/limits) â€” limites da sua ilha
+- [Value](/skyblock/ilha/value) â€” valor da ilha
+- [Settings](/skyblock/ilha/settings) â€” configuraÃ§Ãµes da ilha
+- [Team](/skyblock/ilha/team) â€” gerencie a equipe da ilha
 
 ## Comandos Gerais da Ilha
 
 ### Homes
 
-- `/island sethome [nome]` — define uma home
-- `/island homes` — lista as homes salvas
-- `/island deletehome [nome]` — deleta uma home
-- `/island go [home name]` — vai para a sua ilha
+- `/island sethome [nome]` â€” define uma home
+- `/island homes` â€” lista as homes salvas
+- `/island deletehome [nome]` â€” deleta uma home
+- `/island go [home name]` â€” vai para a sua ilha
 
-### Informações
+### InformaÃ§Ãµes
 
-- `/island info` — informações da ilha
-- `/island near` — ilhas vizinhas
-- `/island language` — altera o idioma da ilha
-- `/island top` — ranking de ilhas
+- `/island info` â€” informaÃ§Ãµes da ilha
+- `/island near` â€” ilhas vizinhas
+- `/island language` â€” altera o idioma da ilha
+- `/island top` â€” ranking de ilhas
 
 ### Reiniciar
 
-- `/island reset` — reseta a ilha e começa do zero
+- `/island reset` â€” reseta a ilha e comeÃ§a do zero
 
-> ⚠️ `/island reset` recomeça sua ilha do zero. Use apenas se tiver certeza.
+> âš ï¸ `/island reset` recomeÃ§a sua ilha do zero. Use apenas se tiver certeza.
 
-Continue evoluindo: veja [Minions](/skyblock/minions), [Spawners](/skyblock/spawners) e a [Progressão](/skyblock/progressao).
+Continue evoluindo: veja [Minions](/skyblock/minions), [Spawners](/skyblock/spawners) e a [ProgressÃ£o](/skyblock/progressao).
