@@ -98,7 +98,6 @@ As seguintes rotas são **reservadas** por páginas estáticas e não podem ser 
 | `/skyblock/ilha/challenges` | Challenges (missões da ilha) | ✓ |
 | `/skyblock/ilha/gerador` | Gerador | ⏳ aguardando dados |
 | `/skyblock/ilha/limits` | Limits | ✓ |
-| `/skyblock/ilha/value` | Value | ⏳ aguardando dados |
 | `/skyblock/ilha/settings` | Settings | ✓ |
 | `/skyblock/ilha/team` | Team (equipe da ilha) | ✓ |
 

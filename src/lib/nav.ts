@@ -106,7 +106,6 @@ const labelMap: Record<string, string> = {
   "challenges": "Challenges",
   "gerador": "Gerador",
   "limits": "Limits",
-  "value": "Value",
   "settings": "Settings",
   "team": "Team",
   "/skyblock/ilha/nivel": "Nível",
@@ -115,7 +114,6 @@ const labelMap: Record<string, string> = {
   "/skyblock/ilha/challenges": "Challenges",
   "/skyblock/ilha/gerador": "Gerador",
   "/skyblock/ilha/limits": "Limits",
-  "/skyblock/ilha/value": "Value",
   "/skyblock/ilha/settings": "Settings",
   "/skyblock/ilha/team": "Team",
 };

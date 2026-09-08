@@ -75,7 +75,6 @@ Além deles:
 - [Challenges](/skyblock/ilha/challenges) — missões dentro da sua ilha
 - [Gerador](/skyblock/ilha/gerador) — sistema de geração da ilha
 - [Limits](/skyblock/ilha/limits) — limites da sua ilha
-- [Value](/skyblock/ilha/value) — valor da ilha
 - [Settings](/skyblock/ilha/settings) — configurações da ilha
 - [Team](/skyblock/ilha/team) — gerencie a equipe da ilha
 

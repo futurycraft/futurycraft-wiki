@@ -3,7 +3,7 @@ title: Settings
 description: Configure sua ilha no SkyBlock pelo painel de configurações.
 category: SkyBlock
 icon: ⚙️
-order: 4.8
+order: 4.7
 featured: false
 updatedAt: 2026-01-01
 ---
