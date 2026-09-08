@@ -90,7 +90,31 @@ export const navSections: NavSection[] = [
   },
 ];
 
-const labelMap: Record<string, string> = { "/comecando": "Começando", "/skyblock": "SkyBlock", "/geral": "Geral" };
+const labelMap: Record<string, string> = {
+  "/comecando": "Começando",
+  "/skyblock": "SkyBlock",
+  "/geral": "Geral",
+  "skyblock": "SkyBlock",
+  "ilha": "Ilha",
+  "nivel": "Nível",
+  "warps": "Warps",
+  "biomas": "Biomas",
+  "challenges": "Challenges",
+  "gerador": "Gerador",
+  "limits": "Limits",
+  "value": "Value",
+  "settings": "Settings",
+  "team": "Team",
+  "/skyblock/ilha/nivel": "Nível",
+  "/skyblock/ilha/warps": "Warps",
+  "/skyblock/ilha/biomas": "Biomas",
+  "/skyblock/ilha/challenges": "Challenges",
+  "/skyblock/ilha/gerador": "Gerador",
+  "/skyblock/ilha/limits": "Limits",
+  "/skyblock/ilha/value": "Value",
+  "/skyblock/ilha/settings": "Settings",
+  "/skyblock/ilha/team": "Team",
+};
 
 function collectLabels(items: NavItem[]): Record<string, string> {
   const map: Record<string, string> = {};
