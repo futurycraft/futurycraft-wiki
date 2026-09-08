@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 };
 
 const secaoGeral = [
-  { title: "Comandos", icon: "⌨️", href: "/geral/comandos", desc: "Menu, loja, economia, teleporte e utilidades." },
   { title: "Regras", icon: "📜", href: "/geral/regras", desc: "As regras oficiais e punições do servidor." },
   { title: "Suporte", icon: "🎫", href: "/geral/suporte", desc: "Abra um ticket no Discord e receba ajuda." },
   { title: "FAQ", icon: "❓", href: "/geral/faq", desc: "Perguntas frequentes sobre o servidor." },

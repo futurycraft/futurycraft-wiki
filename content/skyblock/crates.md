@@ -12,4 +12,4 @@ As **crates** são caixas de recompensas que podem ser abertas no servidor, cont
 
 > **Em breve:** lista completa das crates, suas chaves, formas de obtê-las e tabelas de recompensas será adicionada aqui.
 
-Quer saber o que mais dá recompensas? Veja [Recompensas](/skyblock/recompensas) e [Votação](/skyblock/votacao).
+Quer saber o que mais dá recompensas? Veja [Votação](/skyblock/votacao).

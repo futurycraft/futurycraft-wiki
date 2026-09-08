@@ -1,6 +1,6 @@
 ---
 title: Como Jogar
-description: Crie sua ilha no SkyBlock e comece a evoluir. Tipos de ilha, painel da ilha e missões iniciais.
+description: Resumo do SkyBlock do FuturyCraft: objetivos do modo e o que você deve fazer para evoluir na sua ilha.
 category: SkyBlock
 icon: 🌱
 order: 1
@@ -8,61 +8,33 @@ featured: true
 updatedAt: 2026-01-01
 ---
 
-Entendeu como funciona o modo? Então vamos começar sua jornada no SkyBlock!
+O **SkyBlock** do FuturyCraft é um modo survival em que você começa em uma **ilha flutuante** no céu, praticamente do zero, e evolui sozinho ou em equipe.
 
-## Criar Sua Ilha
+## Objetivos do SkyBlock
 
-Crie sua ilha com o comando:
+- **Evoluir sua ilha** — aumente o nível e o valor baseado nos blocos e recursos que você acumula.
+- **Ganhar dinheiro** — construa farms e evolua sua economia para comprar melhorias.
+- **Ficar mais forte** — melhore seus itens com encantamentos personalizados.
+- **Subir nos rankings** — dispute as posições de ilha, money e cash do servidor.
 
-```
-/criarilha
-```
+## O Que Deve Ser Feito
 
-Ou pelo comando alternativo:
+Uma visão geral da sua jornada no modo:
 
-```
-/is create
-```
+1. **Crie sua ilha** — use `/criarilha`. Veja os [tipos de ilha e o painel](/skyblock/ilha).
 
-## Tipos de Ilha
+2. **Ative a textura** — use `/textura` para ver os itens novos do modo. Veja [Textura do Servidor](/skyblock/textura-do-servidor).
 
-Existem **3 tipos de ilha** que você pode criar:
+3. **Complete as missões** — use `/c` para os desafios da ilha e `/d`/`/q` para as missões do servidor. Veja [Missões](/skyblock/missoes).
 
-### Ilha Padrão
-Uma ilha padrão para começar suas aventuras.
+4. **Monte suas farms** — use [Spawners](/skyblock/spawners) e [Minions](/skyblock/minions) para gerar recursos continuamente.
 
-### Ilha Dupla
-Uma ilha com o **dobro de recursos** para você iniciar sua história aqui.
+5. **Evolua seus encantamentos** — combine e melhore encantamentos para ficar mais forte. Veja [Encantamentos](/skyblock/encantamentos).
 
-### Ilha em Forma de L
-Uma ilha clássica para os jogadores raiz de SkyBlock.
+6. **Cuide da economia** — ganhe e invista seu money e cash. Veja [Economia](/skyblock/economia).
 
-## Painel da Ilha
+7. **Participe dos eventos** — dragão, pinhata e outros. Veja [Eventos](/skyblock/eventos).
 
-Para abrir o painel da sua ilha use o comando:
+8. **Suba nos rankings** — ilha, money e cash. Veja [Rankings](/skyblock/rankings).
 
-```
-/ilha
-```
-
-Ou o atalho:
-
-```
-/is
-```
-
-## Missões Dentro da Ilha
-
-Para visualizar as missões disponíveis **dentro da sua ilha**, utilize um dos seguintes comandos:
-
-- `/c`
-- `/island challenges`
-- `/ilha challenges`
-- `/is challenges`
-
-Além deles:
-
-- `/d` — menu de todas as missões do servidor
-- `/q` — missões secundárias disponíveis para sua ilha
-
-Começou? Aproveite para ativar a [Textura do Servidor](/skyblock/textura-do-servidor) e conhecer a página da sua [Ilha](/skyblock/ilha).
+> Consulte também a lista completa de comandos em [Comandos do SkyBlock](/skyblock/comandos).

@@ -60,13 +60,12 @@ export const navSections: NavSection[] = [
             { title: "Sementes", href: "/skyblock/crafting/sementes" },
             { title: "Itens Principais", href: "/skyblock/crafting/itens-principais" },
           ]},
-          { title: "Votação", href: "/skyblock/votacao", group: "Recompensas" },
-          { title: "Recompensas", href: "/skyblock/recompensas", group: "Recompensas" },
-          { title: "Dragão", href: "/skyblock/dragao", group: "Recompensas" },
-          { title: "Kits", href: "/skyblock/kits", group: "Recompensas" },
-          { title: "Shop", href: "/skyblock/shop", group: "Recompensas" },
-          { title: "Mercado Galáctico", href: "/skyblock/mercado-galactico", group: "Recompensas" },
-          { title: "Rankings", href: "/skyblock/rankings", group: "Recompensas" },
+          { title: "Votação", href: "/skyblock/votacao", group: "Início" },
+          { title: "Dragão", href: "/skyblock/dragao", group: "Progressão" },
+          { title: "Kits", href: "/skyblock/kits", group: "Progressão" },
+          { title: "Shop", href: "/skyblock/shop", group: "Progressão" },
+          { title: "Mercado Galáctico", href: "/skyblock/mercado-galactico", group: "Progressão" },
+          { title: "Rankings", href: "/skyblock/rankings", group: "Referência" },
           { title: "Comandos", href: "/skyblock/comandos", group: "Referência" },
         ],
       },
@@ -75,7 +74,6 @@ export const navSections: NavSection[] = [
   {
     label: "Geral",
     items: [
-      { title: "Comandos", href: "/geral/comandos" },
       { title: "Regras do Servidor", href: "/geral/regras" },
       { title: "Suporte", href: "/geral/suporte" },
       { title: "FAQ", href: "/geral/faq" },
@@ -141,7 +139,6 @@ export const navLabel: Record<string, string> = navSections.reduce(
 export const shortcuts = [
   { title: "Começar a jogar", href: "/comecando" },
   { title: "SkyBlock", href: "/skyblock" },
-  { title: "Comandos do SkyBlock", href: "/skyblock/comandos" },
-  { title: "Comandos Gerais", href: "/geral/comandos" },
+  { title: "Comandos", href: "/skyblock/comandos" },
   { title: "VIPs", href: "/geral/vips" },
 ];

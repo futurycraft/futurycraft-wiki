@@ -28,6 +28,4 @@ Fique atento aos anúncios no chat do servidor. Quando um evento for anunciado, 
 - `/dragao` — evento do dragão
 - `/pinhata` — evento de pinhata
 
-> Consulte também as [Recompensas](/skyblock/recompensas) disponíveis.
-
 > **Em breve:** todos os eventos regulares com horários e recompensas serão documentados aqui.

@@ -74,15 +74,6 @@ const areas = [
       { title: "Loja", icon: "🛒", href: "/geral/loja", desc: "Benefícios e VIPs na loja oficial." },
       { title: "VIPs", icon: "💎", href: "/geral/vips", desc: "Kits, comandos e benefícios de cada VIP." },
       { title: "Textura do Servidor", icon: "🎨", href: "/skyblock/textura-do-servidor", desc: "Ative a textura oficial com /textura." },
-    ],
-  },
-  {
-    id: "recompensas",
-    title: "Recompensas",
-    icon: "🎁",
-    desc: "Vote, participe e ganhe recompensas todos os dias.",
-    pages: [
-      { title: "Recompensas", icon: "🎁", href: "/skyblock/recompensas", desc: "Votações, kits VIP e diárias." },
       { title: "Votação", icon: "🗳️", href: "/skyblock/votacao", desc: "Vote a cada 24h e ganhe recompensas." },
       { title: "Rankings", icon: "📊", href: "/skyblock/rankings", desc: "Tops de ilha, money e cash." },
     ],

@@ -1,6 +1,6 @@
 ---
 title: Ilha
-description: Gerencie sua ilha no SkyBlock: nível, warps, biomas, challenges, limites, valor, configurações e time.
+description: Crie e gerencie sua ilha no SkyBlock: criar ilha, nível, warps, biomas, challenges, limites, valor, configurações e time.
 category: SkyBlock
 icon: 🏝️
 order: 2
@@ -8,9 +8,64 @@ featured: true
 updatedAt: 2026-01-01
 ---
 
-Sua ilha é o centro da sua experiência no SkyBlock. Esta é a página principal da categoria **Ilha**: escolha um sistema abaixo para aprender.
+Sua ilha é o centro da sua experiência no SkyBlock. Esta é a página principal da categoria **Ilha**: aprenda a criar a sua e escolha um sistema abaixo.
 
-> Ainda não tem uma ilha? Veja [Como Jogar](/skyblock/comojogar). Prefere a lista completa? Consulte os [Comandos do SkyBlock](/skyblock/comandos).
+## Criar Sua Ilha
+
+Crie sua ilha com o comando:
+
+```
+/criarilha
+```
+
+Ou pelo comando alternativo:
+
+```
+/is create
+```
+
+## Tipos de Ilha
+
+Existem **3 tipos de ilha** que você pode criar:
+
+### Ilha Padrão
+Uma ilha padrão para começar suas aventuras.
+
+### Ilha Dupla
+Uma ilha com o **dobro de recursos** para você iniciar sua história aqui.
+
+### Ilha em Forma de L
+Uma ilha clássica para os jogadores raiz de SkyBlock.
+
+## Painel da Ilha
+
+Para abrir o painel da sua ilha use o comando:
+
+```
+/ilha
+```
+
+Ou o atalho:
+
+```
+/is
+```
+
+## Missões Dentro da Ilha
+
+Para visualizar as missões disponíveis **dentro da sua ilha**, utilize um dos seguintes comandos:
+
+- `/c`
+- `/island challenges`
+- `/ilha challenges`
+- `/is challenges`
+
+Além deles:
+
+- `/d` — menu de todas as missões do servidor
+- `/q` — missões secundárias disponíveis para sua ilha
+
+> Prefere a lista completa? Consulte os [Comandos do SkyBlock](/skyblock/comandos).
 
 ## Sistemas da Ilha
 

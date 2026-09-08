@@ -44,7 +44,7 @@ O cash pode ser obtido através de **eventos, votações, recompensas e compras 
 
 Veja:
 - [Missões](/skyblock/missoes) — recompensas por desafios
-- [Recompensas](/skyblock/recompensas) — kits, votações e mais
+- [Votação](/skyblock/votacao) — vote e ganhe itens
 - [Loteria](/skyblock/loteria) — aposte seu money para concorrer a prêmios
 
 ## Textura Obrigatória

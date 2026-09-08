@@ -90,14 +90,6 @@ export const sidebarNodes: SidebarNode[] = [
       },
       {
         kind: "group",
-        key: "recompensas",
-        title: "Recompensas",
-        children: [
-          { kind: "link", title: "Recompensas", href: "/skyblock/recompensas" },
-        ],
-      },
-      {
-        kind: "group",
         key: "referencia",
         title: "Referência",
         children: [
@@ -113,7 +105,6 @@ export const sidebarNodes: SidebarNode[] = [
     title: "Geral",
     root: "/geral",
     children: [
-      { kind: "link", title: "Comandos", href: "/geral/comandos" },
       { kind: "link", title: "Suporte", href: "/geral/suporte" },
       { kind: "link", title: "Discord", href: "/geral/discord" },
       { kind: "link", title: "Contato", href: "/geral/contato" },

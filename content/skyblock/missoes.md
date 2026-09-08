@@ -36,5 +36,3 @@ Exemplos de desafios encontrados:
 ## Recompensas
 
 Complete os desafios para ganhar recompensas que aceleram sua evolução: itens, dinheiro e recursos exclusivos.
-
-> Veja também o sistema de [Recompensas](/skyblock/recompensas).

@@ -11,7 +11,6 @@ const footerColumns = [
       { title: "SkyBlock", href: "/skyblock" },
       { title: "Comandos do SkyBlock", href: "/skyblock/comandos" },
       { title: "Encantamentos", href: "/skyblock/encantamentos" },
-      { title: "Comandos Gerais", href: "/geral/comandos" },
       { title: "VIPs", href: "/geral/vips" },
     ],
   },

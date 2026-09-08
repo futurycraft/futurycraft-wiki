@@ -32,10 +32,7 @@ function buildIndex(): SearchEntry[] {
     });
   }
 
-  const commandPage = (categoria: string) =>
-    ["SkyBlock", "Ilha", "Encantamentos"].includes(categoria)
-      ? "/skyblock/comandos"
-      : "/geral/comandos";
+  const comandosHref = "/skyblock/comandos";
 
   for (const c of comandos) {
     entries.push({
@@ -45,7 +42,7 @@ function buildIndex(): SearchEntry[] {
       title: c.comando,
       subtitle: c.categoria,
       text: `${c.comando} ${c.descricao} ${c.uso ?? ""} ${c.categoria} ${c.permissao}`,
-      href: `${commandPage(c.categoria)}?comando=${encodeURIComponent(c.comando)}`,
+      href: `${comandosHref}?comando=${encodeURIComponent(c.comando)}`,
     });
   }
 

@@ -88,7 +88,7 @@ export const gettingStarted = [
     step: "04",
     title: "Conheça o Lobby",
     description: "Use /menu para abrir o menu principal e explore os sistemas disponíveis.",
-    href: "/geral/comandos",
+    href: "/skyblock/comandos",
   },
   {
     step: "05",
@@ -100,6 +100,6 @@ export const gettingStarted = [
     step: "06",
     title: "Crie sua ilha no SkyBlock",
     description: "Use /criarilha e comece sua jornada no céu. Veja como funciona.",
-    href: "/skyblock/comojogar",
+    href: "/skyblock/ilha",
   },
 ];

@@ -57,7 +57,7 @@ TOC, breadcrumbs, cards relacionados e navegação anterior/próximo são gerado
 
 As seguintes rotas são **reservadas** por páginas estáticas e não podem ser criadas via `content/`:
 
-`/`, `/comecando`, `/skyblock`, `/geral`, `/skyblock/comandos`, `/geral/comandos`, `/geral/vips`, `/skyblock/encantamentos`, `/skyblock/encantamentos/:slug`, `/search-index`, `/robots.txt`, `/sitemap.xml`.
+`/`, `/comecando`, `/skyblock`, `/geral`, `/skyblock/comandos`, `/geral/vips`, `/skyblock/encantamentos`, `/skyblock/encantamentos/:slug`, `/search-index`, `/robots.txt`, `/sitemap.xml`.
 
 ---
 
@@ -67,7 +67,6 @@ As seguintes rotas são **reservadas** por páginas estáticas e não podem ser 
 
 | Rota | Título | Status |
 | --- | --- | --- |
-| `/comecando` | Começando (hub: como entrar, Java/Bedrock, loja e Discord) | ✓ |
 | `/comecando` | Começando (entrada da categoria, com os 5 conteúdos + dados de conexão) | ✓ |
 | `/comecando/bem-vindo-a-wiki` | Bem-vindo à Wiki — como navegar e o que encontrar | ✓ |
 | `/comecando/como-fazer-login` | Como Fazer Login — registro, login e verificação anti-bot | ✓ |
@@ -81,7 +80,7 @@ As seguintes rotas são **reservadas** por páginas estáticas e não podem ser 
 | Rota | Título | Status |
 | --- | --- | --- |
 | `/skyblock` | SkyBlock — Visão geral (mapa do modo com atalhos por área) | ✓ |
-| `/skyblock/comojogar` | Como Jogar — criar ilha, tipos de ilha, painel e missões | ✓ |
+| `/skyblock/comojogar` | Como Jogar — resumo do modo, objetivos e o que fazer | ✓ |
 | `/skyblock/votacao` | Vote no Servidor | ✓ |
 | `/skyblock/economia` | Economia — money, cash e tops | ✓ |
 | `/skyblock/progressao` | Progressão — evolução, ilha e farms | ✓ |
@@ -92,7 +91,7 @@ As seguintes rotas são **reservadas** por páginas estáticas e não podem ser 
 
 | Rota | Título | Status |
 | --- | --- | --- |
-| `/skyblock/ilha` | Inicio (hub dos sistemas da ilha) | ✓ |
+| `/skyblock/ilha` | Inicio (criar ilha, tipos, painel e hub dos sistemas) | ✓ |
 | `/skyblock/ilha/nivel` | Nível da Ilha | ✓ |
 | `/skyblock/ilha/warps` | Warps | ✓ |
 | `/skyblock/ilha/biomas` | Biomas | ✓ |
@@ -142,25 +141,18 @@ As seguintes rotas são **reservadas** por páginas estáticas e não podem ser 
 | --- | --- | --- |
 | `/skyblock/loteria` | Loteria — como funciona, apostas e prêmios | ✓ |
 
-#### Recompensas
-
-| Rota | Título | Status |
-| --- | --- | --- |
-| `/skyblock/recompensas` | Recompensas — votação, kits VIP, diárias e eventos | ✓ (parcial) |
-| `/skyblock/rankings` | Rankings — nível de ilha, money e cash | ✓ (parcial) |
-
 #### Referência
 
 | Rota | Título | Status |
 | --- | --- | --- |
-| `/skyblock/comandos` | Comandos do SkyBlock (busca e filtros por categoria) | ✓ |
+| `/skyblock/comandos` | Comandos — todos os comandos do servidor (busca e filtros) | ✓ |
+| `/skyblock/rankings` | Rankings — nível de ilha, money e cash | ✓ (parcial) |
 
 ### Geral
 
 | Rota | Título | Status |
 | --- | --- | --- |
-| `/geral` | Geral (hub com 13 atalhos) | ✓ |
-| `/geral/comandos` | Comandos Gerais — menu, loja, economia, teleporte e utilidades | ✓ |
+| `/geral` | Geral (hub com 12 atalhos) | ✓ |
 | `/geral/regras` | Regras — oficiais e punições | ✓ |
 | `/geral/suporte` | Suporte — abrir ticket no Discord | ✓ |
 | `/geral/faq` | Perguntas Frequentes (FAQ) | ✓ |

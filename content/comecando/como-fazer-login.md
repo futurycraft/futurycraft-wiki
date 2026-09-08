@@ -40,4 +40,4 @@ Caso você apareça em um lugar totalmente sem nada, verifique seu inventário (
 
 > A verificação é aleatória: não aparecerá toda hora e não aparecerá para todo mundo. Não se preocupe caso não apareça para você.
 
-Já está logado? Consulte os [comandos gerais](/geral/comandos) e conheça as [Regras do Servidor](/geral/regras).
+Já está logado? Consulte os [Comandos](/skyblock/comandos) e conheça as [Regras do Servidor](/geral/regras).
