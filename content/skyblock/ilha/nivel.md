@@ -1,4 +1,4 @@
-﻿---
+---
 title: NÃ­vel
 description: Consulte o nÃ­vel da sua ilha, entenda como ele Ã© definido e acompanhe o ranking do servidor.
 category: SkyBlock

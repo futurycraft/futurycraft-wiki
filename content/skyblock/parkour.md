@@ -1,4 +1,4 @@
-﻿---
+---
 title: Parkour
 description: Parkour do SkyBlock do FuturyCraft.
 category: SkyBlock

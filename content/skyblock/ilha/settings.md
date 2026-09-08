@@ -1,4 +1,4 @@
-﻿---
+---
 title: Settings
 description: Configure sua ilha no SkyBlock pelo painel de configuraÃ§Ãµes.
 category: SkyBlock

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Perguntas Frequentes (FAQ)
 description: DÃºvidas frequentes sobre o FuturyCraft: IP, conta, SkyBlock, ranks e suporte.
 category: Geral

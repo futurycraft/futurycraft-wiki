@@ -1,4 +1,4 @@
-﻿---
+---
 title: Entrar para a Equipe
 description: A equipe STAFF do FuturyCraft. Cargos, benefÃ­cios, requisitos e como se candidatar.
 category: Geral

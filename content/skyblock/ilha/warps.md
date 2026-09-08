@@ -1,4 +1,4 @@
-﻿---
+---
 title: Warps
 description: Visite as warps dos jogadores e veja as warps disponÃ­veis no servidor.
 category: SkyBlock

@@ -46,6 +46,7 @@ function slugify(s: string): string {
 }
 
 function parseFrontmatter(raw: string): { meta: Partial<ArticleMeta>; body: string } {
+  raw = raw.replace(/^\uFEFF/, "");
   const meta: Partial<ArticleMeta> = {};
   let body = raw;
   if (raw.startsWith("---")) {

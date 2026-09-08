@@ -1,4 +1,4 @@
-﻿---
+---
 title: Challenges
 description: Desafios e missÃµes dentro da sua ilha, com recompensas que aceleram sua evoluÃ§Ã£o.
 category: SkyBlock

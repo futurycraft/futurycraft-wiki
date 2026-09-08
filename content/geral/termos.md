@@ -1,4 +1,4 @@
-﻿---
+---
 title: Termos
 description: GlossÃ¡rio de termos e siglas usados no FuturyCraft e no Minecraft.
 category: Geral

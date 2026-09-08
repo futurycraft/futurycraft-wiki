@@ -1,4 +1,4 @@
-﻿---
+---
 title: Vote no Servidor
 description: Aprenda como votar no FuturyCraft e ganhar recompensas dentro do jogo.
 category: Servidores

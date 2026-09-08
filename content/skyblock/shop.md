@@ -1,4 +1,4 @@
-﻿---
+---
 title: Shop
 description: Loja e sistema de compras do SkyBlock do FuturyCraft.
 category: SkyBlock

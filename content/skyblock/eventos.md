@@ -1,4 +1,4 @@
-﻿---
+---
 title: Eventos
 description: HorÃ¡rios dos eventos do SkyBlock, incluindo o evento do DragÃ£o e a Pinhata.
 category: SkyBlock

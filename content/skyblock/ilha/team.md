@@ -1,4 +1,4 @@
-﻿---
+---
 title: Team
 description: Gerencie a equipe da sua ilha: convites, cargos, membros e acesso.
 category: SkyBlock

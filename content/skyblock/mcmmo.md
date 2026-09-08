@@ -1,4 +1,4 @@
-﻿---
+---
 title: mcMMO
 description: Habilidades do mcMMO no SkyBlock do FuturyCraft.
 category: SkyBlock

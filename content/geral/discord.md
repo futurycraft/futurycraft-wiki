@@ -1,4 +1,4 @@
-﻿---
+---
 title: Discord
 description: Entre no Discord oficial do FuturyCraft e acompanhe a comunidade.
 category: Geral

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Value
 description: PÃ¡gina sobre o valor da ilha no SkyBlock.
 category: SkyBlock

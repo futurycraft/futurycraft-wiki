@@ -1,4 +1,4 @@
-﻿---
+---
 title: MissÃµes
 description: Sistema de missÃµes do SkyBlock: desafios, missÃµes do servidor e missÃµes secundÃ¡rias.
 category: SkyBlock

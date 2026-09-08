@@ -1,4 +1,4 @@
-﻿---
+---
 title: Ilha
 description: Crie e gerencie sua ilha no SkyBlock: criar ilha, nÃ­vel, warps, biomas, challenges, limites, valor, configuraÃ§Ãµes e time.
 category: SkyBlock

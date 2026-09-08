@@ -1,4 +1,4 @@
-﻿---
+---
 title: Kits
 description: Sistema de kits do SkyBlock do FuturyCraft.
 category: SkyBlock

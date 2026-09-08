@@ -1,4 +1,4 @@
-﻿---
+---
 title: FAQ
 description: Perguntas frequentes sobre o SkyBlock do FuturyCraft.
 category: SkyBlock

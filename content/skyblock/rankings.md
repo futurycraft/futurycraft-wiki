@@ -1,4 +1,4 @@
-﻿---
+---
 title: Rankings
 description: Rankings do SkyBlock: nÃ­vel de ilha, money, cash e mais.
 category: SkyBlock

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Torneios
 description: Torneios do SkyBlock do FuturyCraft.
 category: SkyBlock

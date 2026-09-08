@@ -1,4 +1,4 @@
-﻿---
+---
 title: Itens
 description: ReferÃªncia de itens personalizados do SkyBlock do FuturyCraft.
 category: Geral

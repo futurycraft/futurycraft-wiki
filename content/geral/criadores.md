@@ -1,4 +1,4 @@
-﻿---
+---
 title: Programa de Criadores
 description: Programa de criadores de conteÃºdo do FuturyCraft. FormulÃ¡rios de YouTuber e Streamer.
 category: Geral

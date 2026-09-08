@@ -1,4 +1,4 @@
-﻿---
+---
 title: Gerador
 description: PÃ¡gina do sistema Gerador da ilha no SkyBlock.
 category: SkyBlock

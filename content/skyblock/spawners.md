@@ -1,4 +1,4 @@
-﻿---
+---
 title: Spawners
 description: Spawners no SkyBlock do FuturyCraft: como obter, limites por VIP e upgrades.
 category: SkyBlock

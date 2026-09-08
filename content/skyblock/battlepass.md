@@ -1,4 +1,4 @@
-﻿---
+---
 title: Battle Pass
 description: Sistema de temporadas do SkyBlock do FuturyCraft.
 category: SkyBlock

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Suporte
 description: Como abrir um ticket no Discord para receber suporte do FuturyCraft.
 category: Geral

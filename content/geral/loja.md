@@ -1,4 +1,4 @@
-﻿---
+---
 title: Loja
 description: Loja oficial do FuturyCraft. BenefÃ­cios, VIPs e compras.
 category: Geral

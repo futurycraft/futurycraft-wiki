@@ -1,4 +1,4 @@
-﻿---
+---
 title: Crates
 description: Sistema de crates do SkyBlock do FuturyCraft.
 category: SkyBlock

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Biomas
 description: Altere o bioma da sua ilha e personalize o ambiente do seu SkyBlock.
 category: SkyBlock

@@ -1,4 +1,4 @@
-﻿---
+---
 title: RelÃ­quias
 description: RelÃ­quias do SkyBlock do FuturyCraft.
 category: SkyBlock

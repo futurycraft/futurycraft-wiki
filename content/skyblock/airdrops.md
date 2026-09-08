@@ -1,4 +1,4 @@
-﻿---
+---
 title: Airdrops
 description: Airdrops do SkyBlock do FuturyCraft.
 category: SkyBlock

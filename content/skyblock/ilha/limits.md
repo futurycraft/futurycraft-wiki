@@ -1,4 +1,4 @@
-﻿---
+---
 title: Limits
 description: Consulte os limites da sua ilha no SkyBlock.
 category: SkyBlock

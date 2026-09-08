@@ -1,4 +1,4 @@
-﻿---
+---
 title: Contato
 description: Canais de contato oficiais do FuturyCraft.
 category: Geral

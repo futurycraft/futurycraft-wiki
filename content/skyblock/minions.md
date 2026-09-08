@@ -1,4 +1,4 @@
-﻿---
+---
 title: Minions
 description: Minions ativos no SkyBlock. Limites variam de acordo com o VIP do jogador.
 category: SkyBlock

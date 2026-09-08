@@ -1,4 +1,4 @@
-﻿---
+---
 title: DragÃ£o
 description: Sistema do DragÃ£o do SkyBlock do FuturyCraft.
 category: SkyBlock

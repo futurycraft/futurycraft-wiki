@@ -1,4 +1,4 @@
-﻿---
+---
 title: Guias de Crafting
 description: Receitas personalizadas do SkyBlock: vegetais, comidas, sementes e itens principais.
 category: SkyBlock

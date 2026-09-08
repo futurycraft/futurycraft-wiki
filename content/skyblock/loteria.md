@@ -1,4 +1,4 @@
-﻿---
+---
 title: Loteria
 description: Tudo sobre a Loteria do FuturyCraft: como funciona, apostas, tipos de entrada e prÃªmios.
 category: SkyBlock

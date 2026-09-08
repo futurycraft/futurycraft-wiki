@@ -1,4 +1,4 @@
-﻿---
+---
 title: ProgressÃ£o
 description: Como evoluir no SkyBlock: ilha, farms, automaÃ§Ã£o, encantamentos de farm e nÃ­vel da ilha.
 category: SkyBlock

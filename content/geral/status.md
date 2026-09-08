@@ -1,4 +1,4 @@
-﻿---
+---
 title: Status
 description: Dados de conexÃ£o e status do servidor FuturyCraft.
 category: Geral

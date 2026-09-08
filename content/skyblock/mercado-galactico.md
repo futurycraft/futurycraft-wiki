@@ -1,4 +1,4 @@
-﻿---
+---
 title: Mercado GalÃ¡ctico
 description: Mercado GalÃ¡ctico do SkyBlock do FuturyCraft.
 category: SkyBlock

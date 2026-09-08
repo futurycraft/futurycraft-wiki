@@ -1,4 +1,4 @@
-﻿---
+---
 title: Economia
 description: Dinheiro (money) e cash no SkyBlock do FuturyCraft: como ver, transferir e consultar os tops.
 category: SkyBlock

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Jobs
 description: Sistema de jobs (profissÃµes) do SkyBlock do FuturyCraft.
 category: SkyBlock
