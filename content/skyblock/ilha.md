@@ -1,11 +1,11 @@
 ---
 title: Ilha
-description: Crie e gerencie sua ilha no SkyBlock: criar ilha, nível, warps, biomas, challenges, limites, valor, configurações e time.
+description: Crie e gerencie sua ilha no SkyBlock: tipos de ilha, criar ilha, nível, warps, biomas, challenges, limites, configurações e time.
 category: SkyBlock
 icon: 🏝️
 order: 4
 featured: true
-updatedAt: 2026-01-01
+updatedAt: 2026-09-08
 ---
 
 Sua ilha é o centro da sua experiência no SkyBlock. Esta é a página principal da categoria **Ilha**: aprenda a criar a sua e escolha um sistema abaixo.
@@ -24,18 +24,23 @@ Ou pelo comando alternativo:
 /is create
 ```
 
+Ao criar sua ilha, você pode escolher entre os tipos de ilha atualmente disponíveis no servidor.
+
 ## Tipos de Ilha
 
-Existem **3 tipos de ilha** que você pode criar:
+Existem **2 tipos de ilha** que você pode criar atualmente:
 
-### Ilha Padrão
-Uma ilha padrão para começar suas aventuras.
+### Ilha Oasis
 
-### Ilha Dupla
-Uma ilha com o **dobro de recursos** para você iniciar sua história aqui.
+A **Ilha Oasis** é um dos tipos de ilha disponíveis atualmente no servidor.
 
-### Ilha em Forma de L
-Uma ilha clássica para os jogadores raiz de SkyBlock.
+![Ilha Oasis](/ilha-oasis.png)
+
+### Ilha Sakura
+
+A **Ilha Sakura** é um dos tipos de ilha disponíveis atualmente no servidor.
+
+![Ilha Sakura](/ilha-sakura.png)
 
 ## Painel da Ilha
 
