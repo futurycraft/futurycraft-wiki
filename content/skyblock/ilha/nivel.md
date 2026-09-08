@@ -67,23 +67,17 @@ O **limite** representa a quantidade máxima daquele bloco que é considerada pe
 
 Veja o nível da sua ilha com:
 
-```
-/island level
-```
+`/island level`
 
 Ou, para consultar o nível de outro jogador:
 
-```
-/island level <jogador>
-```
+`/island level <jogador>`
 
 ## Ranking
 
 Acompanhe as ilhas com maior nível usando:
 
-```
-/island top
-```
+`/island top`
 
 O comando permite acompanhar as ilhas com maior nível do servidor. Veja também a página [Rankings](/skyblock/rankings) para acompanhar os tops do servidor.
 
