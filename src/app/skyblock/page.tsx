@@ -5,12 +5,12 @@ import { season } from "@/data/season";
 import { DocLayout } from "@/components/doc-layout";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { JsonLd, breadcrumbJsonLd } from "@/components/json-ld";
-import { ArrowRightIcon, ChevronRightIcon } from "@/components/icons";
+import { ArrowRightIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "SkyBlock",
   description:
-    "Central do modo SkyBlock do FuturyCraft: comece, evolua sua ilha, cresça na economia e domine os sistemas.",
+    "O mapa do SkyBlock do FuturyCraft: onde começar, evoluir sua ilha, dominar os sistemas e ganhar recompensas.",
   alternates: { canonical: `${siteConfig.wikiUrl}/skyblock` },
 };
 
@@ -18,84 +18,71 @@ const areas = [
   {
     id: "comecando",
     title: "Começando",
-    icon: "🌱",
-    desc: "Crie sua ilha, ative a textura e tire suas dúvidas.",
+    icon: "🎮",
+    desc: "Por onde começar: entre, crie sua ilha e ative a textura.",
     pages: [
       { title: "Como Jogar", icon: "🕹️", href: "/skyblock/comojogar", desc: "Crie sua ilha e dê os primeiros passos." },
-      { title: "FAQ", icon: "❓", href: "/skyblock/faq", desc: "Perguntas frequentes sobre o modo." },
-      { title: "Textura do Servidor", icon: "🎨", href: "/skyblock/textura-do-servidor", desc: "Ative a textura oficial com /textura." },
+      { title: "Primeiros Passos", icon: "🌱", href: "/comecando/primeirospassos", desc: "Ative a textura e conheça o menu do jogo." },
+      { title: "FAQ", icon: "❓", href: "/skyblock/faq", desc: "Perguntas frequentes do modo." },
     ],
   },
   {
-    id: "ilha",
-    title: "Ilha",
+    id: "skyblock",
+    title: "SkyBlock",
     icon: "🏝️",
-    desc: "Gerencie sua ilha, evolua e automatize.",
+    desc: "O coração da sua jornada: sua ilha, sua grana e sorteios.",
     pages: [
       { title: "Ilha", icon: "🏝️", href: "/skyblock/ilha", desc: "Níveis, equipe, homes, biomas e mais." },
-      { title: "Progressão", icon: "📈", href: "/skyblock/progressao", desc: "Como evoluir sua ilha e suas farms." },
-      { title: "Minions", icon: "⚙️", href: "/skyblock/minions", desc: "Autômatos que trabalham para você." },
-      { title: "Spawners", icon: "🫧", href: "/skyblock/spawners", desc: "Drops constantes de mobs na ilha." },
-    ],
-  },
-  {
-    id: "economia",
-    title: "Economia",
-    icon: "💰",
-    desc: "Money, cash, loteria e crates.",
-    pages: [
       { title: "Economia", icon: "💰", href: "/skyblock/economia", desc: "Money, cash, banco e lojas." },
       { title: "Loteria", icon: "🎟️", href: "/skyblock/loteria", desc: "Aposte números e concorra a prêmios." },
-      { title: "Crates", icon: "📦", href: "/skyblock/crates", desc: "Caixas de recompensas." },
     ],
   },
   {
     id: "progressao",
     title: "Progressão",
-    icon: "📜",
-    desc: "Missões, jobs, habilidades e temporadas.",
+    icon: "📈",
+    desc: "Evolua sua ilha, seus encantamentos e seus recursos.",
     pages: [
-      { title: "Missões", icon: "📜", href: "/skyblock/missoes", desc: "Desafios da ilha e do servidor." },
+      { title: "Progressão", icon: "📈", href: "/skyblock/progressao", desc: "Como evoluir sua ilha e suas farms." },
+      { title: "Encantamentos", icon: "✨", href: "/skyblock/encantamentos", desc: "284 encantamentos personalizados." },
+      { title: "Spawners", icon: "🫧", href: "/skyblock/spawners", desc: "Drops constantes de mobs na ilha." },
+      { title: "Minions", icon: "⚙️", href: "/skyblock/minions", desc: "Autômatos que trabalham para você." },
       { title: "Jobs", icon: "🛠️", href: "/skyblock/jobs", desc: "Profissões para ganhar recompensas." },
       { title: "mcMMO", icon: "⛏️", href: "/skyblock/mcmmo", desc: "Habilidades e XP por ações." },
-      { title: "Battle Pass", icon: "🎖️", href: "/skyblock/battlepass", desc: "Missões e recompensas por temporada." },
+      { title: "Itens", icon: "🧩", href: "/geral/itens", desc: "Itens personalizados do servidor." },
+      { title: "Crafting", icon: "🔨", href: "/skyblock/crafting", desc: "Receitas exclusivas do modo." },
     ],
   },
   {
     id: "sistemas",
     title: "Sistemas",
     icon: "✨",
-    desc: "Encantamentos, eventos, crafting e mais.",
+    desc: "Missões, eventos, loja, VIPs e todos os sistemas do modo.",
     pages: [
-      { title: "Encantamentos", icon: "✨", href: "/skyblock/encantamentos", desc: "284 encantamentos personalizados." },
+      { title: "Missões", icon: "📜", href: "/skyblock/missoes", desc: "Desafios da ilha e do servidor." },
+      { title: "Battle Pass", icon: "🎖️", href: "/skyblock/battlepass", desc: "Missões e recompensas por temporada." },
       { title: "Pets", icon: "🐾", href: "/skyblock/pets", desc: "Companheiros da sua ilha." },
+      { title: "Crates", icon: "📦", href: "/skyblock/crates", desc: "Caixas de recompensas." },
       { title: "Eventos", icon: "🎉", href: "/skyblock/eventos", desc: "Dragão, pinhata e mais." },
       { title: "Airdrops", icon: "🪂", href: "/skyblock/airdrops", desc: "Recompensas que caem do céu." },
       { title: "Relíquias", icon: "⚰️", href: "/skyblock/reliquias", desc: "Itens raros especiais." },
       { title: "Torneios", icon: "🏆", href: "/skyblock/torneios", desc: "Competições com premiações." },
       { title: "Parkour", icon: "🏃", href: "/skyblock/parkour", desc: "Pistas de habilidade." },
-      { title: "Crafting", icon: "🔨", href: "/skyblock/crafting", desc: "Receitas exclusivas do modo." },
+      { title: "Loja", icon: "🛒", href: "/geral/loja", desc: "Benefícios e VIPs na loja oficial." },
+      { title: "VIPs", icon: "💎", href: "/geral/vips", desc: "Kits, comandos e benefícios de cada VIP." },
+      { title: "Textura do Servidor", icon: "🎨", href: "/skyblock/textura-do-servidor", desc: "Ative a textura oficial com /textura." },
     ],
   },
   {
     id: "recompensas",
     title: "Recompensas",
     icon: "🎁",
-    desc: "Ganhe votando e participando.",
+    desc: "Vote, participe e ganhe recompensas todos os dias.",
     pages: [
       { title: "Recompensas", icon: "🎁", href: "/skyblock/recompensas", desc: "Votações, kits VIP e diárias." },
       { title: "Votação", icon: "🗳️", href: "/skyblock/votacao", desc: "Vote a cada 24h e ganhe recompensas." },
       { title: "Vouchers", icon: "🎫", href: "/skyblock/vouchers", desc: "Vales de recompensas." },
       { title: "Rankings", icon: "📊", href: "/skyblock/rankings", desc: "Tops de ilha, money e cash." },
-    ],
-  },
-  {
-    id: "referencia",
-    title: "Referência",
-    icon: "⌨️",
-    desc: "Todos os comandos do modo.",
-    pages: [
-      { title: "Comandos", icon: "⌨️", href: "/skyblock/comandos", desc: "Comandos da ilha, missões e sistemas." },
     ],
   },
 ];
@@ -154,16 +141,22 @@ export default function SkyblockPage() {
           </div>
         </div>
 
-        <section className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-6 rounded-xl border border-dashed border-border bg-bg-card p-4 text-sm text-text-muted">
+          Use a navegação abaixo ou as áreas desta página para encontrar cada assunto.
+        </div>
+
+        <section className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {areas.map((a) => (
             <a
               key={a.id}
               href={`#${a.id}`}
-              className="group flex flex-col gap-2 rounded-2xl border border-border bg-bg-card p-5 transition-colors hover:border-accent/40 hover:bg-bg-hover"
+              className="group flex flex-col gap-1.5 rounded-2xl border border-border bg-bg-card p-5 transition-colors hover:border-accent/40 hover:bg-bg-hover"
             >
               <span className="flex items-center justify-between">
                 <span className="text-2xl" aria-hidden="true">{a.icon}</span>
-                <ChevronRightIcon className="h-4 w-4 text-text-muted transition-transform group-hover:translate-x-0.5 group-hover:text-accent" />
+                <span className="rounded-full border border-border bg-bg-raised px-2 py-0.5 text-[0.625rem] font-semibold uppercase tracking-widest text-text-muted">
+                  {a.pages.length}
+                </span>
               </span>
               <span className="text-base font-semibold text-text group-hover:text-accent">{a.title}</span>
               <span className="text-sm text-text-muted">{a.desc}</span>
@@ -172,7 +165,7 @@ export default function SkyblockPage() {
         </section>
 
         {areas.map((a) => (
-          <section key={a.id} id={a.id} className="mt-12 scroll-mt-24">
+          <section key={a.id} id={a.id} className="mt-14 scroll-mt-24">
             <h2 className="mb-1 flex items-center gap-2 text-lg font-semibold text-text">
               <span aria-hidden="true">{a.icon}</span> {a.title}
             </h2>

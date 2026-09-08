@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Logo } from "./logo";
 import { SearchModal } from "./search-modal";
+import { AccordionNav } from "./sidebar";
 import { DiscordIcon, MenuIcon, SearchIcon } from "./icons";
-import { navSections } from "@/lib/nav";
 
 const links = [
   { label: "Wiki", href: "/" },
@@ -50,10 +50,6 @@ export function Header() {
       document.body.style.overflow = "";
     };
   }, [openMenu]);
-
-  function activeClass(href: string) {
-    return pathname === href || (href !== "/" && pathname.startsWith(href)) ? "active" : "";
-  }
 
   return (
     <>
@@ -143,64 +139,7 @@ export function Header() {
                 );
               })}
             </div>
-            {navSections.map((section) => (
-              <div key={section.label} className="mb-4">
-                <div className="mb-1 px-3 text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-text-muted">
-                  {section.label}
-                </div>
-                <ul className="space-y-0.5">
-                  {section.items.map((item) => (
-                    <li key={item.href}>
-                      <Link
-                        href={item.href}
-                        onClick={() => setOpenMenu(false)}
-                        className={`sidebar-link ${activeClass(item.href)} ${item.children?.some((c) => pathname.startsWith(c.href)) ? "active" : ""}`}
-                        aria-current={activeClass(item.href) === "active" ? "page" : undefined}
-                      >
-                        <span>{item.title}</span>
-                        {item.emBreve && (
-                          <span className="ml-auto shrink-0 rounded-full border border-border bg-bg-raised px-1.5 py-0.5 text-[0.5625rem] font-medium text-text-muted">
-                            em breve
-                          </span>
-                        )}
-                      </Link>
-                      {item.children && item.children.length > 0 && (
-                        <ul className="mt-0.5 space-y-0.5 border-l border-border pl-2 ml-2">
-                          {item.children.map((child, ci) => {
-                            const showHeader = child.group !== undefined && (ci === 0 || child.group !== item.children![ci - 1].group);
-                            const childActive = pathname === child.href || pathname.startsWith(child.href);
-                            return (
-                              <div key={child.href}>
-                                {showHeader && (
-                                  <div className="mb-1 ml-2 mt-2 text-[0.625rem] font-semibold uppercase tracking-[0.15em] text-text-muted/80 first:mt-0">
-                                    {child.group}
-                                  </div>
-                                )}
-                                <li>
-                                  <Link
-                                    href={child.href}
-                                    onClick={() => setOpenMenu(false)}
-                                    className={`sidebar-link !text-[0.8125rem] ${childActive ? "active" : ""} ${childActive ? "" : "opacity-80"}`}
-                                    aria-current={childActive ? "page" : undefined}
-                                  >
-                                    <span>{child.title}</span>
-                                    {child.emBreve && (
-                                      <span className="ml-auto shrink-0 rounded-full border border-border bg-bg-raised px-1.5 py-0.5 text-[0.5625rem] font-medium text-text-muted">
-                                        em breve
-                                      </span>
-                                    )}
-                                  </Link>
-                                </li>
-                              </div>
-                            );
-                          })}
-                        </ul>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            <AccordionNav onNavigate={() => setOpenMenu(false)} />
             <div className="mt-2 flex items-center gap-2 border-t border-border pt-3">
               <a
                 href="https://discord.futurycraft.com.br/"
