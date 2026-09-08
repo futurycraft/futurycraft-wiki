@@ -76,21 +76,23 @@ As seguintes rotas são **reservadas** por páginas estáticas e não podem ser 
 
 ### SkyBlock
 
-#### Visão Geral
+#### Itens diretos da categoria
 
 | Rota | Título | Status |
 | --- | --- | --- |
-| `/skyblock` | SkyBlock (mapa do modo com atalhos por área) | ✓ |
+| `/skyblock` | SkyBlock — Visão geral (mapa do modo com atalhos por área) | ✓ |
 | `/skyblock/comojogar` | Como Jogar — criar ilha, tipos de ilha, painel e missões | ✓ |
-| `/skyblock/textura-do-servidor` | Textura do Servidor — Java, Bedrock e armaduras | ✓ |
+| `/skyblock/votacao` | Vote no Servidor | ✓ |
 | `/skyblock/economia` | Economia — money, cash e tops | ✓ |
+| `/skyblock/progressao` | Progressão — evolução, ilha e farms | ✓ |
 | `/skyblock/faq` | FAQ do SkyBlock | ✓ |
+| `/skyblock/textura-do-servidor` | Textura do Servidor — Java, Bedrock e armaduras | ✓ |
 
 #### Ilha
 
 | Rota | Título | Status |
 | --- | --- | --- |
-| `/skyblock/ilha` | Ilha (página principal da categoria, hub dos sistemas) | ✓ |
+| `/skyblock/ilha` | Inicio (hub dos sistemas da ilha) | ✓ |
 | `/skyblock/ilha/nivel` | Nível da Ilha | ✓ |
 | `/skyblock/ilha/warps` | Warps | ✓ |
 | `/skyblock/ilha/biomas` | Biomas | ✓ |
@@ -105,37 +107,34 @@ As seguintes rotas são **reservadas** por páginas estáticas e não podem ser 
 
 | Rota | Título | Status |
 | --- | --- | --- |
-| `/skyblock/progressao` | Progressão — evolução, ilha e farms | ✓ |
-| `/skyblock/minions` | Minions — limites por VIP | ✓ (parcial) |
+| `/skyblock/missoes` | Missões — desafios, missões do servidor e secundárias | ✓ |
 | `/skyblock/spawners` | Spawners — drop, limites por VIP e upgrades | ✓ (parcial) |
-| `/skyblock/jobs` | Jobs (profissões) | ✓ (parcial) |
-| `/skyblock/mcmmo` | mcMMO — habilidades | ✓ (parcial) |
-
-#### Encantamentos
-
-| Rota | Título | Status |
-| --- | --- | --- |
-| `/skyblock/encantamentos` | Encantamentos — como funciona, como usar e catálogo (284 encantamentos) | ✓ |
-| `/skyblock/encantamentos/:slug` | Página individual de cada encantamento (gerada dinamicamente) | ✓ |
-| `/skyblock/crafting` | Guias de Crafting — vegetais, comidas, sementes e itens principais | ✓ (parcial) |
-| `/skyblock/crafting/vegetais` | Receitas de vegetais | ✓ (parcial) |
-| `/skyblock/crafting/comidas` | Receitas de comidas | ✓ (parcial) |
-| `/skyblock/crafting/sementes` | Receitas de sementes | ✓ (parcial) |
-| `/skyblock/crafting/itens-principais` | Receitas de itens principais | ✓ (parcial) |
+| `/skyblock/battlepass` | Passe de Batalha — temporadas | ✓ (parcial) |
+| `/skyblock/eventos` | Eventos — horários, Dragão e Pinhata | ✓ (parcial) |
+| `/skyblock/dragao` | Dragão | ⏳ em breve |
+| `/skyblock/shop` | Shop | ⏳ em breve |
+| `/skyblock/kits` | Kits | ⏳ em breve |
+| `/skyblock/mercado-galactico` | Mercado Galáctico | ⏳ em breve |
 
 #### Sistemas
 
 | Rota | Título | Status |
 | --- | --- | --- |
-| `/skyblock/missoes` | Missões — desafios, missões do servidor e secundárias | ✓ |
-| `/skyblock/battlepass` | Battle Pass — temporadas | ✓ (parcial) |
-| `/skyblock/pets` | Pets | ✓ (parcial) |
+| `/skyblock/minions` | Minions — limites por VIP | ✓ (parcial) |
+| `/skyblock/encantamentos` | Encantamentos — como funciona, como usar e catálogo (284 encantamentos) | ✓ |
+| `/skyblock/encantamentos/:slug` | Página individual de cada encantamento (gerada dinamicamente) | ✓ |
+| `/skyblock/jobs` | Jobs (profissões) | ✓ (parcial) |
+| `/skyblock/mcmmo` | mcMMO — habilidades | ✓ (parcial) |
 | `/skyblock/crates` | Crates | ✓ (parcial) |
-| `/skyblock/eventos` | Eventos — horários, Dragão e Pinhata | ✓ (parcial) |
 | `/skyblock/airdrops` | Airdrops | ✓ (parcial) |
 | `/skyblock/reliquias` | Relíquias | ✓ (parcial) |
 | `/skyblock/torneios` | Torneios | ✓ (parcial) |
 | `/skyblock/parkour` | Parkour | ✓ (parcial) |
+| `/skyblock/crafting` | Guias de Crafting — vegetais, comidas, sementes e itens principais | ✓ (parcial) |
+| `/skyblock/crafting/vegetais` | Receitas de vegetais | ✓ (parcial) |
+| `/skyblock/crafting/comidas` | Receitas de comidas | ✓ (parcial) |
+| `/skyblock/crafting/sementes` | Receitas de sementes | ✓ (parcial) |
+| `/skyblock/crafting/itens-principais` | Receitas de itens principais | ✓ (parcial) |
 
 #### Economia
 
@@ -148,8 +147,6 @@ As seguintes rotas são **reservadas** por páginas estáticas e não podem ser 
 | Rota | Título | Status |
 | --- | --- | --- |
 | `/skyblock/recompensas` | Recompensas — votação, kits VIP, diárias e eventos | ✓ (parcial) |
-| `/skyblock/votacao` | Vote no Servidor | ✓ |
-| `/skyblock/vouchers` | Vouchers | ✓ (parcial) |
 | `/skyblock/rankings` | Rankings — nível de ilha, money e cash | ✓ (parcial) |
 
 #### Referência

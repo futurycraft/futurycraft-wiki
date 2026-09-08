@@ -51,6 +51,10 @@ const areas = [
       { title: "mcMMO", icon: "⛏️", href: "/skyblock/mcmmo", desc: "Habilidades e XP por ações." },
       { title: "Itens", icon: "🧩", href: "/geral/itens", desc: "Itens personalizados do servidor." },
       { title: "Crafting", icon: "🔨", href: "/skyblock/crafting", desc: "Receitas exclusivas do modo." },
+      { title: "Dragão", icon: "🐉", href: "/skyblock/dragao", desc: "O boss do servidor." },
+      { title: "Shop", icon: "🛒", href: "/skyblock/shop", desc: "Compras dentro do modo." },
+      { title: "Kits", icon: "🎁", href: "/skyblock/kits", desc: "Kits disponíveis no SkyBlock." },
+      { title: "Mercado Galáctico", icon: "🪐", href: "/skyblock/mercado-galactico", desc: "Mercado entre jogadores." },
     ],
   },
   {
@@ -60,8 +64,7 @@ const areas = [
     desc: "Missões, eventos, loja, VIPs e todos os sistemas do modo.",
     pages: [
       { title: "Missões", icon: "📜", href: "/skyblock/missoes", desc: "Desafios da ilha e do servidor." },
-      { title: "Battle Pass", icon: "🎖️", href: "/skyblock/battlepass", desc: "Missões e recompensas por temporada." },
-      { title: "Pets", icon: "🐾", href: "/skyblock/pets", desc: "Companheiros da sua ilha." },
+      { title: "Passe de Batalha", icon: "🎖️", href: "/skyblock/battlepass", desc: "Missões e recompensas por temporada." },
       { title: "Crates", icon: "📦", href: "/skyblock/crates", desc: "Caixas de recompensas." },
       { title: "Eventos", icon: "🎉", href: "/skyblock/eventos", desc: "Dragão, pinhata e mais." },
       { title: "Airdrops", icon: "🪂", href: "/skyblock/airdrops", desc: "Recompensas que caem do céu." },
@@ -81,7 +84,6 @@ const areas = [
     pages: [
       { title: "Recompensas", icon: "🎁", href: "/skyblock/recompensas", desc: "Votações, kits VIP e diárias." },
       { title: "Votação", icon: "🗳️", href: "/skyblock/votacao", desc: "Vote a cada 24h e ganhe recompensas." },
-      { title: "Vouchers", icon: "🎫", href: "/skyblock/vouchers", desc: "Vales de recompensas." },
       { title: "Rankings", icon: "📊", href: "/skyblock/rankings", desc: "Tops de ilha, money e cash." },
     ],
   },
