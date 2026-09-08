@@ -5,23 +5,16 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { ChevronRightIcon } from "./icons";
 
-interface SidebarLink {
-  title: string;
-  href: string;
-}
+export type SidebarNavEntry =
+  | { kind: "link"; title: string; href: string }
+  | { kind: "placeholder"; title: string }
+  | { kind: "group"; key: string; title: string; children: SidebarNavEntry[] };
 
-interface SidebarAccordion {
-  key: string;
-  title: string;
-  links: SidebarLink[];
-}
-
-interface SidebarNode {
+export interface SidebarNode {
   key: string;
   title: string;
   root: string;
-  accordions?: SidebarAccordion[];
-  links?: SidebarLink[];
+  children: SidebarNavEntry[];
 }
 
 export const sidebarNodes: SidebarNode[] = [
@@ -29,70 +22,99 @@ export const sidebarNodes: SidebarNode[] = [
     key: "comecando",
     title: "Começando",
     root: "/comecando",
-    links: [
-      { title: "Como Jogar", href: "/comecando/comojogar" },
-      { title: "Primeiro Acesso", href: "/comecando/primeiroacesso" },
-      { title: "Primeiros Passos", href: "/comecando/primeirospassos" },
-      { title: "FAQ", href: "/comecando/faq" },
+    children: [
+      { kind: "link", title: "Como Jogar", href: "/comecando/comojogar" },
+      { kind: "link", title: "Primeiro Acesso", href: "/comecando/primeiroacesso" },
+      { kind: "link", title: "Primeiros Passos", href: "/comecando/primeirospassos" },
+      { kind: "link", title: "FAQ", href: "/comecando/faq" },
     ],
   },
   {
     key: "skyblock",
     title: "SkyBlock",
     root: "/skyblock",
-    accordions: [
+    children: [
       {
+        kind: "group",
         key: "visao-geral",
         title: "Visão Geral",
-        links: [
-          { title: "Visão geral", href: "/skyblock" },
-          { title: "Como Jogar", href: "/skyblock/comojogar" },
-          { title: "Ilha", href: "/skyblock/ilha" },
-          { title: "Economia", href: "/skyblock/economia" },
+        children: [
+          { kind: "link", title: "Visão geral", href: "/skyblock" },
+          { kind: "link", title: "Como Jogar", href: "/skyblock/comojogar" },
+          {
+            kind: "group",
+            key: "ilha",
+            title: "Ilha",
+            children: [
+              { kind: "link", title: "Visão geral", href: "/skyblock/ilha" },
+              {
+                kind: "group",
+                key: "sistema-de-ilha",
+                title: "Sistema de Ilha",
+                children: [
+                  { kind: "placeholder", title: "Nível" },
+                  { kind: "placeholder", title: "Warps" },
+                  { kind: "placeholder", title: "Biomas" },
+                  { kind: "placeholder", title: "Challenges" },
+                  { kind: "placeholder", title: "Gerador" },
+                  { kind: "placeholder", title: "Limits" },
+                  { kind: "placeholder", title: "Value" },
+                  { kind: "placeholder", title: "Settings" },
+                  { kind: "placeholder", title: "Team" },
+                ],
+              },
+              { kind: "link", title: "Comandos", href: "/skyblock/comandos?cat=Ilha" },
+            ],
+          },
+          { kind: "link", title: "Economia", href: "/skyblock/economia" },
         ],
       },
       {
+        kind: "group",
         key: "progressao",
         title: "Progressão",
-        links: [
-          { title: "Minions", href: "/skyblock/minions" },
-          { title: "Spawners", href: "/skyblock/spawners" },
-          { title: "Encantamentos", href: "/skyblock/encantamentos" },
-          { title: "Jobs", href: "/skyblock/jobs" },
-          { title: "mcMMO", href: "/skyblock/mcmmo" },
+        children: [
+          { kind: "link", title: "Minions", href: "/skyblock/minions" },
+          { kind: "link", title: "Spawners", href: "/skyblock/spawners" },
+          { kind: "link", title: "Encantamentos", href: "/skyblock/encantamentos" },
+          { kind: "link", title: "Jobs", href: "/skyblock/jobs" },
+          { kind: "link", title: "mcMMO", href: "/skyblock/mcmmo" },
         ],
       },
       {
+        kind: "group",
         key: "sistemas",
         title: "Sistemas",
-        links: [
-          { title: "Missões", href: "/skyblock/missoes" },
-          { title: "Battle Pass", href: "/skyblock/battlepass" },
-          { title: "Pets", href: "/skyblock/pets" },
-          { title: "Crates", href: "/skyblock/crates" },
-          { title: "Eventos", href: "/skyblock/eventos" },
-          { title: "Airdrops", href: "/skyblock/airdrops" },
-          { title: "Relíquias", href: "/skyblock/reliquias" },
-          { title: "Torneios", href: "/skyblock/torneios" },
-          { title: "Parkour", href: "/skyblock/parkour" },
+        children: [
+          { kind: "link", title: "Missões", href: "/skyblock/missoes" },
+          { kind: "link", title: "Battle Pass", href: "/skyblock/battlepass" },
+          { kind: "link", title: "Pets", href: "/skyblock/pets" },
+          { kind: "link", title: "Crates", href: "/skyblock/crates" },
+          { kind: "link", title: "Eventos", href: "/skyblock/eventos" },
+          { kind: "link", title: "Airdrops", href: "/skyblock/airdrops" },
+          { kind: "link", title: "Relíquias", href: "/skyblock/reliquias" },
+          { kind: "link", title: "Torneios", href: "/skyblock/torneios" },
+          { kind: "link", title: "Parkour", href: "/skyblock/parkour" },
         ],
       },
       {
+        kind: "group",
         key: "recompensas",
         title: "Recompensas",
-        links: [
-          { title: "Recompensas", href: "/skyblock/recompensas" },
-          { title: "Votação", href: "/skyblock/votacao" },
-          { title: "Vouchers", href: "/skyblock/vouchers" },
+        children: [
+          { kind: "link", title: "Recompensas", href: "/skyblock/recompensas" },
+          { kind: "link", title: "Votação", href: "/skyblock/votacao" },
+          { kind: "link", title: "Vouchers", href: "/skyblock/vouchers" },
         ],
       },
       {
+        kind: "group",
         key: "referencia",
         title: "Referência",
-        links: [
-          { title: "Comandos", href: "/skyblock/comandos" },
-          { title: "Rankings", href: "/skyblock/rankings" },
-          { title: "FAQ", href: "/skyblock/faq" },
+        children: [
+          { kind: "link", title: "Comandos", href: "/skyblock/comandos" },
+          { kind: "link", title: "Rankings", href: "/skyblock/rankings" },
+          { kind: "link", title: "FAQ", href: "/skyblock/faq" },
         ],
       },
     ],
@@ -101,48 +123,81 @@ export const sidebarNodes: SidebarNode[] = [
     key: "geral",
     title: "Geral",
     root: "/geral",
-    links: [
-      { title: "Comandos", href: "/geral/comandos" },
-      { title: "Regras", href: "/geral/regras" },
-      { title: "Suporte", href: "/geral/suporte" },
-      { title: "Discord", href: "/geral/discord" },
-      { title: "Contato", href: "/geral/contato" },
+    children: [
+      { kind: "link", title: "Comandos", href: "/geral/comandos" },
+      { kind: "link", title: "Regras", href: "/geral/regras" },
+      { kind: "link", title: "Suporte", href: "/geral/suporte" },
+      { kind: "link", title: "Discord", href: "/geral/discord" },
+      { kind: "link", title: "Contato", href: "/geral/contato" },
     ],
   },
 ];
 
-function matchesPath(pathname: string, href: string) {
-  return pathname === href || (href !== "/" && pathname.startsWith(href));
+function pathOf(href: string) {
+  return href.split("?")[0];
 }
 
-function nodeLinks(node: SidebarNode): SidebarLink[] {
-  if (node.links) return node.links;
-  return (node.accordions ?? []).flatMap((a) => a.links);
+function matchesPath(pathname: string, href: string) {
+  const path = pathOf(href);
+  return pathname === path || (path !== "/" && pathname.startsWith(path));
+}
+
+interface SidebarLink {
+  title: string;
+  href: string;
+}
+
+function collectLinkEntries(entry: SidebarNavEntry): SidebarLink[] {
+  if (entry.kind === "link") return [{ title: entry.title, href: entry.href }];
+  if (entry.kind === "group") return entry.children.flatMap(collectLinkEntries);
+  return [];
+}
+
+function collectLinks(nodes: SidebarNode[]): SidebarLink[] {
+  return nodes.flatMap((n) => n.children.flatMap(collectLinkEntries));
 }
 
 function bestLinkFor(pathname: string, links: SidebarLink[]): SidebarLink | null {
-  let best: SidebarLink | null = null;
+  let best: { link: SidebarLink; full: boolean; len: number } | null = null;
   for (const link of links) {
-    if (matchesPath(pathname, link.href) && (!best || link.href.length > best.href.length)) {
-      best = link;
+    const path = pathOf(link.href);
+    if (pathname !== path) continue;
+    const full = link.href === pathname;
+    if (!best) {
+      best = { link, full, len: path.length };
+      continue;
+    }
+    if (full && !best.full) {
+      best = { link, full, len: path.length };
+      continue;
+    }
+    if (full === best.full && path.length > best.len) {
+      best = { link, full, len: path.length };
     }
   }
-  return best;
+  return best?.link ?? null;
+}
+
+function linkChain(entry: SidebarNavEntry, href: string, ancestors: string[]): string[] | null {
+  if (entry.kind === "link") return entry.href === href ? ancestors : null;
+  if (entry.kind === "placeholder") return null;
+  const path = [...ancestors, `${ancestors[ancestors.length - 1]}:${entry.key}`];
+  for (const child of entry.children) {
+    const res = linkChain(child, href, path);
+    if (res) return res;
+  }
+  return null;
 }
 
 function keysForPath(pathname: string): Set<string> | null {
   for (const node of sidebarNodes) {
     if (!matchesPath(pathname, node.root)) continue;
     const keys = new Set([node.key]);
-    if (node.accordions) {
-      const active = bestLinkFor(pathname, nodeLinks(node));
-      if (active) {
-        for (const accordion of node.accordions) {
-          if (accordion.links.some((l) => l.href === active.href)) {
-            keys.add(`${node.key}:${accordion.key}`);
-            break;
-          }
-        }
+    const active = bestLinkFor(pathname, collectLinks(sidebarNodes));
+    if (active) {
+      for (const child of node.children) {
+        const chain = linkChain(child, active.href, [node.key]);
+        if (chain) for (const key of chain) keys.add(key);
       }
     }
     return keys;
@@ -173,7 +228,8 @@ export function AccordionNav({ onNavigate }: { onNavigate?: () => void }) {
     });
   }, [pathname]);
 
-  const activeLink = bestLinkFor(pathname, sidebarNodes.flatMap(nodeLinks));
+  const activeLink = bestLinkFor(pathname, collectLinks(sidebarNodes));
+  const activeKeys = keysForPath(pathname) ?? new Set<string>();
 
   function toggle(key: string) {
     setOpen((prev) => {
@@ -184,20 +240,105 @@ export function AccordionNav({ onNavigate }: { onNavigate?: () => void }) {
     });
   }
 
+  function collapseClasses(isOpen: boolean) {
+    return `grid transition-[grid-template-rows] duration-300 ease-out ${
+      isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+    }`;
+  }
+
+  function renderChildren(children: SidebarNavEntry[], parentKey: string, indent: boolean) {
+    return (
+      <div className="min-h-0 overflow-hidden">
+        <div
+          className={`flex flex-col gap-1 border-l border-border py-1 ${
+            indent ? "ml-1.5 pl-1.5" : "ml-2 pl-2"
+          }`}
+        >
+          {children.map((entry) => {
+            if (entry.kind === "link") {
+              const active = activeLink?.href === entry.href;
+              return (
+                <Link
+                  key={entry.href}
+                  href={entry.href}
+                  onClick={onNavigate}
+                  className={`sidebar-item ${active ? "active" : ""}`}
+                  aria-current={active ? "page" : undefined}
+                >
+                  <span>{entry.title}</span>
+                </Link>
+              );
+            }
+            if (entry.kind === "placeholder") {
+              return (
+                <div
+                  key={entry.title}
+                  className="flex cursor-default items-center gap-2 rounded-lg px-2 py-1.5 text-[0.8125rem] text-text-muted/60"
+                  aria-disabled="true"
+                >
+                  <span>{entry.title}</span>
+                  <span className="ml-auto shrink-0 rounded-full border border-border bg-bg-raised px-1.5 py-0.5 text-[0.5625rem] font-medium text-text-muted">
+                    em breve
+                  </span>
+                </div>
+              );
+            }
+            const key = `${parentKey}:${entry.key}`;
+            const isOpen = open.has(key);
+            const isActive = activeKeys.has(key);
+            return (
+              <div key={key} className="overflow-hidden">
+                <button
+                  type="button"
+                  onClick={() => toggle(key)}
+                  aria-expanded={isOpen}
+                  aria-controls={`acc-${key}`}
+                  className={`flex w-full items-center justify-between gap-2 rounded-lg px-2 py-1.5 text-left text-xs font-semibold uppercase tracking-[0.12em] transition-colors ${
+                    isActive
+                      ? "text-accent"
+                      : "text-text-muted/90 hover:bg-bg-hover hover:text-text"
+                  }`}
+                >
+                  <span>{entry.title}</span>
+                  <span
+                    aria-hidden="true"
+                    className={`flex items-center justify-center transition-transform duration-300 ${
+                      isOpen ? "rotate-90 text-accent" : "text-text-muted/40"
+                    }`}
+                  >
+                    <ChevronRightIcon className="h-3 w-3" />
+                  </span>
+                </button>
+                <div
+                  id={`acc-${key}`}
+                  role="region"
+                  aria-label={entry.title}
+                  className={`${collapseClasses(isOpen)}`}
+                >
+                  {renderChildren(entry.children, key, true)}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <nav aria-label="Navegação lateral" className="flex flex-col gap-1.5 px-2 py-6">
       {sidebarNodes.map((node) => {
-        const nodeOpen = open.has(node.key);
-        const nodeActive = matchesPath(pathname, node.root);
+        const isOpen = open.has(node.key);
+        const isActive = matchesPath(pathname, node.root);
         return (
           <div key={node.key} className="overflow-hidden">
             <button
               type="button"
               onClick={() => toggle(node.key)}
-              aria-expanded={nodeOpen}
-              aria-controls={`nav-${node.key}`}
+              aria-expanded={isOpen}
+              aria-controls={`acc-${node.key}`}
               className={`flex w-full items-center justify-between gap-2 rounded-lg px-3 py-2 text-left text-[0.8125rem] font-semibold uppercase tracking-[0.14em] transition-colors ${
-                nodeActive
+                isActive
                   ? "text-accent"
                   : "text-text-muted hover:bg-bg-hover hover:text-text"
               }`}
@@ -206,104 +347,19 @@ export function AccordionNav({ onNavigate }: { onNavigate?: () => void }) {
               <span
                 aria-hidden="true"
                 className={`flex items-center justify-center transition-transform duration-300 ${
-                  nodeOpen ? "rotate-90 text-accent" : "text-text-muted/50"
+                  isOpen ? "rotate-90 text-accent" : "text-text-muted/50"
                 }`}
               >
                 <ChevronRightIcon className="h-3.5 w-3.5" />
               </span>
             </button>
-
             <div
-              id={`nav-${node.key}`}
+              id={`acc-${node.key}`}
               role="region"
               aria-label={node.title}
-              className={`grid transition-[grid-template-rows] duration-300 ease-out ${
-                nodeOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-              }`}
+              className={`${collapseClasses(isOpen)}`}
             >
-              <div className="min-h-0 overflow-hidden">
-                {node.accordions ? (
-                  <div className="ml-2 flex flex-col gap-1 border-l border-border py-1 pl-2">
-                    {node.accordions.map((accordion) => {
-                      const subOpen = open.has(`${node.key}:${accordion.key}`);
-                      const subActive = accordion.links.some((l) => l.href === activeLink?.href);
-                      return (
-                        <div key={accordion.key} className="overflow-hidden">
-                          <button
-                            type="button"
-                            onClick={() => toggle(`${node.key}:${accordion.key}`)}
-                            aria-expanded={subOpen}
-                            aria-controls={`${node.key}-${accordion.key}`}
-                            className={`flex w-full items-center justify-between gap-2 rounded-lg px-2 py-1.5 text-left text-xs font-semibold uppercase tracking-[0.12em] transition-colors ${
-                              subActive
-                                ? "text-accent"
-                                : "text-text-muted/90 hover:bg-bg-hover hover:text-text"
-                            }`}
-                          >
-                            <span>{accordion.title}</span>
-                            <span
-                              aria-hidden="true"
-                              className={`flex items-center justify-center transition-transform duration-300 ${
-                                subOpen ? "rotate-90 text-accent" : "text-text-muted/40"
-                              }`}
-                            >
-                              <ChevronRightIcon className="h-3 w-3" />
-                            </span>
-                          </button>
-                          <div
-                            id={`${node.key}-${accordion.key}`}
-                            role="region"
-                            aria-label={accordion.title}
-                            className={`grid transition-[grid-template-rows] duration-300 ease-out ${
-                              subOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-                            }`}
-                          >
-                            <div className="min-h-0 overflow-hidden">
-                              <ul className="space-y-0.5 pb-1.5 pl-3">
-                                {accordion.links.map((link) => {
-                                  const active = activeLink?.href === link.href;
-                                  return (
-                                    <li key={link.href}>
-                                      <Link
-                                        href={link.href}
-                                        onClick={onNavigate}
-                                        className={`sidebar-item ${active ? "active" : ""}`}
-                                        aria-current={active ? "page" : undefined}
-                                      >
-                                        <span>{link.title}</span>
-                                      </Link>
-                                    </li>
-                                  );
-                                })}
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                ) : (
-                  <div className="min-h-0 overflow-hidden pb-1">
-                    <ul className="space-y-0.5 pb-1">
-                      {node.links!.map((link) => {
-                        const active = activeLink?.href === link.href;
-                        return (
-                          <li key={link.href}>
-                            <Link
-                              href={link.href}
-                              onClick={onNavigate}
-                              className={`sidebar-item ${active ? "active" : ""}`}
-                              aria-current={active ? "page" : undefined}
-                            >
-                              <span>{link.title}</span>
-                            </Link>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </div>
-                )}
-              </div>
+              {renderChildren(node.children, node.key, false)}
             </div>
           </div>
         );
