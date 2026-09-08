@@ -16,28 +16,34 @@ export const metadata: Metadata = {
 
 const steps = [
   {
-    icon: "🕹️",
-    title: "Como Jogar",
-    href: "/comecando/comojogar",
-    desc: "Dados de conexão, entre pelo Java ou pelo Bedrock.",
+    icon: "💚",
+    title: "Bem-vindo à Wiki",
+    href: "/comecando/bem-vindo-a-wiki",
+    desc: "Conheça a Wiki, como navegar e o que encontrar aqui.",
   },
   {
-    icon: "🚪",
-    title: "Primeiro Acesso",
-    href: "/comecando/primeiroacesso",
+    icon: "🔑",
+    title: "Como Fazer Login",
+    href: "/comecando/como-fazer-login",
     desc: "Registre sua conta, faça login e passe na verificação.",
   },
   {
-    icon: "🌱",
-    title: "Primeiros Passos",
-    href: "/comecando/primeirospassos",
-    desc: "Abra o menu, ative a textura e escolha onde começar.",
+    icon: "🛡️",
+    title: "Entrar para a Equipe",
+    href: "/geral/equipe",
+    desc: "Cargos da STAFF, benefícios e como se candidatar.",
   },
   {
-    icon: "❓",
-    title: "FAQ",
-    href: "/comecando/faq",
-    desc: "Dúvidas frequentes de quem está chegando agora.",
+    icon: "🎬",
+    title: "Programa de Criadores",
+    href: "/geral/criadores",
+    desc: "Programa para YouTubers e streamers.",
+  },
+  {
+    icon: "📕",
+    title: "Regras do Servidor",
+    href: "/geral/regras",
+    desc: "As regras oficiais e as punições do servidor.",
   },
 ];
 
@@ -70,7 +76,7 @@ export default function ComecandoPage() {
           </div>
         </div>
 
-        <section className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <section className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {steps.map((s) => (
             <Link
               key={s.href}

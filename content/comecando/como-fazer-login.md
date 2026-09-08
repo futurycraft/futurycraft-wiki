@@ -1,8 +1,8 @@
 ---
-title: Primeiro Acesso
+title: Como Fazer Login
 description: Registre sua conta, faça login e passe na verificação contra bots para entrar no FuturyCraft.
 category: Começando
-icon: 🚪
+icon: 🔑
 order: 2
 featured: true
 updatedAt: 2026-01-01
@@ -40,4 +40,4 @@ Caso você apareça em um lugar totalmente sem nada, verifique seu inventário (
 
 > A verificação é aleatória: não aparecerá toda hora e não aparecerá para todo mundo. Não se preocupe caso não apareça para você.
 
-Logou? Veja os [Primeiros Passos](/comecando/primeirospassos) para conhecer o servidor.
+Já está logado? Consulte os [comandos gerais](/geral/comandos) e conheça as [Regras do Servidor](/geral/regras).

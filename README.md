@@ -68,10 +68,11 @@ As seguintes rotas são **reservadas** por páginas estáticas e não podem ser 
 | Rota | Título | Status |
 | --- | --- | --- |
 | `/comecando` | Começando (hub: como entrar, Java/Bedrock, loja e Discord) | ✓ |
-| `/comecando/comojogar` | Como Jogar — IPs, portas e versão recomendada | ✓ |
-| `/comecando/primeiroacesso` | Primeiro Acesso — registro, login e verificação anti-bot | ✓ |
-| `/comecando/primeirospassos` | Primeiros Passos — menu, textura e comandos iniciais | ✓ |
-| `/comecando/faq` | Perguntas Frequentes (iniciantes) | ✓ |
+| `/comecando` | Começando (entrada da categoria, com os 5 conteúdos + dados de conexão) | ✓ |
+| `/comecando/bem-vindo-a-wiki` | Bem-vindo à Wiki — como navegar e o que encontrar | ✓ |
+| `/comecando/como-fazer-login` | Como Fazer Login — registro, login e verificação anti-bot | ✓ |
+
+> A categoria Começando também navega para as páginas existentes: [Regras do Servidor](/geral/regras), [Entrar para a Equipe](/geral/equipe) e [Programa de Criadores](/geral/criadores) (sem duplicar rotas).
 
 ### SkyBlock
 

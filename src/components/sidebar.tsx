@@ -23,10 +23,11 @@ export const sidebarNodes: SidebarNode[] = [
     title: "Começando",
     root: "/comecando",
     children: [
-      { kind: "link", title: "Como Jogar", href: "/comecando/comojogar" },
-      { kind: "link", title: "Primeiro Acesso", href: "/comecando/primeiroacesso" },
-      { kind: "link", title: "Primeiros Passos", href: "/comecando/primeirospassos" },
-      { kind: "link", title: "FAQ", href: "/comecando/faq" },
+      { kind: "link", title: "💚 Bem-vindo à Wiki", href: "/comecando/bem-vindo-a-wiki" },
+      { kind: "link", title: "🔑 Como Fazer Login", href: "/comecando/como-fazer-login" },
+      { kind: "link", title: "🛡️ Entrar para a Equipe", href: "/geral/equipe" },
+      { kind: "link", title: "🎬 Programa de Criadores", href: "/geral/criadores" },
+      { kind: "link", title: "📕 Regras do Servidor", href: "/geral/regras" },
     ],
   },
   {
@@ -118,7 +119,6 @@ export const sidebarNodes: SidebarNode[] = [
     root: "/geral",
     children: [
       { kind: "link", title: "Comandos", href: "/geral/comandos" },
-      { kind: "link", title: "Regras", href: "/geral/regras" },
       { kind: "link", title: "Suporte", href: "/geral/suporte" },
       { kind: "link", title: "Discord", href: "/geral/discord" },
       { kind: "link", title: "Contato", href: "/geral/contato" },
@@ -192,6 +192,17 @@ function keysForPath(pathname: string): Set<string> | null {
         const chain = linkChain(child, active.href, [node.key]);
         if (chain) for (const key of chain) keys.add(key);
       }
+    }
+    return keys;
+  }
+  // Links entre categorias (ex.: /geral/equipe agrupado em Começando)
+  for (const node of sidebarNodes) {
+    const active = bestLinkFor(pathname, collectLinks([node]));
+    if (!active) continue;
+    const keys = new Set([node.key]);
+    for (const child of node.children) {
+      const chain = linkChain(child, active.href, [node.key]);
+      if (chain) for (const key of chain) keys.add(key);
     }
     return keys;
   }

@@ -22,7 +22,7 @@ const areas = [
     desc: "Por onde começar: entre, crie sua ilha e ative a textura.",
     pages: [
       { title: "Como Jogar", icon: "🕹️", href: "/skyblock/comojogar", desc: "Crie sua ilha e dê os primeiros passos." },
-      { title: "Primeiros Passos", icon: "🌱", href: "/comecando/primeirospassos", desc: "Ative a textura e conheça o menu do jogo." },
+      { title: "Textura do Servidor", icon: "🎨", href: "/skyblock/textura-do-servidor", desc: "Ative a textura oficial com /textura." },
       { title: "FAQ", icon: "❓", href: "/skyblock/faq", desc: "Perguntas frequentes do modo." },
     ],
   },
