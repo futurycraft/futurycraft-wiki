@@ -57,7 +57,7 @@ TOC, breadcrumbs, cards relacionados e navegação anterior/próximo são gerado
 
 As seguintes rotas são **reservadas** por páginas estáticas e não podem ser criadas via `content/`:
 
-`/`, `/comecando`, `/skyblock`, `/geral`, `/skyblock/comandos`, `/geral/vips`, `/skyblock/encantamentos`, `/skyblock/encantamentos/:slug`, `/search-index`, `/robots.txt`, `/sitemap.xml`.
+`/`, `/comecando`, `/skyblock`, `/geral`, `/skyblock/comandos`, `/geral/vips`, `/skyblock/vips`, `/skyblock/encantamentos`, `/skyblock/encantamentos/:slug`, `/search-index`, `/robots.txt`, `/sitemap.xml`.
 
 ---
 
@@ -139,7 +139,7 @@ As seguintes rotas são **reservadas** por páginas estáticas e não podem ser 
 | Rota | Título | Status |
 | --- | --- | --- |
 | `/skyblock/loteria` | Loteria — como funciona, apostas e prêmios | ✓ |
-| `/skyblock/vips` | VIPs — vantagens, kits e limites de cada categoria de VIP | ✓ |
+| `/skyblock/vips` | VIPs — página estática com seletor e tabela comparativa dos 6 VIPs | ✓ |
 
 #### Referência
 

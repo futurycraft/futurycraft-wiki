@@ -2,6 +2,7 @@ import { getArticles } from "@/lib/content";
 import { comandos } from "@/data/comandos";
 import { getAllEnchants } from "@/lib/enchants";
 import { vips } from "@/data/ranks";
+import { vipVantagens, vipsSkyblock, vipTotalComandos } from "@/data/vips";
 import { categories } from "@/data/categories";
 import { siteConfig } from "@/config/site";
 
@@ -67,6 +68,31 @@ function buildIndex(): SearchEntry[] {
       subtitle: "VIP",
       text: `${v.nome} ${v.kits} ${v.comandos.join(" ")} ${v.extras.join(" ")}`,
       href: `/geral/vips#${v.slug}`,
+    });
+  }
+
+  for (const v of vipsSkyblock) {
+    const comandos = vipVantagens.filter((a) => a.grupo === "comandos");
+    const kits = vipVantagens.filter((a) => a.grupo === "exclusivos");
+    const progressao = vipVantagens.filter((a) => a.grupo === "progressao");
+    const texts = [
+      ...comandos,
+      ...kits,
+      ...progressao,
+    ]
+      .filter((a) => {
+        const c = a.celulas[v.id];
+        return c !== false;
+      })
+      .map((a) => `${a.rotulo} ${a.dica ?? ""}`);
+    entries.push({
+      id: `vip-skyblock:${v.id}`,
+      type: "VIP",
+      typeSlug: "rank",
+      title: `${v.icone} ${v.nomeCompleto}`,
+      subtitle: "VIP · SkyBlock",
+      text: `${v.nomeCompleto} ${v.kit} ${v.tag} ${v.spawners} spawners ${v.minions} minions ${texts.join(" ")} ${vipTotalComandos} comandos`,
+      href: "/skyblock/vips",
     });
   }
 
