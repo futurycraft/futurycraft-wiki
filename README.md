@@ -106,7 +106,7 @@ As seguintes rotas são **reservadas** por páginas estáticas e não podem ser 
 | Rota | Título | Status |
 | --- | --- | --- |
 | `/skyblock/missoes` | Missões — desafios, missões do servidor e secundárias | ✓ |
-| `/skyblock/spawners` | Spawners — drop, limites por VIP e upgrades | ✓ (parcial) |
+| `/skyblock/spawners` | Spawners — drop, limites por VIP, upgrades e troca de mobs | ✓ |
 | `/skyblock/battlepass` | Passe de Batalha — temporadas | ✓ (parcial) |
 | `/skyblock/eventos` | Eventos — horários, Dragão e Pinhata | ✓ (parcial) |
 | `/skyblock/dragao` | Dragão | ⏳ em breve |

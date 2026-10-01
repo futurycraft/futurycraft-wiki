@@ -5,7 +5,7 @@ category: SkyBlock
 icon: 🫧
 order: 6
 featured: true
-updatedAt: 2026-01-01
+updatedAt: 2026-10-01
 ---
 
 Os **spawners** garantem drops constantes de mobs e são essenciais para farms eficientes no SkyBlock.
@@ -14,7 +14,42 @@ Os **spawners** garantem drops constantes de mobs e são essenciais para farms e
 
 Spawners podem ser movidos e posicionados dentro da sua ilha para gerar mobs automaticamente. Com recursos, é possível aumentar o nível deles para melhorar os drops.
 
-> **Em breve:** detalhes completos de obtenção, upgrades e tabela de drops serão adicionados.
+O sistema é gerenciado pelo plugin **UpgradeableSpawners**. Para abrir o menu de um spawner, **clique com o botão direito** nele.
+
+## Upgrades
+
+Cada spawner tem **um único nível de upgrade** — não existe trilha separada por atributo. Ao subir de nível, **todas as estatísticas melhoram de uma vez**, por um único custo.
+
+O item de upgrade dentro do menu mostra o seu nível atual, para onde cada atributo vai no próximo nível e o valor da compra. Basta clicar nele para comprar.
+
+![Menu de upgrades do spawner](/spawners-upgrades.png)
+
+*Menu de upgrades — nível atual, próximo nível e custo de cada atributo.*
+
+Estes são os cinco atributos afetados pelo nível:
+
+- **Spawn Interval** — de quanto em quanto tempo o spawner tenta spawnar. Menor é melhor.
+- **Spawn Amount** — quantos mobs o spawner tenta gerar a cada vez que roda.
+- **Spawns During Period** — quantos mobs o spawner pode gerar dentro do período configurado. Ao atingir o limite, ele pausa até o período resetar.
+- **Player Distance** — a que distância um jogador pode estar para o spawner continuar ativo.
+- **Nearby Entities** — quantos mobs do mesmo tipo podem ficar perto antes do spawner pausar.
+
+> **Dica:** o item de status dentro do menu do spawner mostra o motivo pelo qual ele está pausado.
+
+## Trocar de Mob
+
+O spawner não fica preso a um tipo de mob. **Clique com o botão direito** no spawner, **clique no item do tipo de entidade** e **escolha qual mob ele vai gerar**.
+
+![Menu de troca de mobs do spawner](/spawners-mobs.png)
+
+*Menu de entidades — troque o mob do spawner direto por aqui.*
+
+Alguns mobs podem exigir um VIP específico para serem liberados. Depois que você compra um mob para um spawner, ele fica salvo naquele spawner: dá para voltar para ele depois **sem pagar de novo**, e o mob continua salvo mesmo que você quebre e reposicione o spawner.
+
+## Comandos
+
+- `/spawners get` — recebe um spawner
+- `/spawners list` — abre o menu com os seus spawners colocados
 
 ## Limites por VIP
 
