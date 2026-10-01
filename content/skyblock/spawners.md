@@ -44,12 +44,7 @@ O spawner não fica preso a um tipo de mob. **Clique com o botão direito** no s
 
 *Menu de entidades — troque o mob do spawner direto por aqui.*
 
-Alguns mobs podem exigir um VIP específico para serem liberados. Depois que você compra um mob para um spawner, ele fica salvo naquele spawner: dá para voltar para ele depois **sem pagar de novo**, e o mob continua salvo mesmo que você quebre e reposicione o spawner.
-
-## Comandos
-
-- `/spawners get` — recebe um spawner
-- `/spawners list` — abre o menu com os seus spawners colocados
+Nem todo mob está liberado de cara: alguns são desbloqueados por **rank**. Os ranks são conquistados completando os desafios do `/c` — quanto maior o seu rank, mais mobs ficam disponíveis para usar nos spawners. Veja [Missões](/skyblock/missoes).
 
 ## Limites por VIP
 
