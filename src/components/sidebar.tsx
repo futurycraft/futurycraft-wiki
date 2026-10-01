@@ -39,6 +39,7 @@ export const sidebarNodes: SidebarNode[] = [
       { kind: "link", title: "Como Jogar", href: "/skyblock/comojogar" },
       { kind: "link", title: "Votação", href: "/skyblock/votacao" },
       { kind: "link", title: "Economia", href: "/skyblock/economia" },
+      { kind: "link", title: "💎 VIPs", href: "/skyblock/vips" },
       {
         kind: "group",
         key: "ilha",

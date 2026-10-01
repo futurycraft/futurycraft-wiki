@@ -139,6 +139,7 @@ As seguintes rotas são **reservadas** por páginas estáticas e não podem ser 
 | Rota | Título | Status |
 | --- | --- | --- |
 | `/skyblock/loteria` | Loteria — como funciona, apostas e prêmios | ✓ |
+| `/skyblock/vips` | VIPs — vantagens, kits e limites de cada categoria de VIP | ✓ |
 
 #### Referência
 

@@ -35,6 +35,7 @@ const areas = [
       { title: "Ilha", icon: "🏝️", href: "/skyblock/ilha", desc: "Níveis, equipe, homes, biomas e mais." },
       { title: "Economia", icon: "💰", href: "/skyblock/economia", desc: "Money, cash, banco e lojas." },
       { title: "Loteria", icon: "🎟️", href: "/skyblock/loteria", desc: "Aposte números e concorra a prêmios." },
+      { title: "VIPs", icon: "💎", href: "/skyblock/vips", desc: "Vantagens, kits e limites de cada VIP." },
     ],
   },
   {
