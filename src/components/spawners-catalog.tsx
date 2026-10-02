@@ -5,6 +5,7 @@ import {
   formatarChance,
   formatarPreco,
   formatarQuantidade,
+  importanciaSpawner,
   spawnerCategorias,
   spawnerRank,
   spawners,
@@ -16,9 +17,10 @@ import {
 } from "@/data/spawners";
 
 type CategoriaFiltro = "todos" | SpawnerCategoria;
-type Ordem = "nome" | "menor-preco" | "maior-preco";
+type Ordem = "importancia" | "nome" | "menor-preco" | "maior-preco";
 
 const opcoesOrdem: { id: Ordem; nome: string }[] = [
+  { id: "importancia", nome: "Importância" },
   { id: "nome", nome: "Nome (A–Z)" },
   { id: "menor-preco", nome: "Menor preço" },
   { id: "maior-preco", nome: "Maior preço" },
@@ -177,7 +179,7 @@ function CartaoSpawner({ s }: { s: Spawner }) {
 export function SpawnersCatalog() {
   const [categoria, setCategoria] = useState<CategoriaFiltro>("todos");
   const [query, setQuery] = useState("");
-  const [ordem, setOrdem] = useState<Ordem>("nome");
+  const [ordem, setOrdem] = useState<Ordem>("importancia");
 
   const filtrados = useMemo(() => {
     const q = normalizar(query.trim());
@@ -187,6 +189,7 @@ export function SpawnersCatalog() {
       return buscaTexto(s).includes(q);
     });
     return lista.sort((a, b) => {
+      if (ordem === "importancia") return importanciaSpawner(a) - importanciaSpawner(b);
       if (ordem === "nome") return a.nome.localeCompare(b.nome, "en");
       if (ordem === "menor-preco") return a.preco - b.preco;
       return b.preco - a.preco;

@@ -566,6 +566,57 @@ export const spawnersRankPendente: Spawner[] = spawners.filter(
   (s) => spawnerRank(s) === spawnerRankPendente,
 );
 
+export const ordemImportancia: string[] = [
+  "cow",
+  "mushroom-cow",
+  "iron-golem",
+  "zombie",
+  "creeper",
+  "skeleton",
+  "spider",
+  "sheep",
+  "pig",
+  "chicken",
+  "rabbit",
+
+  "enderman",
+  "blaze",
+  "slime",
+  "magma-cube",
+  "drowned",
+  "ghast",
+  "wither-skeleton",
+  "evoker",
+  "guardian",
+  "elder-guardian",
+  "squid",
+  "glow-squid",
+  "piglin",
+  "zombified-piglin",
+  "vindicator",
+  "pillager",
+  "phantom",
+  "witch",
+  "cave-spider",
+
+  "cod",
+  "axolotl",
+  "ocelot",
+  "bee",
+  "llama",
+  "parrot",
+  "dolphin",
+  "cat",
+  "panda",
+
+  "illusioner",
+];
+
+export function importanciaSpawner(s: Spawner): number {
+  const i = ordemImportancia.indexOf(s.id);
+  return i === -1 ? ordemImportancia.length : i;
+}
+
 export function formatarPreco(valor: number): string {
   return `$${valor.toLocaleString("pt-BR")}`;
 }
