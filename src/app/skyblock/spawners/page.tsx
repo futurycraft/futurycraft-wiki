@@ -73,8 +73,8 @@ function TabelaLimites({
   itens: { grupo: string; limite: string }[];
 }) {
   return (
-    <>
-      <h3 className="mt-6 text-sm font-semibold uppercase tracking-widest text-text-muted">
+    <div>
+      <h3 className="text-sm font-semibold uppercase tracking-widest text-text-muted">
         {titulo}
       </h3>
       <div className="mt-2 overflow-x-auto rounded-xl border border-border">
@@ -112,7 +112,7 @@ function TabelaLimites({
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }
 
@@ -125,7 +125,7 @@ const limitesRanks: { grupo: string; limite: string }[] = [
   { grupo: "Elite", limite: "5" },
   { grupo: "Mestre", limite: "5" },
   { grupo: "Lendário", limite: "5" },
-  { grupo: "Rank Z", limite: "6" },
+  { grupo: "NeoSky", limite: "6" },
 ];
 
 const limitesVips: { grupo: string; limite: string }[] = [
@@ -325,8 +325,10 @@ export default function SpawnersPage() {
             depende do seu rank ou do seu VIP:
           </p>
 
-          <TabelaLimites titulo="Ranks" itens={limitesRanks} />
-          <TabelaLimites titulo="VIPs" itens={limitesVips} />
+          <div className="mt-4 grid items-start gap-6 sm:grid-cols-2">
+            <TabelaLimites titulo="Ranks" itens={limitesRanks} />
+            <TabelaLimites titulo="VIPs" itens={limitesVips} />
+          </div>
 
           <p className="mt-4 text-sm text-text-dim">
             Os limites são independentes: o rank define quantos spawners você

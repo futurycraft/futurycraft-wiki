@@ -462,7 +462,7 @@ export const hierarquiaRanks: { slug: string; nome: string }[] = [
   { slug: "elite", nome: "Elite" },
   { slug: "mestre", nome: "Mestre" },
   { slug: "lendario", nome: "Lendário" },
-  { slug: "rankz", nome: "Rank Z" },
+  { slug: "rankz", nome: "NeoSky" },
 ];
 
 export const hierarquiaVips: string[] = [
