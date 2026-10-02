@@ -5,7 +5,7 @@ category: SkyBlock
 icon: 👾
 order: 16
 featured: true
-updatedAt: 2026-09-08
+updatedAt: 2026-10-01
 ---
 
 As mobtraps são essenciais para farmar mobs, ganhar dinheiro e progredir no servidor ⚔️
@@ -20,7 +20,9 @@ Recomendada para quem está começando no servidor.
 - ✔️ Baixo custo
 - ✔️ Boa eficiência inicial
 
-**Tutorial:** https://www.youtube.com/watch?v=fcEghiHRCFw
+**Tutorial:**
+
+[![Miniatura do tutorial da Mobtrap Simples](https://i.ytimg.com/vi/fcEghiHRCFw/hqdefault.jpg)](https://www.youtube.com/watch?v=fcEghiHRCFw)
 
 > 💡 **Dica:** Use essa mobtrap no início para começar a farmar mobs rapidamente.
 
@@ -32,7 +34,9 @@ Mais eficiente e recomendada para jogadores que querem evoluir rápido.
 - ✔️ Mais lucro
 - ✔️ Ideal para mid/late game
 
-**Tutorial:** https://www.youtube.com/watch?v=-7BQ94qkkD0
+**Tutorial:**
+
+[![Miniatura do tutorial da Mobtrap de Plataforma](https://i.ytimg.com/vi/-7BQ94qkkD0/hqdefault.jpg)](https://www.youtube.com/watch?v=-7BQ94qkkD0)
 
 > 💡 **Dica:** Construa essa versão quando já tiver mais recursos para maximizar seus ganhos.
 

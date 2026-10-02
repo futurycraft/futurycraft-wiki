@@ -4,6 +4,7 @@ import { Breadcrumb } from "./breadcrumb";
 import { Callout } from "./callout";
 import { RelatedArticles } from "./related-articles";
 import { CodeCopy } from "./code-copy";
+import { VideoEmbed } from "./video-embed";
 import { navLabel } from "@/lib/nav";
 import { ArrowLeftIcon, ArrowRightIcon } from "./icons";
 
@@ -28,6 +29,7 @@ export function ArticleLayout({
   return (
     <article className="animate-fade-in">
       <CodeCopy />
+      <VideoEmbed />
       <Breadcrumb
         items={[{ label: "Wiki", href: "/" }, ...crumbs.map((c, i) => {
           const fullHref = `/${crumbs.slice(0, i + 1).join("/")}`;
