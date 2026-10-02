@@ -246,6 +246,11 @@ export default function SpawnersPage() {
             </Link>
             .
           </p>
+
+          <Callout type="info" title="VIPs">
+            Todos os spawners são liberados com VIPs, então qualquer VIP já dá
+            acesso a todos os mobs listados no catálogo.
+          </Callout>
         </Secao>
 
         <Secao id="limites" titulo="Limites por VIP">

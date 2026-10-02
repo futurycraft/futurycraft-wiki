@@ -10,7 +10,6 @@ import {
   spawnerRank,
   spawners,
   spawnersRankPendente,
-  spawnerVips,
   type Spawner,
   type SpawnerCategoria,
   type SpawnerDrop,
@@ -52,7 +51,6 @@ function buscaTexto(s: Spawner): string {
       ...(s.aliases ?? []),
       categoriaNome[s.categoria],
       spawnerRank(s),
-      ...spawnerVips(s),
       ...s.drops.flatMap((d) => [d.nome, ...(d.aliases ?? [])]),
     ].join(" "),
   );
@@ -131,13 +129,6 @@ function CartaoSpawner({ s }: { s: Spawner }) {
           </dd>
         </div>
       </dl>
-
-      {spawnerVips(s).length > 0 && (
-        <p className="mt-2 text-[0.6875rem] leading-relaxed text-text-muted">
-          Também liberado para:{" "}
-          <span className="text-text-dim">{spawnerVips(s).join(", ")}</span>
-        </p>
-      )}
 
       <div className="mt-3 flex-1">
         <h4 className="text-[0.625rem] font-semibold uppercase tracking-widest text-text-muted">
