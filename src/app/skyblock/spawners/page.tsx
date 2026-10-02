@@ -42,22 +42,25 @@ function Secao({
   );
 }
 
-const atributos = [
+const upgrades = [
   {
-    nome: "Spawn Interval",
+    nome: "Intervalo de Spawn",
     desc: "de quanto em quanto tempo o spawner tenta spawnar. Menor é melhor.",
   },
-  { nome: "Spawn Amount", desc: "quantos mobs o spawner tenta gerar a cada vez que roda." },
   {
-    nome: "Spawns During Period",
+    nome: "Mobs por Spawn",
+    desc: "quantos mobs o spawner tenta gerar a cada vez que roda.",
+  },
+  {
+    nome: "Spawns por Período",
     desc: "quantos mobs o spawner pode gerar dentro do período configurado. Ao atingir o limite, ele pausa até o período resetar.",
   },
   {
-    nome: "Player Distance",
+    nome: "Distância do Jogador",
     desc: "a que distância um jogador pode estar para o spawner continuar ativo.",
   },
   {
-    nome: "Nearby Entities",
+    nome: "Mobs Próximos",
     desc: "quantos mobs do mesmo tipo podem ficar perto antes do spawner pausar.",
   },
 ];
@@ -155,18 +158,18 @@ export default function SpawnersPage() {
             <p>
               Cada spawner tem{" "}
               <strong className="font-semibold text-text">
-                um único nível de upgrade
-              </strong>{" "}
-              — não existe trilha separada por atributo. Ao subir de nível,{" "}
-              <strong className="font-semibold text-text">
-                todas as estatísticas melhoram de uma vez
+                cinco upgrades independentes
               </strong>
-              , por um único custo.
+              . Cada upgrade muda{" "}
+              <strong className="font-semibold text-text">uma coisa só</strong> e
+              tem{" "}
+              <strong className="font-semibold text-text">o seu próprio custo</strong>
+              — subir um deles não leva os outros junto.
             </p>
             <p>
-              O item de upgrade dentro do menu mostra o seu nível atual, para
-              onde cada atributo vai no próximo nível e o valor da compra. Basta
-              clicar nele para comprar.
+              O item de upgrade dentro do menu mostra o nível atual de cada
+              atributo, para onde ele vai no próximo nível e o valor da compra.
+              Basta clicar nele para comprar.
             </p>
           </div>
 
@@ -180,15 +183,15 @@ export default function SpawnersPage() {
             />
             <figcaption className="mt-2 text-xs italic text-text-muted">
               Menu de upgrades — nível atual, próximo nível e custo de cada
-              atributo.
+              upgrade.
             </figcaption>
           </figure>
 
           <p className="mt-4 text-sm text-text-dim">
-            Estes são os cinco atributos afetados pelo nível:
+            Estes são os cinco upgrades, cada um responsável por um atributo:
           </p>
           <ul className="mt-2 list-disc space-y-1.5 pl-5 text-sm text-text-dim">
-            {atributos.map((a) => (
+            {upgrades.map((a) => (
               <li key={a.nome}>
                 <strong className="font-semibold text-text">{a.nome}</strong> —{" "}
                 {a.desc}
