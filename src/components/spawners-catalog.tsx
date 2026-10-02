@@ -8,6 +8,8 @@ import {
   spawnerCategorias,
   spawnerRank,
   spawners,
+  spawnersRankPendente,
+  spawnerVips,
   type Spawner,
   type SpawnerCategoria,
   type SpawnerDrop,
@@ -48,6 +50,7 @@ function buscaTexto(s: Spawner): string {
       ...(s.aliases ?? []),
       categoriaNome[s.categoria],
       spawnerRank(s),
+      ...spawnerVips(s),
       ...s.drops.flatMap((d) => [d.nome, ...(d.aliases ?? [])]),
     ].join(" "),
   );
@@ -119,13 +122,20 @@ function CartaoSpawner({ s }: { s: Spawner }) {
         </div>
         <div className="rounded-lg border border-border bg-bg-raised px-3 py-2">
           <dt className="text-[0.625rem] uppercase tracking-widest text-text-muted">
-            Rank necessário
+            Desbloqueado no
           </dt>
           <dd className="truncate text-sm font-medium text-text-muted">
             {spawnerRank(s)}
           </dd>
         </div>
       </dl>
+
+      {spawnerVips(s).length > 0 && (
+        <p className="mt-2 text-[0.6875rem] leading-relaxed text-text-muted">
+          Também liberado para:{" "}
+          <span className="text-text-dim">{spawnerVips(s).join(", ")}</span>
+        </p>
+      )}
 
       <div className="mt-3 flex-1">
         <h4 className="text-[0.625rem] font-semibold uppercase tracking-widest text-text-muted">
@@ -168,11 +178,6 @@ export function SpawnersCatalog() {
   const [categoria, setCategoria] = useState<CategoriaFiltro>("todos");
   const [query, setQuery] = useState("");
   const [ordem, setOrdem] = useState<Ordem>("nome");
-
-  const ranks = useMemo(
-    () => Array.from(new Set(spawners.map((s) => spawnerRank(s)))),
-    [],
-  );
 
   const filtrados = useMemo(() => {
     const q = normalizar(query.trim());
@@ -284,10 +289,11 @@ export function SpawnersCatalog() {
         </div>
       )}
 
-      {ranks.length < 2 && (
+      {spawnersRankPendente.length > 0 && (
         <p className="mt-5 text-xs text-text-muted">
-          A informação de rank por mob ainda está sendo levantada e aparece
-          marcada como &quot;A confirmar&quot; até a confirmação oficial.
+          Rank ainda não confirmado para{" "}
+          {spawnersRankPendente.map((s) => s.nome).join(", ")}. Esses mobs
+          permanecem marcados como &quot;A confirmar&quot;.
         </p>
       )}
     </div>

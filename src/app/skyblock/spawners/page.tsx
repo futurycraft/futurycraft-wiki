@@ -81,7 +81,6 @@ export default function SpawnersPage() {
   const resumo: { titulo: string; valor: string; nota?: string }[] = [
     { titulo: "Spawners disponíveis", valor: String(disponiveis), nota: `de ${total} mobs configurados` },
     { titulo: "Faixa de preço", valor: `${formatarPreco(menor)} → ${formatarPreco(maior)}` },
-    { titulo: "Sistema", valor: "UpgradeableSpawners" },
     { titulo: "Como desbloquear", valor: "Por rank", nota: "desafios do /c" },
   ];
 
@@ -142,11 +141,7 @@ export default function SpawnersPage() {
               nível deles para melhorar os drops.
             </p>
             <p>
-              O sistema é gerenciado pelo plugin{" "}
-              <strong className="font-semibold text-text">
-                UpgradeableSpawners
-              </strong>
-              . Para abrir o menu de um spawner,{" "}
+              Para abrir o menu de um spawner,{" "}
               <strong className="font-semibold text-text">
                 clique com o botão direito
               </strong>{" "}

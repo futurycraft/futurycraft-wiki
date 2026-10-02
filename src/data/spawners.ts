@@ -16,7 +16,6 @@ export interface Spawner {
   icone: string;
   preco: number;
   categoria: SpawnerCategoria;
-  rank?: string | null;
   indisponivel?: boolean;
   drops: SpawnerDrop[];
 }
@@ -48,7 +47,6 @@ export const spawners: Spawner[] = [
     icone: "🐷",
     preco: 65000,
     categoria: "passivo",
-    rank: null,
     drops: [drop("Carne de Porco", 100, 1, 1, ["Porkchop"])],
   },
   {
@@ -58,7 +56,6 @@ export const spawners: Spawner[] = [
     icone: "🐑",
     preco: 125000,
     categoria: "passivo",
-    rank: null,
     drops: [
       drop("Lã Branca", 100, 1, 1, ["White Wool"]),
       drop("Carneiro", 100, 1, 3, ["Mutton"]),
@@ -71,7 +68,6 @@ export const spawners: Spawner[] = [
     icone: "🐄",
     preco: 125000,
     categoria: "passivo",
-    rank: null,
     drops: [
       drop("Couro", 66.7, 1, 2, ["Leather"]),
       drop("Carne", 100, 1, 3, ["Beef"]),
@@ -84,7 +80,6 @@ export const spawners: Spawner[] = [
     icone: "🐔",
     preco: 125000,
     categoria: "passivo",
-    rank: null,
     drops: [
       drop("Pena", 100, 1, 2, ["Feather"]),
       drop("Frango", 100, 1, 1, ["Chicken"]),
@@ -98,7 +93,6 @@ export const spawners: Spawner[] = [
     icone: "🐮",
     preco: 125000,
     categoria: "passivo",
-    rank: null,
     drops: [
       drop("Couro", 67.7, 1, 2, ["Leather"]),
       drop("Carne", 100, 1, 3, ["Beef"]),
@@ -111,7 +105,6 @@ export const spawners: Spawner[] = [
     icone: "🐆",
     preco: 125000,
     categoria: "passivo",
-    rank: null,
     drops: [],
   },
   {
@@ -121,7 +114,6 @@ export const spawners: Spawner[] = [
     icone: "🐰",
     preco: 125000,
     categoria: "passivo",
-    rank: null,
     drops: [
       drop("Pé de Coelho", 10, null, null, ["Rabbit Foot"]),
       drop("Carne de Coelho", 100, null, null, ["Rabbit"]),
@@ -135,7 +127,6 @@ export const spawners: Spawner[] = [
     icone: "🦎",
     preco: 125000,
     categoria: "passivo",
-    rank: null,
     drops: [],
   },
   {
@@ -144,7 +135,6 @@ export const spawners: Spawner[] = [
     icone: "🦙",
     preco: 125000,
     categoria: "passivo",
-    rank: null,
     drops: [],
   },
   {
@@ -154,7 +144,6 @@ export const spawners: Spawner[] = [
     icone: "🐝",
     preco: 125000,
     categoria: "passivo",
-    rank: null,
     drops: [],
   },
   {
@@ -164,7 +153,6 @@ export const spawners: Spawner[] = [
     icone: "🦜",
     preco: 125000,
     categoria: "passivo",
-    rank: null,
     drops: [],
   },
   {
@@ -174,7 +162,6 @@ export const spawners: Spawner[] = [
     icone: "🐬",
     preco: 200000,
     categoria: "passivo",
-    rank: null,
     drops: [],
   },
   {
@@ -184,7 +171,6 @@ export const spawners: Spawner[] = [
     icone: "🐱",
     preco: 200000,
     categoria: "passivo",
-    rank: null,
     drops: [],
   },
   {
@@ -193,7 +179,6 @@ export const spawners: Spawner[] = [
     icone: "🐼",
     preco: 200000,
     categoria: "passivo",
-    rank: null,
     drops: [],
   },
   {
@@ -203,7 +188,6 @@ export const spawners: Spawner[] = [
     icone: "🐟",
     preco: 125000,
     categoria: "passivo",
-    rank: null,
     drops: [],
   },
   {
@@ -213,7 +197,6 @@ export const spawners: Spawner[] = [
     icone: "🦑",
     preco: 175000,
     categoria: "passivo",
-    rank: null,
     drops: [drop("Bolsa de Tinta", 25, 1, 3, ["Ink Sac"])],
   },
   {
@@ -223,7 +206,6 @@ export const spawners: Spawner[] = [
     icone: "🦑",
     preco: 175000,
     categoria: "passivo",
-    rank: null,
     drops: [drop("Bolsa de Tinta Brilhante", 25, 1, 3, ["Glow Ink Sac"])],
   },
 
@@ -233,7 +215,6 @@ export const spawners: Spawner[] = [
     icone: "💥",
     preco: 250000,
     categoria: "hostil",
-    rank: null,
     drops: [drop("Pólvora", 100, 1, 3, ["Gunpowder"])],
   },
   {
@@ -243,7 +224,6 @@ export const spawners: Spawner[] = [
     icone: "💀",
     preco: 175000,
     categoria: "hostil",
-    rank: null,
     drops: [
       drop("Osso", 100, 1, 3, ["Bone"]),
       drop("Flecha", 100, 1, 2, ["Arrow"]),
@@ -256,7 +236,6 @@ export const spawners: Spawner[] = [
     icone: "🕸️",
     preco: 175000,
     categoria: "hostil",
-    rank: null,
     drops: [drop("Olho de Aranha", 1, 1, 3, ["Spider Eye"])],
   },
   {
@@ -266,7 +245,6 @@ export const spawners: Spawner[] = [
     icone: "🧟",
     preco: 175000,
     categoria: "hostil",
-    rank: null,
     drops: [
       drop("Barra de Ferro", 0.3, 1, 3, ["Iron Ingot"]),
       drop("Carne Podre", 100, 1, 3, ["Rotten Flesh"]),
@@ -280,7 +258,6 @@ export const spawners: Spawner[] = [
     icone: "🟢",
     preco: 175000,
     categoria: "hostil",
-    rank: null,
     drops: [],
   },
   {
@@ -289,7 +266,6 @@ export const spawners: Spawner[] = [
     icone: "👻",
     preco: 875000,
     categoria: "hostil",
-    rank: null,
     drops: [
       drop("Lágrima de Ghast", 1, 1, 3, ["Ghast Tear"]),
       drop("Pólvora", 50, 0, 1, ["Gunpowder"]),
@@ -302,7 +278,6 @@ export const spawners: Spawner[] = [
     icone: "🌌",
     preco: 250000,
     categoria: "hostil",
-    rank: null,
     drops: [],
   },
   {
@@ -312,7 +287,6 @@ export const spawners: Spawner[] = [
     icone: "🕷️",
     preco: 1750000,
     categoria: "hostil",
-    rank: null,
     drops: [
       drop("Olho de Aranha", 0.5, 1, 1, ["Spider Eye"]),
       drop("Linha", 5, 1, 2, ["String"]),
@@ -324,7 +298,6 @@ export const spawners: Spawner[] = [
     icone: "🔥",
     preco: 250000,
     categoria: "hostil",
-    rank: null,
     drops: [drop("Vara de Blaze", 15, 1, 3, ["Blaze Rod"])],
   },
   {
@@ -334,7 +307,6 @@ export const spawners: Spawner[] = [
     icone: "🟠",
     preco: 250000,
     categoria: "hostil",
-    rank: null,
     drops: [],
   },
   {
@@ -344,7 +316,6 @@ export const spawners: Spawner[] = [
     icone: "🧙",
     preco: 250000,
     categoria: "hostil",
-    rank: null,
     drops: [],
   },
   {
@@ -354,7 +325,6 @@ export const spawners: Spawner[] = [
     icone: "🦇",
     preco: 10000000,
     categoria: "hostil",
-    rank: null,
     drops: [drop("Membrana de Phantom", null, null, null, ["Phantom Membrane"])],
   },
   {
@@ -364,7 +334,6 @@ export const spawners: Spawner[] = [
     icone: "🧟‍♂️",
     preco: 100000,
     categoria: "hostil",
-    rank: null,
     drops: [
       drop("Barra de Cobre", 11, 1, 3, ["Copper Ingot"]),
       drop("Tridente", 0.01, null, null, ["Trident"]),
@@ -380,7 +349,6 @@ export const spawners: Spawner[] = [
     icone: "🤖",
     preco: 1500000,
     categoria: "especial",
-    rank: null,
     drops: [
       drop("Papoula", 100, 1, 2, ["Poppy"]),
       drop("Barra de Ferro", 100, 1, 3, ["Iron Ingot"]),
@@ -393,7 +361,6 @@ export const spawners: Spawner[] = [
     icone: "🐠",
     preco: 750000,
     categoria: "especial",
-    rank: null,
     drops: [
       drop("Cristais de Prismarinho", 40, 1, 3, ["Prismarine Crystals"]),
       drop("Fragmento de Prismarinho", 20, 1, 3, ["Prismarine Shard"]),
@@ -406,7 +373,6 @@ export const spawners: Spawner[] = [
     icone: "🐡",
     preco: 750000,
     categoria: "especial",
-    rank: null,
     drops: [
       drop("Bacalhau", 0.625, 1, 3, ["Cod"]),
       drop("Salmão", 1.5, 1, 3, ["Salmon"]),
@@ -422,7 +388,6 @@ export const spawners: Spawner[] = [
     icone: "☠️",
     preco: 500000,
     categoria: "especial",
-    rank: null,
     drops: [
       drop("Cabeça de Esqueleto Wither", 1, 1, 1, ["Wither Skeleton Skull"]),
       drop("Carvão", 100, 1, 3, ["Coal"]),
@@ -436,7 +401,6 @@ export const spawners: Spawner[] = [
     icone: "🪄",
     preco: 5000,
     categoria: "especial",
-    rank: null,
     drops: [
       drop("Esmeralda", 80, 1, 3, ["Emerald"]),
       drop("Totem da Imortalidade", 30, 1, 1, ["Totem of Undying"]),
@@ -449,7 +413,6 @@ export const spawners: Spawner[] = [
     icone: "🪓",
     preco: 250000,
     categoria: "especial",
-    rank: null,
     drops: [drop("Esmeralda", 100, 1, 3, ["Emerald"])],
   },
   {
@@ -459,7 +422,6 @@ export const spawners: Spawner[] = [
     icone: "🏹",
     preco: 250000,
     categoria: "especial",
-    rank: null,
     drops: [drop("Esmeralda", 100, 1, 3, ["Emerald"])],
   },
   {
@@ -468,7 +430,6 @@ export const spawners: Spawner[] = [
     icone: "🐗",
     preco: 175000,
     categoria: "especial",
-    rank: null,
     drops: [],
   },
   {
@@ -478,7 +439,6 @@ export const spawners: Spawner[] = [
     icone: "🧟‍♂️",
     preco: 200000,
     categoria: "especial",
-    rank: null,
     drops: [drop("Barra de Ouro", 2.5, null, null, ["Gold Ingot"])],
   },
   {
@@ -488,17 +448,123 @@ export const spawners: Spawner[] = [
     icone: "🎭",
     preco: 5000,
     categoria: "especial",
-    rank: null,
     indisponivel: true,
     drops: [],
   },
 ];
 
+export const hierarquiaRanks: { slug: string; nome: string }[] = [
+  { slug: "membro", nome: "Membro" },
+  { slug: "aprendiz", nome: "Aprendiz" },
+  { slug: "aventureiro", nome: "Aventureiro" },
+  { slug: "explorador", nome: "Explorador" },
+  { slug: "veterano", nome: "Veterano" },
+  { slug: "elite", nome: "Elite" },
+  { slug: "mestre", nome: "Mestre" },
+  { slug: "lendario", nome: "Lendário" },
+  { slug: "rankz", nome: "Rank Z" },
+];
+
+export const hierarquiaVips: string[] = [
+  "VIP Ferro",
+  "VIP Ouro",
+  "VIP Diamante",
+  "VIP Esmeralda",
+  "VIP Supremo",
+  "VIP Magnata",
+];
+
+const permissoesRank: Record<string, string[]> = {
+  membro: [
+    "bee", "cat", "chicken", "cod", "cow", "dolphin", "llama", "ocelot",
+    "panda", "parrot", "pig", "rabbit", "sheep", "skeleton", "spider",
+    "witch", "zombie",
+  ],
+  aprendiz: [
+    "axolotl", "bee", "cat", "chicken", "cod", "cow", "dolphin", "llama",
+    "ocelot", "panda", "parrot", "pig", "rabbit", "sheep", "skeleton",
+    "spider", "witch", "zombie",
+  ],
+  aventureiro: [
+    "axolotl", "cave_spider", "ghast", "iron_golem", "llama", "mooshroom",
+    "ocelot", "panda", "parrot", "pig", "rabbit", "sheep", "skeleton", "slime",
+    "spider", "witch", "wither_skeleton", "zombie",
+  ],
+  explorador: [
+    "axolotl", "cave_spider", "creeper", "ghast", "glow_squid", "iron_golem",
+    "llama", "mooshroom", "ocelot", "panda", "parrot", "pig", "piglin",
+    "pillager", "rabbit", "sheep", "skeleton", "spider", "witch",
+    "wither_skeleton", "zombie",
+  ],
+  veterano: [
+    "axolotl", "cave_spider", "creeper", "ghast", "glow_squid", "iron_golem",
+    "llama", "magma_cube", "mooshroom", "ocelot", "panda", "parrot", "pig",
+    "piglin", "pillager", "rabbit", "sheep", "skeleton", "spider", "witch",
+    "wither_skeleton", "zombie",
+  ],
+  elite: [
+    "axolotl", "cave_spider", "creeper", "ghast", "glow_squid", "iron_golem",
+    "llama", "magma_cube", "mooshroom", "ocelot", "panda", "parrot", "pig",
+    "piglin", "pillager", "rabbit", "sheep", "skeleton", "spider", "witch",
+    "wither_skeleton", "zombie",
+  ],
+  mestre: [
+    "axolotl", "blaze", "cave_spider", "creeper", "ghast", "glow_squid",
+    "iron_golem", "llama", "magma_cube", "mooshroom", "ocelot", "panda",
+    "parrot", "pig", "piglin", "pillager", "rabbit", "sheep", "skeleton",
+    "spider", "witch", "wither_skeleton", "zombie",
+  ],
+  lendario: [
+    "axolotl", "blaze", "cave_spider", "creeper", "drowned", "enderman",
+    "evoker", "ghast", "glow_squid", "iron_golem", "llama", "magma_cube",
+    "mooshroom", "ocelot", "panda", "parrot", "phantom", "pig", "piglin",
+    "pillager", "rabbit", "sheep", "skeleton", "spider", "witch",
+    "wither_skeleton", "zombie",
+  ],
+  rankz: [
+    "axolotl", "blaze", "cave_spider", "creeper", "drowned", "elder_guardian",
+    "enderman", "evoker", "ghast", "glow_squid", "guardian", "iron_golem",
+    "llama", "magma_cube", "mooshroom", "ocelot", "panda", "parrot", "phantom",
+    "pig", "piglin", "pillager", "rabbit", "sheep", "skeleton", "spider",
+    "vindicator", "witch", "wither_skeleton", "zombie", "zombified_piglin",
+  ],
+};
+
+const mobsLiberadosPorVip = [
+  "drowned", "evoker", "iron_golem", "piglin", "pillager", "vindicator",
+  "witch", "wither_skeleton",
+];
+
+const permissoesVip: Record<string, string[]> = Object.fromEntries(
+  hierarquiaVips.map((vip) => [vip, mobsLiberadosPorVip]),
+);
+
+const permissaoPorMob: Record<string, string> = {
+  "mushroom-cow": "mooshroom",
+};
+
+export function permissaoMob(s: Spawner): string {
+  return permissaoPorMob[s.id] ?? s.id.replace(/-/g, "_");
+}
+
 export const spawnerRankPendente = "A confirmar";
 
 export function spawnerRank(s: Spawner): string {
-  return s.rank ?? spawnerRankPendente;
+  const perm = permissaoMob(s);
+  for (const r of hierarquiaRanks) {
+    if (permissoesRank[r.slug].includes(perm)) return r.nome;
+  }
+  return spawnerRankPendente;
 }
+
+export function spawnerVips(s: Spawner): string[] {
+  const perm = permissaoMob(s);
+  return hierarquiaVips.filter((vip) => permissoesVip[vip].includes(perm));
+}
+
+export const spawnersRankPendente: Spawner[] = spawners.filter(
+  (s) => spawnerRank(s) === spawnerRankPendente,
+);
 
 export function formatarPreco(valor: number): string {
   return `$${valor.toLocaleString("pt-BR")}`;
