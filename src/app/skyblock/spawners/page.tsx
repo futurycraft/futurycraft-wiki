@@ -13,7 +13,7 @@ import { formatarPreco, spawners } from "@/data/spawners";
 export const metadata: Metadata = {
   title: "Spawners",
   description:
-    "Referência completa dos spawners do SkyBlock: como usar, upgrades, troca de mobs, limites por VIP e todos os mobs com preço, rank e drops.",
+    "Referência completa dos spawners do SkyBlock: como usar, upgrades, troca de mobs, limites por rank e VIP e todos os mobs com preço, rank e drops.",
   alternates: { canonical: `${siteConfig.wikiUrl}/skyblock/spawners` },
   openGraph: {
     title: "Spawners do SkyBlock",
@@ -65,13 +65,76 @@ const upgrades = [
   },
 ];
 
-const limitesVip: { vip: string; limite: string }[] = [
-  { vip: "Jogador comum", limite: "1" },
-  { vip: "VIP Ferro", limite: "6" },
-  { vip: "VIP Ouro", limite: "8" },
-  { vip: "VIP Diamante", limite: "10" },
-  { vip: "VIP Esmeralda", limite: "12" },
-  { vip: "VIP Supremo", limite: "14" },
+function TabelaLimites({
+  titulo,
+  itens,
+}: {
+  titulo: string;
+  itens: { grupo: string; limite: string }[];
+}) {
+  return (
+    <>
+      <h3 className="mt-6 text-sm font-semibold uppercase tracking-widest text-text-muted">
+        {titulo}
+      </h3>
+      <div className="mt-2 overflow-x-auto rounded-xl border border-border">
+        <table className="w-full border-collapse text-left text-sm">
+          <thead>
+            <tr>
+              <th
+                scope="col"
+                className="border-b border-border bg-bg-raised px-4 py-2.5 text-xs font-semibold uppercase tracking-widest text-text-muted"
+              >
+                Grupo
+              </th>
+              <th
+                scope="col"
+                className="border-b border-border bg-bg-raised px-4 py-2.5 text-right text-xs font-semibold uppercase tracking-widest text-text-muted"
+              >
+                Spawners (com upgrade)
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {itens.map((l) => (
+              <tr key={l.grupo} className="border-b border-border/60 last:border-b-0">
+                <th
+                  scope="row"
+                  className="px-4 py-2.5 text-left font-normal text-text-dim"
+                >
+                  {l.grupo}
+                </th>
+                <td className="px-4 py-2.5 text-right font-mono font-semibold text-text">
+                  {l.limite}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  );
+}
+
+const limitesRanks: { grupo: string; limite: string }[] = [
+  { grupo: "Membro", limite: "1" },
+  { grupo: "Aprendiz", limite: "1" },
+  { grupo: "Aventureiro", limite: "2" },
+  { grupo: "Explorador", limite: "3" },
+  { grupo: "Veterano", limite: "4" },
+  { grupo: "Elite", limite: "5" },
+  { grupo: "Mestre", limite: "5" },
+  { grupo: "Lendário", limite: "5" },
+  { grupo: "Rank Z", limite: "6" },
+];
+
+const limitesVips: { grupo: string; limite: string }[] = [
+  { grupo: "VIP Ferro", limite: "6" },
+  { grupo: "VIP Ouro", limite: "8" },
+  { grupo: "VIP Diamante", limite: "10" },
+  { grupo: "VIP Esmeralda", limite: "12" },
+  { grupo: "VIP Supremo", limite: "14" },
+  { grupo: "VIP Magnata", limite: "14" },
 ];
 
 export default function SpawnersPage() {
@@ -256,48 +319,18 @@ export default function SpawnersPage() {
           </Callout>
         </Secao>
 
-        <Secao id="limites" titulo="Limites por VIP">
+        <Secao id="limites" titulo="Limites de Spawners">
           <p className="mt-4 text-sm leading-relaxed text-text-dim">
             O número máximo de spawners com upgrade que você pode ter na ilha
-            depende do seu VIP:
+            depende do seu rank ou do seu VIP:
           </p>
-          <div className="mt-4 overflow-x-auto rounded-xl border border-border">
-            <table className="w-full border-collapse text-left text-sm">
-              <thead>
-                <tr>
-                  <th
-                    scope="col"
-                    className="border-b border-border bg-bg-raised px-4 py-2.5 text-xs font-semibold uppercase tracking-widest text-text-muted"
-                  >
-                    VIP
-                  </th>
-                  <th
-                    scope="col"
-                    className="border-b border-border bg-bg-raised px-4 py-2.5 text-right text-xs font-semibold uppercase tracking-widest text-text-muted"
-                  >
-                    Spawners (com upgrade)
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {limitesVip.map((l) => (
-                  <tr key={l.vip} className="border-b border-border/60 last:border-b-0">
-                    <th
-                      scope="row"
-                      className="px-4 py-2.5 text-left font-normal text-text-dim"
-                    >
-                      {l.vip}
-                    </th>
-                    <td className="px-4 py-2.5 text-right font-mono font-semibold text-text">
-                      {l.limite}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+
+          <TabelaLimites titulo="Ranks" itens={limitesRanks} />
+          <TabelaLimites titulo="VIPs" itens={limitesVips} />
+
           <p className="mt-4 text-sm text-text-dim">
-            Quer turbinar sua ilha? Veja os{" "}
+            Os limites são independentes: o rank define quantos spawners você
+            pode ter, e o VIP soma um limite maior por conta própria. Veja os{" "}
             <Link href="/geral/vips" className="text-accent hover:underline">
               VIPs
             </Link>{" "}
