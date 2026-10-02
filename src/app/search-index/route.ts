@@ -3,6 +3,7 @@ import { comandos } from "@/data/comandos";
 import { getAllEnchants } from "@/lib/enchants";
 import { vips } from "@/data/ranks";
 import { vipVantagens, vipsSkyblock, vipTotalComandos } from "@/data/vips";
+import { formatarPreco, spawners, spawnerRank } from "@/data/spawners";
 import { categories } from "@/data/categories";
 import { siteConfig } from "@/config/site";
 
@@ -93,6 +94,19 @@ function buildIndex(): SearchEntry[] {
       subtitle: "VIP · SkyBlock",
       text: `${v.nomeCompleto} ${v.kit} ${v.tag} ${v.spawners} spawners ${v.minions} minions ${texts.join(" ")} ${vipTotalComandos} comandos`,
       href: "/skyblock/vips",
+    });
+  }
+
+  for (const s of spawners) {
+    const drops = s.drops.flatMap((d) => [d.nome, ...(d.aliases ?? [])]);
+    entries.push({
+      id: `spawner:${s.id}`,
+      type: "Spawner",
+      typeSlug: "spawner",
+      title: `${s.icone} ${s.nome}`,
+      subtitle: `Spawner · ${formatarPreco(s.preco)}`,
+      text: `${s.nome} ${(s.aliases ?? []).join(" ")} spawner preco ${formatarPreco(s.preco)} rank ${spawnerRank(s)} ${drops.join(" ")}`,
+      href: `/skyblock/spawners#mob-${s.id}`,
     });
   }
 

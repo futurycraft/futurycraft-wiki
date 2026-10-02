@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${wikiUrl}/skyblock/encantamentos`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
     { url: `${wikiUrl}/geral/vips`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${wikiUrl}/skyblock/vips`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${wikiUrl}/skyblock/spawners`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
   ];
 
   const articles = getArticles().map((a) => ({
