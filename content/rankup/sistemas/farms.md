@@ -1,6 +1,6 @@
 ---
 title: Farms
-description: As farms do RankUP: compra no menu /shopfarm (DeluxeMenus) e o sistema de plantações e Machado de farm (yPlantacoes).
+description: As farms do RankUP: compra no menu /shopfarm e o sistema de plantações e Machado de farm.
 category: RankUP
 icon: 🌾
 order: 3
@@ -10,7 +10,7 @@ updatedAt: 2026-10-08
 
 ## Farms do RankUP
 
-As farms do RankUP funcionam com o sistema do **yPlantacoes**: você compra sementes/blocos no menu **Shop Farm** (DeluxeMenus), planta no seu plot e colhe com o **Machado de farm** para ganhar **Tokens** de farm.
+As farms do RankUP funcionam com o sistema de **plantações**: você compra sementes/blocos no menu **Shop Farm** (DeluxeMenus), planta no seu plot e colhe com o **Machado de farm** para ganhar **Tokens** de farm.
 
 ## Shop Farm — onde comprar
 
@@ -40,7 +40,7 @@ O menu tem três partes:
 | Madeira da Selva | R$25.000 |
 | Areia das Almas | R$25.000 |
 
-## Como funciona (yPlantacoes)
+## Como funciona
 
 ### O Machado de farm
 
