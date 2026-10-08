@@ -52,7 +52,7 @@ Nas varas de nível 10 existem recompensas raras:
 - **Chaves** são entregues direto para a sua conta de caixas (`crates give direto`), com o aviso de *"SORTE!"* na actionbar.
 - **Limites** vão para o seu **Correio** (`/correio`).
 - Ao conseguir uma **Chave Mítica** ou **Cósmica**, você pode usá-la direto nas [Caixas do RankUP](/rankup/caixas).
-- Limites aumentam o máximo de spawners que você pode colocar — veja [Spawners](/rankup/sistemas/spawners).
+- **Limites** são usados para comprar spawners — a pesca é a melhor fonte de limites do modo. Veja [Spawners](/rankup/sistemas/spawners).
 
 ## Boosters
 
