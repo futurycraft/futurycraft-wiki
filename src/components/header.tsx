@@ -12,6 +12,7 @@ const links = [
   { label: "Wiki", href: "/" },
   { label: "Começando", href: "/comecando" },
   { label: "SkyBlock", href: "/skyblock" },
+  { label: "RankUP", href: "/rankup" },
   { label: "Geral", href: "/geral" },
 ];
 

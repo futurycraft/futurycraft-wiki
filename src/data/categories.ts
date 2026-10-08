@@ -22,6 +22,13 @@ export const categories: Category[] = [
     href: "/skyblock",
   },
   {
+    slug: "rankup",
+    title: "RankUP",
+    description: "Progressão por ranks: 257 ranks até o Hyperion, minas, economia e recompensas.",
+    icon: "🚀",
+    href: "/rankup",
+  },
+  {
     slug: "geral",
     title: "Geral",
     description: "Comandos, regras, suporte, loja e informações oficiais.",

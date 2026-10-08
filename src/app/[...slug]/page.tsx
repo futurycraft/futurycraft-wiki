@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-const RESERVED_PATHS = new Set(["comecando", "skyblock", "geral"]);
+const RESERVED_PATHS = new Set(["comecando", "skyblock", "geral", "rankup"]);
 
 export function generateStaticParams(): { slug: string[] }[] {
   return getArticles()
