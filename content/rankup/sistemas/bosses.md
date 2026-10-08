@@ -160,9 +160,6 @@ Evolua com **Shift + clique direito** na espada. No menu de evolução você aum
 | Matadora de Bosses [Lv.08] | 100.000 |
 | Matadora de Bosses [Lv.09] | 125.000 |
 | Matadora de Bosses [Lv.10] | 150.000 |
-| **Matadora de Bosses [HIT-KILL]** | **Insta-kill** |
-
-A matadora **HIT-KILL** mata o boss com um único acerto.
 
 ### Livros de Dano e Kill-Stack
 
