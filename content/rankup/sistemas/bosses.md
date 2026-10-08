@@ -1,6 +1,6 @@
 ---
 title: Bosses
-description: Os stack-bosses do RankUP: onde comprar, como enfrentar, matadoras e as recompensas de cada boss.
+description: Os stack-bosses do RankUP: como conseguir, como enfrentar, matadoras e as recompensas de cada boss.
 category: RankUP
 icon: 👹
 order: 5
@@ -18,7 +18,7 @@ Os bosses são a principal forma de conseguir **máquinas** e **combustível** d
 
 ## Como funciona
 
-1. **Compre o ovo.** O **Boss Creeper** está na Loja de bosses (`/boss` → **Loja**) por **1.000 coins**. Os ovos dos demais bosses saem caixas e recompensas de outros sistemas.
+1. **Consiga o ovo.** Os ovos de bosses saem na **Caixa Mítica** (veja [Caixas do RankUP](/rankup/caixas)).
 2. **Coloque no terreno.** Os bosses são colocados apenas em **plots/terrenos**.
 3. **Empilhe.** Você pode colocar vários bosses iguais próximos — o stack aparece no nome do boss (ex.: `BOSS CREEPER x10`).
 4. **Enfrente com a matadora.** Nos bosses, o dano normal não funciona: você precisa usar a [Matadora de Bosses](#matadora-de-bosses).
@@ -33,7 +33,6 @@ O menu principal tem:
 - **Recompensas** — o armazém com tudo que você ganhou.
 - **Bosses** — prévia das recompensas de cada boss.
 - **TOP Jogadores** — ranking em relação aos bosses.
-- **Loja** — compra de bosses.
 
 ## Lista de bosses
 
