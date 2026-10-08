@@ -108,6 +108,7 @@ export const sidebarNodes: SidebarNode[] = [
       { kind: "link", title: "Começando", href: "/rankup/comecando" },
       { kind: "link", title: "Ranks", href: "/rankup/ranks" },
       { kind: "link", title: "Minas", href: "/rankup/minas" },
+      { kind: "link", title: "Caixas", href: "/rankup/caixas" },
       { kind: "link", title: "Economia", href: "/rankup/economia" },
       {
         kind: "group",

@@ -78,6 +78,7 @@ export const navSections: NavSection[] = [
           { title: "Começando", href: "/rankup/comecando", group: "Começando" },
           { title: "Ranks", href: "/rankup/ranks", group: "Progressão" },
           { title: "Minas", href: "/rankup/minas", group: "Progressão" },
+          { title: "Caixas", href: "/rankup/caixas", group: "Progressão" },
           { title: "Recompensas", href: "/rankup/recompensas", group: "Progressão" },
           { title: "Economia", href: "/rankup/economia", group: "Economia" },
           { title: "Sistemas", href: "/rankup/sistemas", group: "Sistemas" },
