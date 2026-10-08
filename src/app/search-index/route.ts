@@ -5,6 +5,7 @@ import { vips } from "@/data/ranks";
 import { vipVantagens, vipsSkyblock, vipTotalComandos } from "@/data/vips";
 import { formatarPreco, spawners, spawnerRank } from "@/data/spawners";
 import { categories } from "@/data/categories";
+import { rankupRanks, rankupTotal } from "@/data/rankup-ranks";
 import { siteConfig } from "@/config/site";
 
 export const dynamic = "force-static";
@@ -121,6 +122,18 @@ function buildIndex(): SearchEntry[] {
       href: c.href,
     });
   }
+
+  entries.push({
+    id: "rankup:ranks",
+    type: "RankUP",
+    typeSlug: "pagina",
+    title: "🏆 Ranks do RankUP",
+    subtitle: "RankUP",
+    text: `Ranks RankUP ${rankupTotal} ranks progressão Money Blocos Fragmentos Hyperion ${rankupRanks
+      .map((r) => `${r.posicao} ${r.nome}`)
+      .join(" ")}`,
+    href: "/rankup/ranks",
+  });
 
   entries.push({
     id: "home",
