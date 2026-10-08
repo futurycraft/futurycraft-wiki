@@ -13,7 +13,6 @@ updatedAt: 2026-10-08
 As máquinas geram **drops vendáveis por Money** automaticamente — mas para funcionar elas precisam de **combustível**.
 
 > **Comando:** `/maquinas` (aliases `/maquina`, `/machine`, `/machines`).
-> **Combustíveis:** `/combustiveis` (aliases `/combustivel`, `/fuel`, `/fuels`).
 > **Limite de máquinas:** `/limitemaquinas` (aliases `/maquinalimite`).
 > **Todos os drops:** `/drops`.
 
