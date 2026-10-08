@@ -257,11 +257,6 @@ export function RankupRanksCatalog() {
           </table>
         </div>
       )}
-
-      <p className="mt-3 text-xs text-text-muted">
-        Valores exatamente como configurados no RankUP. Money com o prefixo
-        R$ · Blocos e Fragmentos sem sufixo.
-      </p>
     </div>
   );
 }
