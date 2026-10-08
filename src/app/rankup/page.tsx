@@ -32,6 +32,7 @@ const areas = [
     pages: [
       { title: "Ranks", icon: "🏆", href: "/rankup/ranks", desc: "257 ranks, do primeiro até o Hyperion." },
       { title: "Minas", icon: "⛏️", href: "/rankup/minas", desc: "Minas e coleta conforme a progressão." },
+      { title: "Caixas", icon: "🎁", href: "/rankup/caixas", desc: "Caixas, chaves e recompensas de cada uma." },
       { title: "Recompensas", icon: "🎁", href: "/rankup/recompensas", desc: "O que você ganha a cada subida de rank." },
     ],
   },

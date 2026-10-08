@@ -6,6 +6,8 @@ import { vipVantagens, vipsSkyblock, vipTotalComandos } from "@/data/vips";
 import { formatarPreco, spawners, spawnerRank } from "@/data/spawners";
 import { categories } from "@/data/categories";
 import { rankupRanks, rankupTotal } from "@/data/rankup-ranks";
+import { rankupCaixas } from "@/data/rankup-caixas";
+import { rankupComandos } from "@/data/rankup-comandos";
 import { siteConfig } from "@/config/site";
 
 export const dynamic = "force-static";
@@ -133,6 +135,34 @@ function buildIndex(): SearchEntry[] {
       .map((r) => `${r.posicao} ${r.nome}`)
       .join(" ")}`,
     href: "/rankup/ranks",
+  });
+
+  entries.push({
+    id: "rankup:caixas",
+    type: "RankUP",
+    typeSlug: "pagina",
+    title: "🎁 Caixas do RankUP",
+    subtitle: "RankUP",
+    text: `Caixas RankUP chaves recompensas ${rankupCaixas
+      .flatMap((c) => [
+        c.nome,
+        c.chave,
+        ...c.recompensas.map((r) => `${r.nome} ${r.detalhe} ${r.chance}%`),
+      ])
+      .join(" ")}`,
+    href: "/rankup/caixas",
+  });
+
+  entries.push({
+    id: "rankup:comandos",
+    type: "RankUP",
+    typeSlug: "pagina",
+    title: "💻 Comandos do RankUP",
+    subtitle: "RankUP",
+    text: `Comandos RankUP liberados jogadores ${rankupComandos
+      .map((c) => `${c.comando} ${c.descricao} ${c.categoria}`)
+      .join(" ")}`,
+    href: "/rankup/comandos",
   });
 
   entries.push({
