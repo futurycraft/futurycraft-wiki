@@ -20,13 +20,15 @@ As máquinas geram **drops vendáveis por Money** automaticamente — mas para f
 
 Loja: `/maquinas`. As máquinas são compradas com **Fragmentos** ❈ (moeda do [RankUP](/rankup/ranks)) + **Limites** ✧ (da [loja de spawners](/rankup/sistemas/spawners)):
 
-| Máquina | Preço | Valor do drop |
-| --- | --- | --- |
-| ⚙️ Extrator de Ferro Quântico | 525.000 Fragmentos + 3 Limites | Ferro — R$5 |
-| ☀️ Refinador Solar de Ouro | 875.000 Fragmentos + 5 Limites | Ouro — R$25 |
-| ✦ Compressor Estelar de Diamantes | 1.150.000 Fragmentos + 10 Limites | Diamante — R$50 |
-| ☄️ Gerador Espectral de Esmeraldas | 1.800.000 Fragmentos + 15 Limites | Esmeralda — R$75 |
-| ⚡ Condensador Atômico de Redstone | 2.500.000 Fragmentos + 20 Limites | Redstone — R$100 |
+| Máquina | Libera no rank | Preço | Valor do drop |
+| --- | --- | --- | --- |
+| ⚙️ Extrator de Ferro Quântico | [Piloto](/rankup/ranks) | 525.000 Fragmentos + 3 Limites | Ferro — R$5 |
+| ☀️ Refinador Solar de Ouro | [Coronel](/rankup/ranks) | 875.000 Fragmentos + 5 Limites | Ouro — R$25 |
+| ✦ Compressor Estelar de Diamantes | [Lorde](/rankup/ranks) | 1.150.000 Fragmentos + 10 Limites | Diamante — R$50 |
+| ☄️ Gerador Espectral de Esmeraldas | [Celestial](/rankup/ranks) | 1.800.000 Fragmentos + 15 Limites | Esmeralda — R$75 |
+| ⚡ Condensador Atômico de Redstone | [Hyperion](/rankup/ranks) | 2.500.000 Fragmentos + 20 Limites | Redstone — R$100 |
+
+Cada máquina é **liberada a partir do rank** indicado — o grupo é obrigatório para poder comprar e colocar a máquina. Na loja, máquinas bloqueadas mostram o rank necessário.
 
 Na loja: **botão direito** compra 1, **botão Q** compra o máximo com limite, **botão esquerdo** escolhe a quantia e **shift + botão direito** mostra o preview do drop.
 
